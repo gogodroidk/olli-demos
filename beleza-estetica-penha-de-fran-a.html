@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beleza&estetica Penha de França — Loja em Penha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rose-50:#fbf3f1;
+    --rose-100:#f7e6e1;
+    --rose-200:#f0d3ca;
+    --rose-300:#e3b6a8;
+    --rose-400:#cf9686;
+    --rose-500:#b97865;
+    --nude-50:#fdfaf6;
+    --nude-100:#f8f0e6;
+    --nude-200:#f0e3d1;
+    --gold-300:#d9bd82;
+    --gold-500:#b7913f;
+    --gold-600:#9a7730;
+    --ink-900:#3a2c28;
+    --ink-700:#5c4740;
+    --ink-500:#8a7369;
+    --white:#ffffff;
+    --shadow-soft: 0 20px 60px -25px rgba(90,55,45,0.35);
+    --shadow-card: 0 10px 30px -12px rgba(90,55,45,0.18);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Manrope', sans-serif;
+    color:var(--ink-900);
+    background:var(--nude-50);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  img, svg{max-width:100%; display:block;}
+
+  a{text-decoration:none; color:inherit;}
+
+  ul{list-style:none;}
+
+  h1, h2, h3, h4{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    color:var(--ink-900);
+    line-height:1.15;
+    letter-spacing:-0.01em;
+  }
+
+  .container{
+    width:100%;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.72rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold-600);
+    font-weight:700;
+  }
+
+  .eyebrow::before{
+    content:"";
+    width:22px;
+    height:1px;
+    background:var(--gold-500);
+    display:inline-block;
+  }
+
+  /* ---------- HEADER ---------- */
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(253,250,246,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(185,120,101,0.14);
+  }
+
+  .site-header .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:16px;
+    padding-bottom:16px;
+  }
+
+  .brand{
+    font-family:'Fraunces', serif;
+    font-size:1.3rem;
+    font-weight:600;
+    color:var(--ink-900);
+  }
+
+  .brand span{
+    display:block;
+    font-family:'Manrope', sans-serif;
+    font-size:0.62rem;
+    font-weight:600;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--gold-600);
+    margin-top:2px;
+  }
+
+  .nav-links{
+    display:none;
+    gap:32px;
+    font-size:0.9rem;
+    font-weight:500;
+    color:var(--ink-700);
+  }
+
+  .nav-links a:hover{color:var(--rose-500);}
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:14px 28px;
+    border-radius:100px;
+    font-weight:700;
+    font-size:0.92rem;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+
+  .btn-primary{
+    background:linear-gradient(135deg, var(--gold-500), var(--rose-500));
+    color:var(--white);
+    box-shadow:0 12px 28px -10px rgba(185,120,101,0.55);
+  }
+
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 18px 34px -10px rgba(185,120,101,0.65);}
+
+  .btn-header{
+    padding:10px 20px;
+    font-size:0.82rem;
+  }
+
+  .btn-outline{
+    background:transparent;
+    border:1.5px solid var(--rose-400);
+    color:var(--ink-900);
+  }
+
+  .btn-outline:hover{background:var(--rose-100);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:64px 0 80px;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(217,189,130,0.28), transparent 55%),
+      radial-gradient(circle at 85% 15%, rgba(207,150,134,0.35), transparent 50%),
+      linear-gradient(160deg, var(--nude-100) 0%, var(--rose-100) 55%, var(--nude-50) 100%);
+    overflow:hidden;
+  }
+
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-10%;
+    bottom:-30%;
+    width:60%;
+    padding-bottom:60%;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(255,255,255,0.55), transparent 70%);
+    pointer-events:none;
+  }
+
+  .hero .container{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    text-align:center;
+    align-items:center;
+  }
+
+  .hero h1{
+    font-size:clamp(2.1rem, 6vw, 3.6rem);
+    max-width:16ch;
+  }
+
+  .hero h1 em{
+    font-style:italic;
+    color:var(--rose-500);
+  }
+
+  .hero p.lead{
+    font-size:clamp(1rem, 2.2vw, 1.15rem);
+    color:var(--ink-700);
+    max-width:52ch;
+  }
+
+  .hero .cta-row{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    width:100%;
+    max-width:340px;
+  }
+
+  .hero .cta-note{
+    font-size:0.8rem;
+    color:var(--ink-500);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    justify-content:center;
+  }
+
+  .hero .cta-note .dot{
+    width:8px; height:8px; border-radius:50%;
+    background:#3fbf5f;
+    box-shadow:0 0 0 4px rgba(63,191,95,0.18);
+  }
+
+  .hero-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin-top:6px;
+  }
+
+  .hero-tags span{
+    font-size:0.78rem;
+    font-weight:600;
+    color:var(--ink-700);
+    background:rgba(255,255,255,0.65);
+    border:1px solid rgba(185,120,101,0.25);
+    padding:7px 16px;
+    border-radius:100px;
+  }
+
+  /* ---------- SOCIAL PROOF ---------- */
+  .social-proof{
+    padding:40px 0;
+    background:var(--white);
+    border-bottom:1px solid rgba(185,120,101,0.12);
+  }
+
+  .social-proof .container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    text-align:center;
+  }
+
+  .stars{
+    display:flex;
+    gap:6px;
+    color:var(--gold-500);
+    font-size:1.4rem;
+    letter-spacing:2px;
+  }
+
+  .rating-line{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:baseline;
+    gap:10px;
+  }
+
+  .rating-number{
+    font-family:'Fraunces', serif;
+    font-size:2.2rem;
+    font-weight:600;
+    color:var(--ink-900);
+  }
+
+  .rating-text{
+    color:var(--ink-500);
+    font-size:0.95rem;
+  }
+
+  .proof-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+    width:100%;
+    max-width:760px;
+    margin-top:8px;
+  }
+
+  .proof-card{
+    background:var(--nude-50);
+    border:1px solid rgba(185,120,101,0.14);
+    border-radius:16px;
+    padding:18px 20px;
+    font-size:0.9rem;
+    color:var(--ink-700);
+    text-align:left;
+  }
+
+  .proof-card strong{
+    display:block;
+    color:var(--ink-900);
+    font-size:0.85rem;
+    margin-bottom:4px;
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services{
+    padding:80px 0;
+  }
+
+  .section-head{
+    text-align:center;
+    max-width:620px;
+    margin:0 auto 48px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    align-items:center;
+  }
+
+  .section-head h2{
+    font-size:clamp(1.7rem, 4vw, 2.4rem);
+  }
+
+  .section-head p{
+    color:var(--ink-500);
+    font-size:0.98rem;
+  }
+
+  .services-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .service-card{
+    background:var(--white);
+    border-radius:22px;
+    padding:36px 30px;
+    box-shadow:var(--shadow-card);
+    border:1px solid rgba(185,120,101,0.10);
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    position:relative;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+
+  .service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-soft);
+  }
+
+  .service-card.featured{
+    background:linear-gradient(165deg, var(--rose-500), var(--gold-500));
+    color:var(--white);
+    border:none;
+  }
+
+  .service-card.featured h3,
+  .service-card.featured .service-icon{color:var(--white);}
+
+  .service-card.featured p,
+  .service-card.featured li{color:rgba(255,255,255,0.92);}
+
+  .service-card.featured .service-list li::before{color:var(--white);}
+
+  .badge{
+    position:absolute;
+    top:-12px;
+    right:24px;
+    background:var(--ink-900);
+    color:var(--white);
+    font-size:0.68rem;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:6px 14px;
+    border-radius:100px;
+  }
+
+  .service-icon{
+    font-size:2.1rem;
+    width:64px;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:18px;
+    background:var(--rose-100);
+  }
+
+  .service-card h3{font-size:1.35rem;}
+
+  .service-card p{
+    color:var(--ink-500);
+    font-size:0.92rem;
+  }
+
+  .service-list{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    font-size:0.88rem;
+    color:var(--ink-700);
+    margin-top:4px;
+  }
+
+  .service-list li{
+    padding-left:20px;
+    position:relative;
+  }
+
+  .service-list li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:var(--gold-600);
+    font-weight:700;
+  }
+
+  .service-card .btn{margin-top:auto;}
+
+  /* ---------- GALLERY ---------- */
+  .gallery{
+    padding:80px 0;
+    background:linear-gradient(180deg, var(--nude-100), var(--nude-50));
+  }
+
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:16px;
+  }
+
+  .gallery-item{
+    aspect-ratio:1/1;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2.6rem;
+    position:relative;
+    overflow:hidden;
+    box-shadow:var(--shadow-card);
+  }
+
+  .gallery-item span.label{
+    position:absolute;
+    bottom:14px;
+    left:14px;
+    right:14px;
+    font-family:'Manrope', sans-serif;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.04em;
+    color:rgba(255,255,255,0.95);
+    text-shadow:0 2px 8px rgba(0,0,0,0.25);
+  }
+
+  .g1{background:linear-gradient(150deg, var(--rose-300), var(--rose-500));}
+  .g2{background:linear-gradient(150deg, var(--gold-300), var(--gold-600));}
+  .g3{background:linear-gradient(150deg, var(--rose-100), var(--rose-400));}
+  .g4{background:linear-gradient(150deg, var(--nude-200), var(--gold-500));}
+  .g5{background:linear-gradient(150deg, var(--rose-400), var(--gold-500));}
+  .g6{background:linear-gradient(150deg, var(--gold-500), var(--rose-500));}
+
+  /* ---------- CTA FINAL ---------- */
+  .cta-final{
+    padding:90px 0;
+    background:linear-gradient(150deg, var(--ink-900), #56382f);
+    color:var(--white);
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .cta-final::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 80% 20%, rgba(217,189,130,0.25), transparent 55%);
+  }
+
+  .cta-final .container{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+  }
+
+  .cta-final h2{
+    color:var(--white);
+    font-size:clamp(1.8rem, 4.5vw, 2.6rem);
+    max-width:18ch;
+  }
+
+  .cta-final p{
+    color:rgba(255,255,255,0.78);
+    max-width:48ch;
+    font-size:1rem;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--white);
+    padding:56px 0 120px;
+    border-top:1px solid rgba(185,120,101,0.14);
+  }
+
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+
+  .footer-brand .brand{margin-bottom:10px;}
+
+  .footer-brand p{
+    color:var(--ink-500);
+    font-size:0.88rem;
+    max-width:34ch;
+  }
+
+  .footer-col h4{
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--gold-600);
+    margin-bottom:14px;
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+  }
+
+  .footer-col p, .footer-col a{
+    font-size:0.9rem;
+    color:var(--ink-700);
+    margin-bottom:10px;
+    display:block;
+  }
+
+  .footer-col a:hover{color:var(--rose-500);}
+
+  .footer-bottom{
+    margin-top:40px;
+    padding-top:24px;
+    border-top:1px solid rgba(185,120,101,0.14);
+    font-size:0.78rem;
+    color:var(--ink-500);
+    text-align:center;
+  }
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .wa-float{
+    position:fixed;
+    bottom:22px;
+    right:22px;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#25D366;
+    color:var(--white);
+    padding:14px 18px;
+    border-radius:100px;
+    box-shadow:0 14px 30px -10px rgba(37,211,102,0.6);
+    font-weight:700;
+    font-size:0.85rem;
+    transition:transform .25s ease;
+  }
+
+  .wa-float:hover{transform:translateY(-3px) scale(1.02);}
+
+  .wa-float svg{width:26px; height:26px; flex-shrink:0;}
+
+  .wa-float .wa-text{display:none;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (min-width:640px){
+    .proof-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-grid{grid-template-columns:repeat(3,1fr);}
+    .footer-grid{grid-template-columns:1.3fr 1fr 1fr;}
+    .wa-float .wa-text{display:inline;}
+  }
+
+  @media (min-width:860px){
+    .nav-links{display:flex;}
+    .hero .container{text-align:left; align-items:flex-start;}
+    .hero p.lead{max-width:60ch;}
+    .hero .cta-row{flex-direction:row; max-width:none;}
+    .hero .cta-note{justify-content:flex-start;}
+    .hero-tags{justify-content:flex-start;}
+    .services-grid{grid-template-columns:repeat(3,1fr);}
+    .social-proof .container{flex-direction:row; justify-content:space-between; text-align:left;}
+    .rating-line{justify-content:flex-start;}
+    .stars{justify-content:flex-start;}
+  }
+
+  @media (min-width:1024px){
+    .gallery-grid{grid-template-columns:repeat(6,1fr);}
+  }
+
+  /* ---------- DARK MODE ---------- */
+  @media (prefers-color-scheme: dark){
+    body{background:#1c1512; color:#f2e8e2;}
+    .site-header{background:rgba(28,21,18,0.85); border-color:rgba(217,189,130,0.15);}
+    .brand{color:#f2e8e2;}
+    h1, h2, h3, h4{color:#f7f0ea;}
+    .nav-links{color:#d8c6bd;}
+    .social-proof{background:#231a16; border-color:rgba(217,189,130,0.12);}
+    .proof-card{background:#2a1f1a; border-color:rgba(217,189,130,0.16); color:#d8c6bd;}
+    .proof-card strong{color:#f7f0ea;}
+    .rating-number{color:#f7f0ea;}
+    .service-card{background:#231a16; border-color:rgba(217,189,130,0.14); box-shadow:none;}
+    .service-card p, .service-card .rating-text{color:#c7b3a8;}
+    .service-icon{background:rgba(217,189,130,0.14);}
+    .gallery{background:linear-gradient(180deg,#231a16,#1c1512);}
+    footer{background:#1c1512; border-color:rgba(217,189,130,0.14);}
+    .footer-col p, .footer-col a{color:#d8c6bd;}
+    .footer-brand p{color:#b8a599;}
+    .footer-bottom{color:#8a7369; border-color:rgba(217,189,130,0.14);}
+    .btn-outline{border-color:var(--rose-400); color:#f7f0ea;}
+    .btn-outline:hover{background:rgba(217,189,130,0.1);}
+  }
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="#top" class="brand">Beleza&estetica Penha de França<span>Loja · Penha</span></a>
+      <nav class="nav-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a href="https://wa.me/5511962142793" class="btn btn-primary btn-header" target="_blank" rel="noopener">Agendar avaliação</a>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="container">
+      <span class="eyebrow">Loja · Penha</span>
+      <h1>Sua beleza natural, <em>realçada com técnica e sensibilidade</em></h1>
+      <p class="lead">A Beleza&estetica Penha de França é referência em harmonização facial em Penha. Aqui, cada procedimento é pensado para respeitar suas proporções e entregar resultados naturais — com segurança, ética e acompanhamento próximo em cada etapa.</p>
+      <div class="cta-row">
+        <a href="https://wa.me/5511962142793" class="btn btn-primary" target="_blank" rel="noopener">
+          Falar no WhatsApp agora
+        </a>
+        <a href="#servicos" class="btn btn-outline">Ver procedimentos</a>
+      </div>
+      <span class="cta-note"><span class="dot"></span> Avaliação inicial detalhada antes de qualquer procedimento</span>
+      <div class="hero-tags">
+        <span>Harmonização Facial</span>
+        <span>Preenchimento</span>
+        <span>Botox</span>
+        <span>Procedimentos Corporais</span>
+        <span>Limpeza de Pele</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="social-proof">
+    <div class="container">
+      <div>
+        <div class="stars"></div>
+        <div class="rating-line">
+          <span class="rating-number"></span>
+          <span class="rating-text">de 5 · baseado em</span>
+        </div>
+      </div>
+      <div class="proof-grid">
+        <div class="proof-card">
+          <strong>Atendimento humanizado</strong>
+          Escuta atenta, explicação clara de cada etapa e nenhuma pressa em fechar procedimento.
+        </div>
+        <div class="proof-card">
+          <strong>Resultado natural</strong>
+          Técnica que respeita a expressão do rosto — sem exageros, sem "cara de mexido".
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="servicos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Nossos procedimentos</span>
+        <h2>Cuidado completo, da pele ao contorno corporal</h2>
+        <p>Protocolos individualizados, avaliados por profissional qualificado antes de qualquer indicação.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">🧖‍♀️</div>
+          <h3>Limpeza de Pele Profunda</h3>
+          <p>Higienização completa com extração, esfoliação e máscara calmante para peles equilibradas e com brilho saudável.</p>
+          <ul class="service-list">
+            <li>Diagnóstico de pele personalizado</li>
+            <li>Extração e esfoliação profissional</li>
+            <li>Máscara + hidratação final</li>
+          </ul>
+          <a href="https://wa.me/5511962142793" class="btn btn-outline" target="_blank" rel="noopener">Quero agendar</a>
+        </div>
+
+        <div class="service-card featured">
+          <span class="badge">Mais procurado</span>
+          <div class="service-icon">💉</div>
+          <h3>Harmonização Facial</h3>
+          <p>Botox e preenchimento combinados para simetria, contorno de mandíbula, lábios e rejuvenescimento sem perder a naturalidade.</p>
+          <ul class="service-list">
+            <li>Avaliação facial detalhada</li>
+            <li>Toxina botulínica (botox)</li>
+            <li>Preenchimento com ácido hialurônico</li>
+          </ul>
+          <a href="https://wa.me/5511962142793" class="btn" style="background:var(--white); color:var(--ink-900);" target="_blank" rel="noopener">Quero agendar</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Procedimentos Corporais</h3>
+          <p>Protocolos para contorno, firmeza e redução de medidas, com equipamentos de última geração e acompanhamento de resultado.</p>
+          <ul class="service-list">
+            <li>Avaliação corporal individual</li>
+            <li>Protocolos de contorno e firmeza</li>
+            <li>Plano de sessões sob medida</li>
+          </ul>
+          <a href="https://wa.me/5511962142793" class="btn btn-outline" target="_blank" rel="noopener">Quero agendar</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Ambiente & Resultados</span>
+        <h2>Um espaço pensado para o seu bem-estar</h2>
+        <p>Conforto, discrição e cuidado em cada detalhe do atendimento.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item g1">🌸<span class="label">Recepção acolhedora</span></div>
+        <div class="gallery-item g2">💆🏻‍♀️<span class="label">Sala de procedimentos</span></div>
+        <div class="gallery-item g3">✨<span class="label">Resultado harmonização</span></div>
+        <div class="gallery-item g4">💧<span class="label">Skincare & hidratação</span></div>
+        <div class="gallery-item g5">🤍<span class="label">Protocolo corporal</span></div>
+        <div class="gallery-item g6">🎀<span class="label">Finalização e cuidados</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--gold-300);">Dê o primeiro passo</span>
+      <h2>Sua melhor versão começa com uma conversa</h2>
+      <p>Marque uma avaliação sem compromisso e descubra o protocolo ideal para o seu objetivo, com quem entende de estética facial e corporal.</p>
+      <a href="https://wa.me/5511962142793" class="btn btn-primary" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <footer id="contato">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="brand">Beleza&estetica Penha de França<span>Loja · Penha</span></a>
+          <p>Estética facial e corporal com técnica, ética e resultado natural, cuidando de você em cada detalhe.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <a href="https://wa.me/5511962142793" target="_blank" rel="noopener">(11) 96214-2793</a>
+          <a href="https://maps.google.com/?cid=14252433145216482625&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Praça Nossa Sra. da Penha, 101 - Penha de França, São Paulo - SP, 03632-010</a>
+        </div>
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <p>Segunda a sábado</p>
+          <p>Agendamento prévio via WhatsApp</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Beleza&estetica Penha de França — Loja em Penha. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511962142793" class="wa-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.004 3C9.376 3 4 8.373 4 15c0 2.31.646 4.47 1.77 6.31L4 29l7.87-1.73A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3Zm0 21.7c-1.93 0-3.75-.52-5.31-1.43l-.38-.22-4.66 1.02 1-4.55-.25-.4A9.66 9.66 0 0 1 5.3 15c0-5.9 4.8-10.7 10.704-10.7C22 4.3 26.7 9.1 26.7 15S21.908 24.7 16.004 24.7Zm5.86-7.99c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.72.16-.21.32-.83 1.05-1.02 1.26-.19.21-.38.24-.7.08-.32-.16-1.34-.49-2.55-1.57-.94-.84-1.58-1.87-1.76-2.19-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55-.19-.01-.4-.01-.62-.01-.21 0-.56.08-.85.4-.29.32-1.12 1.1-1.12 2.67 0 1.57 1.15 3.09 1.31 3.3.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.82.68.77.24 1.46.21 2.01.13.61-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37Z"/>
+    </svg>
+    <span class="wa-text">WhatsApp</span>
+  </a>
+
+</body>
+</html>
