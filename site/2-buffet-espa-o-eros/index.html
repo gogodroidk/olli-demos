@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espaço Eros · Cerimonial de Coroação para 15 Anos e Casamentos · São Miguel Paulista</title>
+<meta name="description" content="No Espaço Eros, a festa vira coroação. Escadaria de entrada, trono, pajens de espada e bolo suspenso em lustre de cristal. Cerimonial completo para debutantes e casamentos na Zona Leste de São Paulo. 4,6★ em 1.316 avaliações.">
+<meta property="og:title" content="Espaço Eros · Aqui, a festa vira coroação">
+<meta property="og:description" content="Cerimonial completo para 15 anos e casamentos na Zona Leste de SP. 4,6★ em 1.316 avaliações reais.">
+<meta property="og:image" content="fotos/foto04.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#131110">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23131110'/%3E%3Cpath d='M6 22h20l-2-11-5 4-3-7-3 7-5-4z' fill='%23C9A961'/%3E%3Ccircle cx='16' cy='7' r='1.6' fill='%23e6c884'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --carvao:#131110;
+    --carvao-2:#1b1613;
+    --carvao-3:#221a17;
+    --vinho:#5E1224;
+    --vinho-claro:#8a2237;
+    --neon:#ff2d4d;
+    --ouro:#C9A961;
+    --ouro-vivo:#e6c884;
+    --ouro-escuro:#8a6a2f;
+    --azul:#16213A;
+    --blush:#E9CFC4;
+    --marfim:#F4EFE6;
+    --marfim-dim:#c9bfb2;
+    --serif:'Playfair Display',Georgia,serif;
+    --script:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter',system-ui,sans-serif;
+    --easing:cubic-bezier(.16,.84,.44,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--carvao);
+    color:var(--marfim);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+
+  /* --- Ambient gold grain / vignette layer --- */
+  .grain{
+    position:fixed;inset:0;pointer-events:none;z-index:1;
+    background:
+      radial-gradient(120% 80% at 50% -10%, rgba(201,169,97,.10), transparent 55%),
+      radial-gradient(100% 60% at 50% 120%, rgba(94,18,36,.28), transparent 60%);
+    mix-blend-mode:screen;opacity:.9;
+  }
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+  .eyebrow{
+    font-family:var(--sans);font-weight:500;
+    letter-spacing:.42em;text-transform:uppercase;
+    font-size:.66rem;color:var(--ouro);
+    display:inline-flex;align-items:center;gap:.85em;
+  }
+  .eyebrow::before,.eyebrow.center::after{
+    content:"";width:34px;height:1px;
+    background:linear-gradient(90deg,transparent,var(--ouro));
+    display:inline-block;
+  }
+  .eyebrow.center::before{background:linear-gradient(90deg,var(--ouro),transparent)}
+
+  h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.05;letter-spacing:-.01em}
+  .display{font-size:clamp(2.6rem,8vw,6rem);font-weight:800}
+  .display .em{font-style:italic;font-weight:600;color:var(--ouro-vivo)}
+  section h2{font-size:clamp(2rem,5vw,3.6rem)}
+  .lede{font-family:var(--script);font-size:clamp(1.25rem,2.6vw,1.7rem);font-weight:400;color:var(--marfim-dim);line-height:1.5}
+
+  /* --- Nav --- */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 24px;
+    transition:background .5s var(--easing),padding .5s var(--easing),border-color .5s;
+    border-bottom:1px solid transparent;
+  }
+  header.nav.scrolled{
+    background:rgba(15,13,12,.82);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    padding:12px 24px;
+    border-bottom:1px solid rgba(201,169,97,.18);
+  }
+  .brand{display:flex;flex-direction:column;line-height:1}
+  .brand .mark{font-family:var(--serif);font-weight:800;font-size:1.4rem;letter-spacing:.02em}
+  .brand .mark span{color:var(--ouro)}
+  .brand .sub{font-size:.56rem;letter-spacing:.36em;text-transform:uppercase;color:var(--marfim-dim);margin-top:3px}
+  .nav-links{display:none;gap:34px;align-items:center}
+  .nav-links a{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--marfim-dim);transition:color .3s;position:relative}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--ouro);transition:width .35s var(--easing)}
+  .nav-links a:hover{color:var(--marfim)}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{
+    display:none;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+    padding:11px 22px;border:1px solid var(--ouro);color:var(--ouro-vivo);border-radius:999px;
+    transition:background .35s,color .35s,transform .35s;
+  }
+  .nav-cta:hover{background:var(--ouro);color:var(--carvao);transform:translateY(-2px)}
+  /* compact WhatsApp icon for mobile header (no reachable CTA otherwise) */
+  .nav-wa{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;flex:none;
+    border-radius:50%;border:1px solid var(--ouro);color:var(--ouro-vivo);
+    transition:background .3s,color .3s,transform .3s}
+  .nav-wa svg{width:20px;height:20px}
+  .nav-wa:hover{background:var(--ouro);color:var(--carvao);transform:translateY(-2px)}
+  @media(min-width:900px){.nav-links{display:flex}.nav-cta{display:inline-block}.nav-wa{display:none}}
+
+  /* --- Hero --- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 42%;transform:scale(1.08);animation:heroZoom 18s ease-out forwards}
+  @keyframes heroZoom{to{transform:scale(1)}}
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:
+      linear-gradient(180deg,rgba(15,13,12,.55) 0%,rgba(15,13,12,.15) 32%,rgba(15,13,12,.72) 74%,var(--carvao) 100%),
+      radial-gradient(80% 55% at 50% 40%, transparent 40%, rgba(19,17,16,.5) 100%);
+  }
+  /* theatre curtains */
+  .curtain{position:absolute;top:0;bottom:0;width:52%;z-index:3;pointer-events:none;
+    background:
+      linear-gradient(90deg, #3d0a16 0%, #6d1226 22%, #45091a 40%, #7a1a30 60%, #4a0c1c 80%, #6d1226 100%);
+    background-size:44px 100%;
+    box-shadow:inset 0 0 120px rgba(0,0,0,.6);
+  }
+  .curtain::after{content:"";position:absolute;top:0;bottom:0;width:26px;background:linear-gradient(90deg,rgba(0,0,0,.4),transparent)}
+  .curtain.left{left:0;transform-origin:left;animation:openLeft 1.9s .35s var(--easing) forwards}
+  .curtain.right{right:0;transform:scaleX(-1);animation:openRight 1.9s .35s var(--easing) forwards}
+  .curtain.right::after{right:0;left:auto;transform:scaleX(-1)}
+  @keyframes openLeft{to{transform:translateX(-102%)}}
+  @keyframes openRight{to{transform:scaleX(-1) translateX(-102%)}}
+  .hero-inner{position:relative;z-index:4;padding-bottom:clamp(56px,10vh,110px);max-width:820px}
+  .hero h1{margin:.28em 0 .5em}
+  .hero .lede{max-width:640px;margin-bottom:2.2em}
+  .hero-cta-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .hero .badge-inline{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:400;font-size:.82rem;color:var(--marfim-dim);letter-spacing:.02em}
+  .stars{color:var(--ouro-vivo);letter-spacing:2px;font-size:.9rem}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:.7em;
+    font-family:var(--sans);font-weight:500;font-size:.86rem;letter-spacing:.06em;
+    padding:16px 30px;border-radius:999px;cursor:pointer;
+    transition:transform .4s var(--easing),box-shadow .4s,background .4s;
+    will-change:transform;
+  }
+  .btn-gold{
+    background:linear-gradient(120deg,var(--ouro-vivo),var(--ouro) 55%,var(--ouro-escuro));
+    color:#1b120a;box-shadow:0 10px 30px -8px rgba(201,169,97,.5);
+  }
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 18px 40px -10px rgba(201,169,97,.62)}
+  .btn-ghost{border:1px solid rgba(244,239,230,.35);color:var(--marfim)}
+  .btn-ghost:hover{border-color:var(--ouro);color:var(--ouro-vivo);transform:translateY(-3px)}
+  .btn svg{width:18px;height:18px;flex:none}
+  .btn .arrow{transition:transform .4s var(--easing)}
+  .btn:hover .arrow{transform:translateX(5px)}
+
+  .scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:4;
+    font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--marfim-dim);
+    display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.85}
+  .scroll-hint .line{width:1px;height:38px;background:linear-gradient(var(--ouro),transparent);animation:scrollLine 2.2s ease-in-out infinite}
+  @keyframes scrollLine{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+  /* --- Proof bar --- */
+  .proof{border-top:1px solid rgba(201,169,97,.16);border-bottom:1px solid rgba(201,169,97,.16);background:var(--carvao-2)}
+  .proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+  @media(min-width:760px){.proof-grid{grid-template-columns:repeat(4,1fr)}}
+  .proof-cell{padding:34px 20px;text-align:center;border-right:1px solid rgba(201,169,97,.12);border-bottom:1px solid rgba(201,169,97,.12)}
+  .proof-cell:last-child{border-right:none}
+  .proof-num{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,5vw,3rem);color:var(--ouro-vivo);line-height:1}
+  .proof-num .star{font-size:.6em;vertical-align:.15em;margin-left:.06em}
+  .proof-num .suffix{font-size:.5em;vertical-align:.28em;margin-left:.03em;color:var(--ouro)}
+  @media(max-width:759px){.proof-cell:nth-child(2n){border-right:none}}
+  .proof-label{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--marfim-dim);margin-top:12px}
+
+  /* --- Section base --- */
+  section{position:relative;padding:clamp(80px,12vh,150px) 0}
+  .sec-head{max-width:760px;margin-bottom:clamp(40px,6vw,72px)}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head h2{margin:.32em 0 .5em}
+  .sec-head .lede{color:var(--marfim-dim)}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity 1s var(--easing),transform 1s var(--easing)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+
+  /* --- Cerimonial (split) --- */
+  .cerimonial{background:
+      radial-gradient(90% 60% at 15% 20%, rgba(94,18,36,.4), transparent 60%),
+      var(--carvao);}
+  .split{display:grid;gap:clamp(32px,5vw,64px);align-items:center}
+  @media(min-width:920px){.split{grid-template-columns:1.05fr .95fr}.split.rev>.split-media{order:2}}
+  .split-media{position:relative}
+  .fig{position:relative;border-radius:6px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
+  .fig img{width:100%;transition:transform 1.4s var(--easing)}
+  .fig:hover img{transform:scale(1.05)}
+  .fig::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(201,169,97,.22);border-radius:6px;pointer-events:none}
+  .fig-caption{position:absolute;left:0;bottom:0;right:0;padding:22px 22px 18px;
+    background:linear-gradient(transparent,rgba(10,8,7,.86));
+    font-family:var(--script);font-size:1.05rem;font-style:italic;color:var(--blush)}
+  /* crossed swords ornament */
+  .swords{display:inline-flex;gap:0;color:var(--ouro);margin-bottom:.4em}
+  .swords svg{width:52px;height:52px}
+  .swords svg:last-child{transform:scaleX(-1)}
+  .stack-media{display:grid;gap:18px}
+  .stack-media .fig.small{box-shadow:0 24px 50px -24px rgba(0,0,0,.75)}
+
+  .feature-list{list-style:none;margin-top:1.8em;display:grid;gap:16px}
+  .feature-list li{display:flex;gap:16px;align-items:flex-start}
+  .feature-list .ic{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid rgba(201,169,97,.4);display:grid;place-items:center;color:var(--ouro-vivo);margin-top:2px}
+  .feature-list .ic svg{width:18px;height:18px}
+  .feature-list strong{font-family:var(--serif);font-weight:600;font-size:1.05rem;color:var(--marfim);display:block;margin-bottom:2px}
+  .feature-list span.d{font-size:.9rem;color:var(--marfim-dim)}
+
+  /* --- Salão gallery --- */
+  .gallery-grid{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:820px){.gallery-grid{grid-template-columns:repeat(12,1fr);grid-auto-rows:170px}}
+  .gcell{position:relative;overflow:hidden;border-radius:5px}
+  .gcell img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--easing),filter .6s}
+  .gcell::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(201,169,97,.16);border-radius:5px}
+  .gcell:hover img{transform:scale(1.07)}
+  .gcell .tag{position:absolute;left:14px;bottom:12px;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--marfim);
+    background:rgba(19,17,16,.55);backdrop-filter:blur(4px);padding:6px 12px;border-radius:999px;border:1px solid rgba(201,169,97,.3)}
+  @media(min-width:820px){
+    .g1{grid-column:span 7;grid-row:span 2}
+    .g2{grid-column:span 5;grid-row:span 2}
+    .g3{grid-column:span 4;grid-row:span 2}
+    .g4{grid-column:span 4;grid-row:span 2}
+    .g5{grid-column:span 4;grid-row:span 2}
+  }
+  @media(max-width:819px){.gcell{aspect-ratio:4/3}.g1{grid-column:span 2}}
+
+  /* --- Temas (decoração) --- */
+  .temas{background:
+      radial-gradient(80% 60% at 85% 15%, rgba(94,18,36,.32), transparent 55%),
+      var(--carvao-2);}
+  .theme-chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.6em}
+  .chip{font-size:.78rem;letter-spacing:.06em;padding:10px 18px;border-radius:999px;
+    border:1px solid rgba(201,169,97,.35);color:var(--marfim);background:rgba(201,169,97,.05);
+    transition:background .35s,transform .35s}
+  .chip:hover{background:rgba(201,169,97,.16);transform:translateY(-2px)}
+
+  /* --- Bar --- */
+  .drink-notes{display:grid;gap:14px;margin-top:1.6em}
+  .drink-notes .dn{display:flex;align-items:center;gap:14px;padding-bottom:14px;border-bottom:1px solid rgba(201,169,97,.14)}
+  .drink-notes .swatch{width:16px;height:16px;border-radius:50%;flex:none;box-shadow:0 0 0 1px rgba(255,255,255,.15)}
+  .drink-notes .dn b{font-family:var(--serif);font-weight:600;color:var(--marfim)}
+  .drink-notes .dn em{color:var(--marfim-dim);font-style:normal;font-size:.88rem;margin-left:auto;text-align:right}
+
+  /* --- Equipe / quem cuida --- */
+  .equipe{position:relative;overflow:hidden}
+  .equipe-bg{position:absolute;inset:0;z-index:0}
+  .equipe-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+  .equipe-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--carvao) 8%,rgba(19,17,16,.82) 45%,rgba(19,17,16,.5) 100%)}
+  .equipe .wrap{position:relative;z-index:2}
+  .people{display:grid;gap:22px;margin-top:2em;max-width:640px}
+  @media(min-width:640px){.people{grid-template-columns:1fr 1fr}}
+  .person{padding:26px;border:1px solid rgba(201,169,97,.22);border-radius:6px;background:rgba(19,17,16,.55);backdrop-filter:blur(6px)}
+  .person .role{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ouro)}
+  .person .nm{font-family:var(--serif);font-weight:700;font-size:1.5rem;margin:.2em 0 .4em}
+  .person p{font-size:.92rem;color:var(--marfim-dim)}
+
+  /* --- Depoimentos --- */
+  .quotes{display:grid;gap:22px}
+  @media(min-width:860px){.quotes{grid-template-columns:repeat(3,1fr)}}
+  .quote{padding:32px 28px;border-radius:6px;background:linear-gradient(180deg,var(--carvao-3),var(--carvao-2));
+    border:1px solid rgba(201,169,97,.16);position:relative;display:flex;flex-direction:column}
+  .quote .mark{font-family:var(--serif);font-size:4rem;line-height:.6;color:var(--ouro);opacity:.35;height:.5em}
+  .quote .stars{margin:.2em 0 1em}
+  .quote p{font-family:var(--script);font-size:1.18rem;line-height:1.5;color:var(--marfim);font-style:italic;flex:1}
+  .quote .who{margin-top:1.4em;padding-top:1.2em;border-top:1px solid rgba(201,169,97,.16);display:flex;align-items:center;gap:12px}
+  .quote .who .av{width:42px;height:42px;border-radius:50%;flex:none;display:grid;place-items:center;
+    font-family:var(--serif);font-weight:700;color:var(--carvao);
+    background:linear-gradient(135deg,var(--ouro-vivo),var(--ouro-escuro))}
+  .quote .who b{font-family:var(--sans);font-weight:600;font-size:.92rem;display:block}
+  .quote .who span{font-size:.72rem;color:var(--marfim-dim);letter-spacing:.04em}
+
+  /* --- Inclui / diferenciais --- */
+  .incl-grid{display:grid;gap:1px;background:rgba(201,169,97,.14);border:1px solid rgba(201,169,97,.14);border-radius:6px;overflow:hidden;
+    grid-template-columns:1fr}
+  @media(min-width:620px){.incl-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:960px){.incl-grid{grid-template-columns:1fr 1fr 1fr}}
+  .incl{background:var(--carvao-2);padding:28px 26px;transition:background .4s}
+  .incl:hover{background:var(--carvao-3)}
+  .incl .ic{width:40px;height:40px;color:var(--ouro-vivo);margin-bottom:14px}
+  .incl .ic svg{width:100%;height:100%}
+  .incl h3{font-size:1.12rem;font-weight:600;margin-bottom:6px}
+  .incl p{font-size:.88rem;color:var(--marfim-dim)}
+
+  /* --- Localização --- */
+  .local{background:var(--carvao-2)}
+  .local-grid{display:grid;gap:clamp(28px,4vw,48px)}
+  @media(min-width:900px){.local-grid{grid-template-columns:1fr 1fr;align-items:stretch}}
+  .info-block{display:flex;flex-direction:column;gap:26px}
+  .info-item{display:flex;gap:16px}
+  .info-item .ic{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,169,97,.35);display:grid;place-items:center;color:var(--ouro-vivo)}
+  .info-item .ic svg{width:20px;height:20px}
+  .info-item h3{font-size:1.05rem;font-weight:600;margin-bottom:4px}
+  .info-item p,.info-item a{font-size:.94rem;color:var(--marfim-dim);line-height:1.5}
+  .info-item a:hover{color:var(--ouro-vivo)}
+  .hours{list-style:none;margin-top:6px;font-size:.9rem;color:var(--marfim-dim);display:grid;gap:5px;max-width:320px}
+  .hours li{display:flex;justify-content:space-between;gap:12px;padding-bottom:5px;border-bottom:1px dotted rgba(201,169,97,.18)}
+  .hours li.closed span:last-child{color:#e08a99}
+  .hours li.today{color:var(--marfim)}
+  .hours li.today span:last-child{color:var(--ouro-vivo);font-weight:500}
+  .map-card{position:relative;border-radius:8px;overflow:hidden;min-height:320px;border:1px solid rgba(201,169,97,.22);
+    background:linear-gradient(160deg,var(--carvao-3),#0f0c0b);display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
+  .map-card::before{content:"";position:absolute;inset:0;opacity:.5;
+    background:
+      repeating-linear-gradient(0deg,transparent 0 38px,rgba(201,169,97,.07) 38px 39px),
+      repeating-linear-gradient(90deg,transparent 0 38px,rgba(201,169,97,.07) 38px 39px);
+    -webkit-mask:radial-gradient(120% 90% at 40% 30%,#000,transparent 75%);mask:radial-gradient(120% 90% at 40% 30%,#000,transparent 75%)}
+  .map-pin{position:absolute;top:34%;left:38%;z-index:2;width:20px;height:20px;border-radius:50% 50% 50% 0;
+    background:var(--neon);transform:rotate(-45deg);box-shadow:0 0 0 6px rgba(255,45,77,.18),0 0 22px rgba(255,45,77,.7)}
+  .map-pin::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--carvao)}
+  .map-card .mc-inner{position:relative;z-index:2}
+  .map-card h3{font-size:1.2rem;font-weight:600;margin-bottom:6px}
+  .map-card p{font-size:.9rem;color:var(--marfim-dim);margin-bottom:16px}
+
+  /* --- CTA final --- */
+  .finale{position:relative;overflow:hidden;text-align:center;padding:clamp(90px,16vh,180px) 0}
+  .finale-bg{position:absolute;inset:0;z-index:0}
+  .finale-bg img{width:100%;height:100%;object-fit:cover;object-position:center 55%;transform:scale(1.05)}
+  .finale-bg::after{content:"";position:absolute;inset:0;background:
+    linear-gradient(180deg,var(--carvao) 0%,rgba(19,17,16,.72) 40%,rgba(19,17,16,.86) 100%),
+    radial-gradient(70% 60% at 50% 40%,rgba(94,18,36,.35),transparent 70%)}
+  .finale .wrap{position:relative;z-index:2}
+  .finale h2{font-size:clamp(2.2rem,6vw,4.4rem);margin:.3em auto .4em;max-width:14ch}
+  .finale .lede{max-width:560px;margin:0 auto 2em}
+
+  /* --- Footer --- */
+  footer{background:#0c0a09;border-top:1px solid rgba(201,169,97,.16);padding:56px 0 90px;position:relative;z-index:2}
+  .foot-grid{display:grid;gap:32px;grid-template-columns:1fr}
+  @media(min-width:720px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+  .foot-brand .mark{font-family:var(--serif);font-weight:800;font-size:1.6rem}
+  .foot-brand .mark span{color:var(--ouro)}
+  .foot-brand p{font-size:.86rem;color:var(--marfim-dim);margin-top:10px;max-width:34ch}
+  .foot-col h4{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ouro);margin-bottom:14px}
+  .foot-col a,.foot-col p{display:block;font-size:.88rem;color:var(--marfim-dim);margin-bottom:8px;transition:color .3s}
+  .foot-col a:hover{color:var(--ouro-vivo)}
+  .foot-bottom{margin-top:44px;padding-top:22px;border-top:1px solid rgba(201,169,97,.12);
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.74rem;color:var(--marfim-dim)}
+
+  /* --- Sticky WhatsApp --- */
+  .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;display:inline-flex;align-items:center;gap:10px;
+    background:linear-gradient(135deg,#25d366,#1ba851);color:#062b12;font-weight:600;font-size:.86rem;letter-spacing:.02em;
+    padding:14px 20px;border-radius:999px;box-shadow:0 12px 34px -8px rgba(37,211,102,.55);
+    transform:translateY(120px);transition:transform .6s var(--easing),box-shadow .4s}
+  .wa-float.show{transform:none}
+  .wa-float:hover{box-shadow:0 18px 44px -8px rgba(37,211,102,.7)}
+  .wa-float svg{width:22px;height:22px}
+  .wa-float .lbl{display:none}
+  @media(min-width:560px){.wa-float .lbl{display:inline}}
+  .wa-float .pulse{position:absolute;inset:0;border-radius:999px;box-shadow:0 0 0 0 rgba(37,211,102,.5);animation:pulse 2.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto}
+    .hero-bg img{transform:none}
+    .curtain{display:none}
+    .reveal{opacity:1;transform:none}
+    .wa-float{transform:none}
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Espaço Eros — início">
+    <span class="mark">Espaço <span>Eros</span></span>
+    <span class="sub">Cerimonial · São Paulo</span>
+  </a>
+  <nav class="nav-links" aria-label="Navegação principal">
+    <a href="#cerimonial">O Cerimonial</a>
+    <a href="#salao">O Salão</a>
+    <a href="#temas">Temas</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#visita">Visita</a>
+  </nav>
+  <a class="nav-cta" href="https://wa.me/551127743192?text=Ol%C3%A1%2C%20Espa%C3%A7o%20Eros!%20Vi%20o%20site%20e%20quero%20saber%20as%20datas%20dispon%C3%ADveis%20para%20minha%20festa%20(15%20anos%20ou%20casamento)." target="_blank" rel="noopener">Reservar data</a>
+  <a class="nav-wa" href="https://wa.me/551127743192?text=Ol%C3%A1%2C%20Espa%C3%A7o%20Eros!%20Vi%20o%20site%20e%20quero%20saber%20as%20datas%20dispon%C3%ADveis%20para%20minha%20festa%20(15%20anos%20ou%20casamento)." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="fotos/foto04.jpg" alt="Escadaria dupla curva vermelha iluminada do salão Espaço Eros, com cortinas de veludo e lustre de cristal" fetchpriority="high"></div>
+  <div class="curtain left" aria-hidden="true"></div>
+  <div class="curtain right" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">15 Anos · Casamentos · Zona Leste de SP</span>
+    <h1 class="display">Aqui, a festa<br>vira <span class="em">coroação</span>.</h1>
+    <p class="lede">Escadaria de entrada, trono, pajens de espada e um bolo suspenso em lustre de cristal. O cerimonial completo para debutantes e casamentos — não um evento comum, uma cena que a família conta por 20 anos.</p>
+    <div class="hero-cta-row">
+      <a class="btn btn-gold" href="https://wa.me/551127743192?text=Ol%C3%A1%2C%20Espa%C3%A7o%20Eros!%20Vi%20o%20site%20e%20quero%20saber%20as%20datas%20dispon%C3%ADveis%20para%20minha%20festa%20(15%20anos%20ou%20casamento)." target="_blank" rel="noopener">Marcar minha entrada triunfal <span class="arrow" aria-hidden="true">→</span></a>
+      <span class="badge-inline"><span class="stars">★★★★★</span> 4,6 · 1.316 avaliações no Google</span>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span class="line"></span>Role</div>
+</section>
+
+<!-- PROOF BAR -->
+<section class="proof" style="padding:0" aria-label="Prova social">
+  <div class="proof-grid">
+    <div class="proof-cell"><div class="proof-num" data-count="4.6" data-dec="1">4,6<span class="star">★</span></div><div class="proof-label">Nota no Google</div></div>
+    <div class="proof-cell"><div class="proof-num" data-count="1316">0</div><div class="proof-label">Famílias avaliaram</div></div>
+    <div class="proof-cell"><div class="proof-num" data-count="100">0<span class="suffix">%</span></div><div class="proof-label">Festa sob medida ao seu orçamento</div></div>
+    <div class="proof-cell"><div class="proof-num">1</div><div class="proof-label">Cerimonial de coroação exclusivo</div></div>
+  </div>
+</section>
+
+<!-- CERIMONIAL -->
+<section class="cerimonial" id="cerimonial">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-content reveal">
+        <span class="swords" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4l10 10M13 15l2-2M15 17l4-4M14 20l-2-2"/><circle cx="3.4" cy="3.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4l10 10M13 15l2-2M15 17l4-4M14 20l-2-2"/><circle cx="3.4" cy="3.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="eyebrow">O Cerimonial</span>
+        <h2>A entrada que vira coroação.</h2>
+        <p class="lede">No Espaço Eros, ninguém “faz uma festa”. A família desce a escadaria vermelha, os pajens cruzam as espadas, o mestre de cerimônias anuncia o nome — e quem sobe como filha, desce coroada.</p>
+        <ul class="feature-list">
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l4 3 5-6 5 6 4-3v9H3z"/></svg></span><div><strong>Coroação com trono e manto</strong><span class="d">A cena central: coroa, trono dourado e a debutante no centro de tudo.</span></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5l14 14M14 6l4-1-1 4M9 15l-4 4"/></svg></span><div><strong>Pajens de espada</strong><span class="d">Uniformizados, ajoelhados, formando o arco de honra sobre a entrada.</span></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v6M8 21h8M6 9h12l-1 8H7z"/></svg></span><div><strong>Mestre de cerimônias</strong><span class="d">Toni Di Bartolomeu conduz cada momento com maestria, do anúncio à valsa.</span></div></li>
+        </ul>
+        <div style="margin-top:2.2em">
+          <a class="btn btn-gold" href="https://wa.me/551127743192?text=Ol%C3%A1!%20Adorei%20o%20cerimonial%20de%20corea%C3%A7%C3%A3o%20(escadaria%2C%20trono%2C%20pajens)%20e%20quero%20saber%20como%20funciona%20para%20minha%20festa%20de%2015%20anos." target="_blank" rel="noopener">Quero meu cerimonial de coroação <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="split-media reveal d1">
+        <div class="fig">
+          <img src="fotos/foto07.jpg" alt="Debutante coroada em vestido azul-marinho com dois pajens ajoelhados cruzando espadas em arco de honra">
+          <div class="fig-caption">Os pajens cruzam as espadas — a cena que só o Eros encena.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="split rev" style="margin-top:clamp(40px,7vw,90px)">
+      <div class="split-media reveal">
+        <div class="fig">
+          <img src="fotos/foto03.jpg" alt="Salão cheio de convidados com telão gigante transmitindo ao vivo a coroação da debutante no trono">
+          <div class="fig-caption">Coroação transmitida ao vivo no telão gigante, para 300 olhares ao mesmo tempo.</div>
+        </div>
+      </div>
+      <div class="split-content reveal d1">
+        <span class="eyebrow">Ao vivo, para todos</span>
+        <h2>Nenhum convidado<br>perde o momento.</h2>
+        <p class="lede">Telão de LED, iluminação cênica e som profissional transformam a coroação em espetáculo. Cada gesto vai para a tela — e a emoção toma o salão inteiro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SALÃO / GALLERY -->
+<section id="salao">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">O Salão</span>
+      <h2>Onde a cena acontece.</h2>
+      <p class="lede">Piso e paredes espelhadas que dobram cada luz, lustres de cristal, cadeiras Tiffany e o coração de neon na parede. Um cenário montado para brilhar depois que as luzes baixam.</p>
+    </div>
+    <div class="gallery-grid reveal d1">
+      <div class="gcell g1"><img src="fotos/foto01.jpg" alt="Salão amplo montado com mesas rosé, cadeiras Tiffany brancas, lustres e coração de neon vermelho na parede" loading="lazy"><span class="tag">Salão principal</span></div>
+      <div class="gcell g2"><img src="fotos/foto08.jpg" alt="Vista de baixo do lustre de cristal com arranjo de rosas champagne e convidados em trajes de gala" loading="lazy"><span class="tag">Lustres de cristal</span></div>
+      <div class="gcell g3"><img src="fotos/foto06.jpg" alt="Salão em festa com telão exibindo o making-of do casal e lustre grande iluminado" loading="lazy"><span class="tag">Telão &amp; luz cênica</span></div>
+      <div class="gcell g4"><img src="fotos/foto05.jpg" alt="Mesa do bolo com bolo azul de cinco andares suspenso em lustre invertido de cristal, entre árvores de cerejeira" loading="lazy"><span class="tag">Mesa cenográfica</span></div>
+      <div class="gcell g5"><img src="fotos/foto04.jpg" alt="Escadaria dupla curva vermelha com corrimãos iluminados e cortinas de veludo" loading="lazy"><span class="tag">A escadaria</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMAS -->
+<section class="temas" id="temas">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-media reveal">
+        <div class="fig">
+          <img src="fotos/foto05.jpg" alt="Bolo de cinco andares azul suspenso por correntes em lustre de cristal, entre árvores de flor de cerejeira e candelabros dourados">
+          <div class="fig-caption">Bolo suspenso em lustre de cristal — uma instalação que parece flutuar.</div>
+        </div>
+      </div>
+      <div class="split-content reveal d1">
+        <span class="eyebrow">Decoração temática</span>
+        <h2>Cada festa,<br>um conto diferente.</h2>
+        <p class="lede">Árvores de cerejeira, candelabros dourados, o nome da aniversariante em destaque e um bolo que flutua sobre correntes de cristal. A decoração é desenhada do zero para a história de cada família.</p>
+        <div class="theme-chips">
+          <span class="chip">Realeza &amp; Coroação</span>
+          <span class="chip">Jardim de Cerejeira</span>
+          <span class="chip">Princesa Clássica</span>
+          <span class="chip">Glamour Dourado</span>
+          <span class="chip">Sob medida</span>
+        </div>
+        <div style="margin-top:2.2em">
+          <a class="btn btn-ghost" href="https://wa.me/551127743192?text=Ol%C3%A1!%20Vi%20a%20decora%C3%A7%C3%A3o%20tem%C3%A1tica%20do%20Espa%C3%A7o%20Eros%20e%20quero%20saber%20quais%20temas%20voc%C3%AAs%20fazem." target="_blank" rel="noopener">Ver temas disponíveis <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAR -->
+<section id="bar">
+  <div class="wrap">
+    <div class="split rev">
+      <div class="split-media reveal">
+        <div class="fig">
+          <img src="fotos/foto02.jpg" alt="Bar decorado com letreiro luminoso BAR e dois drinques autorais: um rosa cremoso com limão e um azul com morango">
+          <div class="fig-caption">Letreiro luminoso, luz de balada e drinques autorais.</div>
+        </div>
+      </div>
+      <div class="split-content reveal d1">
+        <span class="eyebrow">O Bar</span>
+        <h2>Um brinde à<br>altura da cena.</h2>
+        <p class="lede">Bar montado com letreiro luminoso, cardápio projetado e drinques autorais servidos na medida da noite — do cremoso ao clássico azul, para todos os convidados.</p>
+        <div class="drink-notes">
+          <div class="dn"><span class="swatch" style="background:linear-gradient(135deg,#e9b8c4,#c98aa0)"></span><b>Rosé Cremoso</b><em>limão-siciliano &amp; guarda-sol</em></div>
+          <div class="dn"><span class="swatch" style="background:linear-gradient(135deg,#2fa8e0,#1666c9)"></span><b>Blue Lagoon</b><em>gelo, morango &amp; lima</em></div>
+          <div class="dn"><span class="swatch" style="background:linear-gradient(135deg,#e6c884,#8a6a2f)"></span><b>Autorais da casa</b><em>cardápio projetado ao vivo</em></div>
+        </div>
+        <div style="margin-top:2.2em">
+          <a class="btn btn-ghost" href="https://wa.me/551127743192?text=Ol%C3%A1!%20Posso%20saber%20mais%20sobre%20o%20bar%20de%20drinks%20do%20Espa%C3%A7o%20Eros%3F" target="_blank" rel="noopener">Provar o cardápio de drinks <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="equipe">
+  <div class="equipe-bg" aria-hidden="true"><img src="fotos/foto06.jpg" alt="" loading="lazy" decoding="async"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Quem cuida de você</span>
+      <h2>Gente que os clientes<br>levam pra vida.</h2>
+      <p class="lede">Nos 1.316 depoimentos, dois nomes se repetem com carinho. Não é acaso: aqui, quem organiza a sua festa vira parte da sua história.</p>
+    </div>
+    <div class="people">
+      <div class="person reveal d1">
+        <span class="role">Proprietária</span>
+        <div class="nm">Paula</div>
+        <p>Presente pessoalmente no fechamento e na festa, ajustando a celebração ao orçamento da família sem abrir mão da perfeição. “Uma pessoa incrível, que eu vou levar pra minha vida.”</p>
+      </div>
+      <div class="person reveal d2">
+        <span class="role">Assessoria</span>
+        <div class="nm">Bianca</div>
+        <p>Do primeiro contato ao último segundo, carisma e paciência que tranquilizam a família inteira. “Ela não passa um ar de estresse — isso nos deixa muito tranquilos.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Depoimentos reais</span>
+      <h2>Histórias que aconteceram aqui.</h2>
+      <p class="lede">Avaliações verificadas no Google — de famílias que já viveram a cena.</p>
+    </div>
+    <div class="quotes">
+      <figure class="quote reveal d1">
+        <div class="mark" aria-hidden="true">”</div>
+        <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p>Casamos no espaço e tudo foi impecável. A Paula sempre muito preocupada em fazer a festa dar certo — até no orçamento, para que fosse sob medida pro nosso bolso e mesmo assim perfeita. Todos os garçons muito educados, todos muito bem servidos.</p>
+        <figcaption class="who"><span class="av">T</span><span><b>Tatiane Moreno</b><span>Casamento · avaliação 5★</span></span></figcaption>
+      </figure>
+      <figure class="quote reveal d2">
+        <div class="mark" aria-hidden="true">”</div>
+        <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p>A festa de 15 anos da minha filha foi simplesmente perfeita. Só recebi elogios — amaram o buffet, disseram que é lindo demais e a comida deliciosa. A Paula, dona do buffet, é uma pessoa incrível, que eu vou levar pra minha vida.</p>
+        <figcaption class="who"><span class="av">J</span><span><b>Juliana Cristina</b><span>15 Anos · avaliação 5★</span></span></figcaption>
+      </figure>
+      <figure class="quote reveal d3">
+        <div class="mark" aria-hidden="true">”</div>
+        <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p>Estou sendo muito elogiada pela festa da minha filha, graças ao desempenho de toda a equipe. A assessoria da Bianca, o carisma e a paciência dessa menina é incrível. E o mestre de cerimônia Toni Di Bartolomeu regeu com maestria.</p>
+        <figcaption class="who"><span class="av">N</span><span><b>Naiara</b><span>15 Anos · avaliação 5★</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUI -->
+<section style="background:var(--carvao-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">O que está incluso</span>
+      <h2>Tudo pensado para a cena.</h2>
+    </div>
+    <div class="incl-grid reveal d1">
+      <div class="incl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg></div><h3>Escadaria dupla iluminada</h3><p>Entrada triunfal com corrimãos de cristal e degraus cênicos.</p></div>
+      <div class="incl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8l4 3 5-6 5 6 4-3v9H3z"/></svg></div><h3>Cerimonial de coroação</h3><p>Trono, manto, coroa e pajens de espada em arco de honra.</p></div>
+      <div class="incl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Telão &amp; som profissional</h3><p>Transmissão ao vivo e making-of para o salão inteiro.</p></div>
+      <div class="incl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 3v6a6 6 0 0012 0V3M12 15v6M8 21h8"/></svg></div><h3>Bar de drinks autorais</h3><p>Letreiro luminoso, cardápio projetado e coquetéis da casa.</p></div>
+      <div class="incl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20h16M6 20V9h12v11M9 9V6a3 3 0 016 0v3"/></svg></div><h3>Buffet com garçons elogiados</h3><p>Serviço à mesa impecável — citado nominalmente nas avaliações.</p></div>
+      <div class="incl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.35-9.5-8.5C.5 8 3 4 7 4c2 0 3.5 1.5 5 3.5C13.5 5.5 15 4 17 4c4 0 6.5 4 4.5 8.5C19 16.65 12 21 12 21z"/></svg></div><h3>Assessoria dedicada</h3><p>Bianca no seu lado do primeiro contato à última música.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section class="local" id="visita">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Localização &amp; visita</span>
+      <h2>Venha sentir o salão.</h2>
+      <p class="lede">Atendimento e visitas com hora marcada em São Miguel Paulista. As festas acontecem à noite — venha conhecer o cenário de dia e imaginar a sua.</p>
+    </div>
+    <div class="local-grid">
+      <div class="info-block reveal">
+        <div class="info-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-5.2-7-11a7 7 0 1114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><h3>Endereço</h3><a href="https://maps.google.com/?cid=6365965600250498290" target="_blank" rel="noopener">R. Pascoal Daniel, 96 — São Miguel Paulista<br>São Paulo · SP · 08020-370</a></div>
+        </div>
+        <div class="info-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-3 2a11 11 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span>
+          <div><h3>Telefone &amp; WhatsApp</h3><a href="https://wa.me/551127743192" target="_blank" rel="noopener">+55 11 2774-3192</a></div>
+        </div>
+        <div class="info-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div><h3>Horário de atendimento</h3>
+            <ul class="hours" id="hours">
+              <li data-day="1"><span>Segunda a sexta</span><span>10h – 19h</span></li>
+              <li data-day="6"><span>Sábado</span><span>10h – 14h</span></li>
+              <li class="closed" data-day="0"><span>Domingo</span><span>Fechado</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="map-card reveal d1" href="https://maps.google.com/?cid=6365965600250498290" target="_blank" rel="noopener" aria-label="Abrir no Google Maps">
+        <span class="map-pin" aria-hidden="true"></span>
+        <div class="mc-inner">
+          <h3>São Miguel Paulista, Zona Leste</h3>
+          <p>Fácil acesso, a poucos minutos do centro de São Miguel.</p>
+          <span class="btn btn-gold">Abrir no Google Maps <span class="arrow" aria-hidden="true">→</span></span>
+        </div>
+      </a>
+    </div>
+    <div style="margin-top:clamp(32px,5vw,52px)" class="reveal">
+      <a class="btn btn-ghost" href="https://wa.me/551127743192?text=Ol%C3%A1!%20Quero%20agendar%20uma%20visita%20para%20conhecer%20o%20Espa%C3%A7o%20Eros%20pessoalmente." target="_blank" rel="noopener">Agendar visita ao salão <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FINALE -->
+<section class="finale">
+  <div class="finale-bg" aria-hidden="true"><img src="fotos/foto07.jpg" alt="" loading="lazy" decoding="async"></div>
+  <div class="wrap">
+    <span class="eyebrow center reveal">Espaço Eros</span>
+    <h2 class="reveal d1">Sua escadaria está esperando.</h2>
+    <p class="lede reveal d1">Fale agora com quem transforma 15 anos e casamentos em cerimonial. Orçamento sem compromisso, no seu tempo.</p>
+    <div class="reveal d2">
+      <a class="btn btn-gold" href="https://wa.me/551127743192?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20sem%20compromisso." target="_blank" rel="noopener">Falar agora com o Espaço Eros <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="mark">Espaço <span>Eros</span></div>
+        <p>Cerimonial completo para debutantes e casamentos na Zona Leste de São Paulo. Onde a festa vira coroação.</p>
+        <div style="margin-top:16px" class="stars" aria-label="4,6 de 5 estrelas no Google">★★★★★ <span style="font-family:var(--sans);font-size:.8rem;color:var(--marfim-dim);letter-spacing:0">4,6 · 1.316 avaliações</span></div>
+      </div>
+      <div class="foot-col">
+        <h4>Navegar</h4>
+        <a href="#cerimonial">O Cerimonial</a>
+        <a href="#salao">O Salão</a>
+        <a href="#temas">Decoração &amp; Temas</a>
+        <a href="#bar">O Bar</a>
+        <a href="#depoimentos">Depoimentos</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/551127743192" target="_blank" rel="noopener">WhatsApp · (11) 2774-3192</a>
+        <p>R. Pascoal Daniel, 96<br>São Miguel Paulista · SP</p>
+        <p>Seg–Sex 10h–19h · Sáb 10h–14h</p>
+        <a href="https://maps.google.com/?cid=6365965600250498290" target="_blank" rel="noopener">Ver no Google Maps →</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Buffet Espaço Eros · São Paulo, SP</span>
+      <span>Feito para quem entra como filha e desce coroada.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY WHATSAPP -->
+<a class="wa-float" id="waFloat" href="https://wa.me/551127743192?text=Ol%C3%A1%2C%20Espa%C3%A7o%20Eros!%20Vi%20o%20site%20e%20quero%20saber%20as%20datas%20dispon%C3%ADveis%20para%20minha%20festa%20(15%20anos%20ou%20casamento)." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+  <span class="pulse" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12 2a10 10 0 00-8.6 15.06L2 22l5.05-1.32A10 10 0 1012 2z"/></svg>
+  <span class="lbl">Chamar no WhatsApp</span>
+</a>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // nav scrolled
+  var nav = document.getElementById('nav');
+  var wa = document.getElementById('waFloat');
+  function onScroll(){
+    if(window.scrollY > 40){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    if(window.scrollY > 480){ wa.classList.add('show'); } else { wa.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // highlight today's hours
+  try{
+    var d = new Date().getDay(); // 0 Sun .. 6 Sat
+    document.querySelectorAll('#hours li').forEach(function(li){
+      var day = +li.getAttribute('data-day');
+      var today = (day===1 && d>=1 && d<=5) || (day===6 && d===6) || (day===0 && d===0);
+      if(today) li.classList.add('today');
+    });
+  }catch(e){}
+
+  // reveal on scroll
+  var reveals = document.querySelectorAll('.reveal');
+  if(reduce){ reveals.forEach(function(r){r.classList.add('in');}); }
+  else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:0.14, rootMargin:'0px 0px -8% 0px'});
+    reveals.forEach(function(r){ io.observe(r); });
+  }
+
+  // counters
+  var counters = document.querySelectorAll('.proof-num[data-count]');
+  function animateCount(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var dec = +(el.getAttribute('data-dec')||0);
+    if(reduce){ el.firstChild.nodeValue = (dec? target.toFixed(dec).replace('.',',') : Math.round(target).toLocaleString('pt-BR')); return; }
+    var start = null, dur = 1600;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts-start)/dur, 1);
+      var eased = 1-Math.pow(1-p,3);
+      var val = target*eased;
+      var out = dec ? val.toFixed(dec).replace('.',',') : Math.round(val).toLocaleString('pt-BR');
+      el.firstChild.nodeValue = out;
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ animateCount(en.target); cio.unobserve(en.target); }
+    });
+  }, {threshold:0.5});
+  counters.forEach(function(c){ cio.observe(c); });
+})();
+</script>
+</body>
+</html>

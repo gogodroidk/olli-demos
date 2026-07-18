@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buffet Kifolia & Diversão Kids — Festas infantis na Vila Jacuí, SP</title>
+<meta name="description" content="No Kifolia, o nome do seu filho vira letreiro 3D na entrada, com tapete vermelho, e a festa ganha cenografia temática sob medida. Nota 4,4 em 957 avaliações no Google. Vila Jacuí, São Paulo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --roxo:#5B2E86;
+    --roxo-esc:#40205F;
+    --vermelho:#D62828;
+    --vermelho-esc:#B31E1E;
+    --amarelo:#FFC93C;
+    --verde:#8BC53F;
+    --laranja:#F4802A;
+    --laranja-esc:#C0491C;
+    --dourado:#D4AF7A;
+    --creme:#FFF8F0;
+    --carvao:#211A1D;
+    --sombra:0 18px 45px -20px rgba(33,26,29,.45);
+    --sombra-forte:0 30px 70px -25px rgba(33,26,29,.6);
+    --raio:26px;
+    --wa:#25D366;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Fredoka',system-ui,sans-serif;
+    color:var(--carvao);
+    background:var(--creme);
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.balloon{font-family:'Baloo 2',cursive;line-height:1.08;font-weight:800}
+  img{max-width:100%;display:block}
+  a{text-decoration:none;color:inherit}
+  .wrap{width:min(1180px,92vw);margin-inline:auto}
+  section{position:relative}
+
+  /* ---------- BOTOES ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.55em;
+    font-family:'Baloo 2',cursive;font-weight:700;font-size:1.05rem;
+    padding:.95em 1.6em;border-radius:999px;cursor:pointer;border:none;
+    transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,filter .25s;
+    line-height:1.15;text-align:left;
+  }
+  .btn-wa{background:var(--wa);color:#053d1c;box-shadow:0 14px 30px -12px rgba(37,211,102,.8)}
+  .btn-red{background:var(--vermelho);color:#fff;box-shadow:0 14px 30px -12px rgba(214,40,40,.85)}
+  .btn:hover{transform:translateY(-4px) scale(1.02);filter:saturate(1.15)}
+  .btn:active{transform:translateY(-1px)}
+  .btn svg{width:1.25em;height:1.25em;flex:none}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:60;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:.7rem clamp(1rem,4vw,2.2rem);
+    transition:background .35s,box-shadow .35s,padding .35s;
+  }
+  header.scrolled{background:rgba(64,32,95,.96);box-shadow:0 8px 30px -12px rgba(0,0,0,.5);backdrop-filter:blur(8px);padding-top:.5rem;padding-bottom:.5rem}
+  .logo{display:flex;align-items:center;gap:.5rem;font-family:'Baloo 2';font-weight:800;font-size:1.35rem;color:#fff;letter-spacing:.5px}
+  .logo .dot{width:12px;height:12px;border-radius:50%;box-shadow:20px 0 0 var(--amarelo),40px 0 0 var(--verde);background:var(--vermelho);margin-right:36px}
+  header .btn{font-size:.95rem;padding:.7em 1.25em}
+  .logo b{color:var(--amarelo)}
+  @media(max-width:620px){.header-cta-text{display:none}header .btn{padding:.7em .9em}}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100svh;display:flex;align-items:flex-end;
+    padding:7rem 0 3.5rem;position:relative;overflow:hidden;isolation:isolate;
+  }
+  .hero-bg{position:absolute;inset:0;z-index:-3}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;z-index:-2;
+    background:
+      linear-gradient(180deg,rgba(64,32,95,.55) 0%,rgba(64,32,95,.15) 30%,rgba(64,32,95,.4) 60%,rgba(33,26,29,.9) 100%);
+  }
+  .confetti{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+  .confetti i{
+    position:absolute;top:-8%;width:11px;height:11px;border-radius:2px;opacity:.9;
+    animation:fall linear infinite;
+    will-change:transform;
+  }
+  @keyframes fall{
+    0%{transform:translateY(-10vh) rotate(0deg)}
+    100%{transform:translateY(112vh) rotate(540deg)}
+  }
+  .hero-inner{position:relative;z-index:2;color:#fff}
+  .badge-google{
+    display:inline-flex;align-items:center;gap:.6rem;
+    background:rgba(255,248,240,.15);border:1.5px solid rgba(255,255,255,.35);
+    backdrop-filter:blur(6px);padding:.5rem 1rem;border-radius:999px;
+    font-weight:600;font-size:.92rem;margin-bottom:1.4rem;
+  }
+  .badge-google .stars{color:var(--amarelo);letter-spacing:1px;font-size:1rem}
+  .badge-google b{color:#fff}
+  .hero h1{
+    font-size:clamp(2.1rem,6.4vw,4.6rem);
+    text-shadow:0 4px 30px rgba(0,0,0,.5);
+    max-width:16ch;margin-bottom:1.1rem;
+  }
+  .hero h1 .hl{color:var(--amarelo)}
+  .hero h1 .hl2{color:var(--verde)}
+  .hero p.sub{
+    font-size:clamp(1.05rem,2.4vw,1.35rem);max-width:52ch;
+    color:#fdf3e7;margin-bottom:2rem;text-shadow:0 2px 14px rgba(0,0,0,.5);font-weight:400;
+  }
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem}
+  .scroll-hint{
+    position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);
+    color:rgba(255,255,255,.7);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;z-index:2;
+    display:flex;flex-direction:column;align-items:center;gap:.4rem;
+  }
+  .scroll-hint span{width:22px;height:34px;border:2px solid rgba(255,255,255,.6);border-radius:12px;position:relative}
+  .scroll-hint span::after{content:"";position:absolute;top:6px;left:50%;width:4px;height:7px;background:#fff;border-radius:2px;transform:translateX(-50%);animation:wheel 1.6s infinite}
+  @keyframes wheel{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}100%{opacity:0;transform:translate(-50%,12px)}}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+
+  /* ---------- SECTIONS COMMON ---------- */
+  .sec-pad{padding:clamp(4rem,9vw,7rem) 0}
+  .kicker{
+    display:inline-block;font-family:'Baloo 2';font-weight:700;font-size:.85rem;
+    text-transform:uppercase;letter-spacing:2.5px;
+    color:var(--laranja-esc);margin-bottom:.7rem;
+  }
+  .sec-title{font-size:clamp(1.8rem,4.6vw,3rem);color:var(--roxo);margin-bottom:.7rem;max-width:20ch}
+  .sec-lead{font-size:clamp(1.02rem,2vw,1.2rem);max-width:56ch;color:#4a4048;font-weight:400}
+
+  /* ---------- CONCEITO LETREIRO ---------- */
+  .conceito{background:linear-gradient(180deg,#fff 0%,var(--creme) 100%)}
+  .conceito-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center;margin-top:2.5rem}
+  @media(min-width:900px){.conceito-grid{grid-template-columns:1.05fr 1fr;gap:3.5rem}}
+  .photo-duo{display:grid;grid-template-columns:1fr;gap:1rem}
+  @media(min-width:520px){.photo-duo{grid-template-columns:1fr 1fr}}
+  .photo-card{
+    border-radius:var(--raio);overflow:hidden;box-shadow:var(--sombra);position:relative;
+    aspect-ratio:3/4;border:5px solid #fff;
+  }
+  .photo-card img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.22,1,.36,1)}
+  .photo-card:hover img{transform:scale(1.06)}
+  .photo-card .tag{position:absolute;bottom:.8rem;left:.8rem;background:rgba(33,26,29,.8);color:#fff;padding:.35rem .8rem;border-radius:999px;font-size:.78rem;font-weight:600;backdrop-filter:blur(4px)}
+  .conceito-txt h2{margin-bottom:1rem}
+  .conceito-txt ul{list-style:none;margin:1.6rem 0 0;display:grid;gap:.9rem}
+  .conceito-txt li{display:flex;gap:.8rem;align-items:flex-start;font-size:1.02rem;color:#3d343b}
+  .conceito-txt li .ic{flex:none;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;color:#fff;font-weight:800;font-family:'Baloo 2';font-size:1.05rem;box-shadow:var(--sombra)}
+
+  /* ---------- TEMAS ---------- */
+  .temas{background:var(--roxo);color:#fff;overflow:hidden}
+  .temas::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 0%,rgba(244,128,42,.25),transparent 45%),radial-gradient(circle at 90% 100%,rgba(139,197,63,.22),transparent 45%);pointer-events:none}
+  .temas .kicker{color:var(--amarelo)}
+  .temas .sec-title{color:#fff}
+  .temas .sec-lead{color:#efe4f7}
+  .temas-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-top:2.8rem;position:relative;z-index:2}
+  @media(min-width:760px){.temas-grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:1fr}}
+  .tema{
+    position:relative;border-radius:20px;overflow:hidden;aspect-ratio:3/4;
+    box-shadow:var(--sombra-forte);border:3px solid rgba(255,255,255,.12);
+  }
+  .tema img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.22,1,.36,1)}
+  .tema:hover img{transform:scale(1.08)}
+  .tema::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(33,10,45,.9) 100%)}
+  .tema figcaption{position:absolute;left:0;right:0;bottom:0;padding:1rem;z-index:2}
+  .tema .tt{font-family:'Baloo 2';font-weight:700;font-size:1.15rem;line-height:1.1;display:block;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+  .tema .st{font-size:.8rem;color:#f4e7c9;font-weight:400}
+  @media(min-width:760px){
+    .tema.destaque{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+    .tema.destaque .tt{font-size:1.7rem}
+    .tema.wide{grid-column:span 2;aspect-ratio:16/9}
+  }
+  .temas-cta{margin-top:2.6rem;text-align:center;position:relative;z-index:2}
+  .temas-cta p{color:#efe4f7;margin-bottom:1rem;font-size:1.05rem}
+
+  /* ---------- SPLIT FEATURE (foto01 / foto03) ---------- */
+  .feature{display:grid;grid-template-columns:1fr;gap:0;align-items:stretch}
+  @media(min-width:880px){.feature{grid-template-columns:1fr 1fr}.feature.flip .feat-img{order:2}}
+  .feat-img{position:relative;min-height:340px;overflow:hidden}
+  .feat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .feat-txt{padding:clamp(2.5rem,6vw,5rem) clamp(1.5rem,5vw,4rem);display:flex;flex-direction:column;justify-content:center}
+  .feat-quote{margin-top:1.4rem;padding:1rem 1.2rem;border-left:4px solid var(--verde);background:rgba(139,197,63,.1);border-radius:0 14px 14px 0;font-style:italic;color:#3d343b}
+  .feat-quote b{font-style:normal;color:var(--roxo);display:block;margin-top:.4rem;font-family:'Baloo 2';font-size:.9rem}
+  .feat-b{background:var(--carvao);color:#fff}
+  .feat-b .sec-title{color:#fff}
+  .feat-b .sec-lead{color:#d9cfd6}
+  .feat-b .kicker{color:var(--amarelo)}
+
+  /* ---------- DEPOIMENTOS ---------- */
+  .depo{background:linear-gradient(180deg,var(--creme),#fff)}
+  .depo-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2.8rem}
+  @media(min-width:820px){.depo-grid{grid-template-columns:repeat(3,1fr)}}
+  .card-depo{
+    background:#fff;border-radius:22px;padding:2rem 1.7rem 1.7rem;box-shadow:var(--sombra);
+    position:relative;border:1px solid #f0e6da;display:flex;flex-direction:column;
+  }
+  .card-depo::before{content:"\201C";position:absolute;top:-.3rem;left:1.2rem;font-family:Georgia,serif;font-size:5rem;color:var(--dourado);opacity:.55;line-height:1}
+  .card-depo .stars{color:#E8930A;letter-spacing:2px;margin-bottom:.7rem;font-size:1.05rem;position:relative;z-index:1}
+  .card-depo p{color:#42393f;font-size:.98rem;position:relative;z-index:1;flex:1}
+  .card-depo .autor{margin-top:1.2rem;display:flex;align-items:center;gap:.7rem;font-family:'Baloo 2';font-weight:700;color:var(--roxo)}
+  .card-depo .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;flex:none}
+
+  /* ---------- DIFERENCIAIS ---------- */
+  .difs{background:var(--roxo-esc);color:#fff;overflow:hidden}
+  .difs::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 10%,rgba(255,201,60,.16),transparent 40%);pointer-events:none}
+  .difs .kicker{color:var(--amarelo)}.difs .sec-title{color:#fff}
+  .difs-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2.6rem;position:relative;z-index:2}
+  @media(min-width:640px){.difs-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:980px){.difs-grid{grid-template-columns:1fr 1fr 1fr}}
+  .dif{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;
+    transition:transform .3s,background .3s;
+  }
+  .dif:hover{transform:translateY(-5px);background:rgba(255,255,255,.11)}
+  .dif .ico{flex:none;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:1.5rem;box-shadow:var(--sombra)}
+  .dif h3{font-size:1.08rem;margin-bottom:.25rem;color:#fff}
+  .dif p{font-size:.92rem;color:#d9cfe4;font-weight:400}
+
+  /* ---------- INFO / HORARIOS ---------- */
+  .info-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;margin-top:2.6rem;align-items:start}
+  @media(min-width:900px){.info-grid{grid-template-columns:1fr 1.1fr}}
+  .info-box{background:#fff;border-radius:22px;padding:2rem;box-shadow:var(--sombra);border:1px solid #f0e6da}
+  .info-box h3{color:var(--roxo);font-size:1.3rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:.55rem}
+  .hrs{list-style:none;display:grid;gap:.45rem}
+  .hrs li{display:flex;justify-content:space-between;padding:.5rem .2rem;border-bottom:1px dashed #eadfce;font-size:.98rem}
+  .hrs li:last-child{border-bottom:none}
+  .hrs li span:first-child{font-weight:600;color:#3d343b}
+  .hrs li span:last-child{color:var(--roxo);font-weight:600}
+  .hrs li.wknd{background:rgba(139,197,63,.12);border-radius:8px;padding-inline:.6rem}
+  .contato-list{list-style:none;display:grid;gap:1rem;margin-top:.4rem}
+  .contato-list li{display:flex;gap:.85rem;align-items:center;font-size:1rem}
+  .contato-list .ci{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:#fff;font-size:1.15rem}
+  .contato-list a:hover{color:var(--vermelho)}
+  .mapa{border-radius:22px;overflow:hidden;box-shadow:var(--sombra);border:5px solid #fff;min-height:340px;height:100%}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  /* ---------- CTA FINAL ---------- */
+  .cta-final{background:var(--roxo);color:#fff;text-align:center;overflow:hidden;isolation:isolate}
+  .cta-final::before{content:"";position:absolute;inset:0;z-index:-1;background:
+    radial-gradient(circle at 20% 20%,rgba(214,40,40,.35),transparent 40%),
+    radial-gradient(circle at 80% 80%,rgba(255,201,60,.3),transparent 40%),
+    radial-gradient(circle at 60% 10%,rgba(139,197,63,.25),transparent 35%);}
+  .cta-final .wrap{position:relative;z-index:2}
+  .cta-final h2{font-size:clamp(2rem,5.5vw,3.6rem);color:#fff;margin-bottom:1rem;max-width:16ch;margin-inline:auto}
+  .cta-final h2 .amp{color:var(--amarelo)}
+  .cta-final p{font-size:1.15rem;color:#f1e6fa;margin-bottom:2rem;max-width:44ch;margin-inline:auto;font-weight:400}
+  .cta-final .btn{font-size:1.2rem;padding:1.1em 2em}
+  .urg{display:inline-flex;align-items:center;gap:.5rem;background:var(--vermelho);color:#fff;padding:.45rem 1.1rem;border-radius:999px;font-weight:700;font-family:'Baloo 2';font-size:.9rem;margin-bottom:1.5rem;box-shadow:0 10px 25px -10px rgba(214,40,40,.8)}
+  .pulse{width:9px;height:9px;border-radius:50%;background:#fff;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 10px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--carvao);color:#cfc5cc;padding:3rem 0 2rem;font-size:.92rem}
+  .foot-grid{display:grid;gap:2rem;grid-template-columns:1fr}
+  @media(min-width:720px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+  footer .logo{color:#fff;margin-bottom:.8rem}
+  footer h4{color:#fff;font-family:'Baloo 2';margin-bottom:.8rem;font-size:1.05rem}
+  footer a{color:#cfc5cc}footer a:hover{color:var(--amarelo)}
+  footer ul{list-style:none;display:grid;gap:.5rem}
+  .foot-bottom{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;color:#8a7f88;font-size:.82rem}
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .wa-float{
+    position:fixed;bottom:1.3rem;right:1.3rem;z-index:80;
+    display:flex;align-items:center;gap:.6rem;
+    background:var(--wa);color:#053d1c;font-family:'Baloo 2';font-weight:700;
+    padding:.85rem 1.1rem;border-radius:999px;
+    box-shadow:0 16px 36px -10px rgba(37,211,102,.7);
+    transition:transform .3s cubic-bezier(.34,1.56,.64,1);
+  }
+  .wa-float:hover{transform:scale(1.06)}
+  .wa-float svg{width:1.7rem;height:1.7rem;flex:none}
+  .wa-float .wa-txt{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .4s ease,margin .4s;font-size:.95rem}
+  @media(min-width:900px){.wa-float:hover .wa-txt{max-width:220px}}
+  .wa-float::after{content:"";position:absolute;inset:0;border-radius:999px;border:2px solid var(--wa);animation:ring 2.2s infinite}
+  @keyframes ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.5);opacity:0}}
+  @media(max-width:620px){.wa-float .wa-txt{display:none}.wa-float{padding:.9rem}}
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none !important;scroll-behavior:auto !important}
+    .reveal{opacity:1;transform:none;transition:none}
+    .confetti{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <a href="#topo" class="logo"><span class="dot"></span>Kif<b>o</b>lia</a>
+  <a class="btn btn-wa" href="https://wa.me/5511942724301?text=Oi!%20Vi%20o%20site%20do%20Kifolia%20e%20quero%20saber%20se%20tem%20data%20dispon%C3%ADvel%20pra%20festa%20do%2Fda%20%5Bnome%20da%20crian%C3%A7a%5D%20%E2%80%94%20pode%20me%20passar%20os%20valores%3F" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2s-.7.9-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 00-8.6 15l-1.3 4.7 4.9-1.3A10 10 0 1012 2z"/></svg>
+    <span class="header-cta-text">Ver o letreiro do meu filho</span>
+  </a>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="topo">
+  <div class="hero-bg">
+    <img src="fotos/foto04.jpg" fetchpriority="high" alt="Fachada do Buffet Kifolia pintada como um bolo gigante, com o nome HEITOR em letras 3D na calçada e tapete vermelho na entrada">
+  </div>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-inner reveal in">
+      <span class="badge-google">
+        <span class="stars">★★★★½</span>
+        <b>4,4</b> · 957 avaliações no Google
+      </span>
+      <h1>O nome do seu filho vira <span class="hl">letreiro</span>. A festa vira <span class="hl2">cenário</span>. A memória fica pra sempre.</h1>
+      <p class="sub">No Kifolia, cada aniversário ganha uma cenografia construída do zero pro tema escolhido — e o nome do aniversariante esculpido em letras gigantes na entrada, com tapete vermelho. Na Vila Jacuí, São Paulo.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" href="https://wa.me/5511942724301?text=Oi!%20Vi%20o%20site%20do%20Kifolia%20e%20quero%20saber%20se%20tem%20data%20dispon%C3%ADvel%20pra%20festa%20do%2Fda%20%5Bnome%20da%20crian%C3%A7a%5D%20%E2%80%94%20pode%20me%20passar%20os%20valores%3F" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2s-.7.9-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 00-8.6 15l-1.3 4.7 4.9-1.3A10 10 0 1012 2z"/></svg>
+          Quero ver o letreiro do meu filho
+        </a>
+        <a class="btn btn-red" href="#temas">Ver os temas montados</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span></span>rolar</div>
+</section>
+
+<!-- ============ CONCEITO: NOME NA ENTRADA ============ -->
+<section class="sec-pad conceito">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">O ritual da porta</span>
+      <h2 class="sec-title">O nome do seu filho na entrada — antes mesmo de ele entrar</h2>
+      <p class="sec-lead">Não é balão avulso nem letreiro alugado de banco de imagem. É o nome do aniversariante esculpido em letras 3D gigantes na calçada, com tapete vermelho na porta. Todo dia é um nome diferente — hoje pode ser o do seu.</p>
+    </div>
+    <div class="conceito-grid">
+      <div class="photo-duo reveal d1">
+        <div class="photo-card">
+          <img src="fotos/foto04.jpg" alt="Letras 3D gigantes formando HEITOR na entrada do buffet, de dia, com tapete vermelho e arco de balões" loading="lazy">
+          <span class="tag">De dia · tapete vermelho</span>
+        </div>
+        <div class="photo-card">
+          <img src="fotos/foto08.jpg" alt="Letras 3D gigantes formando PEDRO MIGUEL na entrada do buffet à noite, com coluna de balões" loading="lazy">
+          <span class="tag">À noite · Pedro Miguel</span>
+        </div>
+      </div>
+      <div class="conceito-txt reveal d2">
+        <h2 class="sec-title" style="font-size:clamp(1.5rem,3.5vw,2.1rem)">Seu filho não entra na festa. Ele estreia nela.</h2>
+        <p class="sec-lead">A própria fachada já é a peça: a parede é pintada como um bolo de verdade, com camadas, glacê escorrendo e personagens no telhado. Aí a gente coloca o nome dele na frente — e a foto na porta já vale o convite.</p>
+        <ul>
+          <li><span class="ic" style="background:var(--vermelho)">1</span><div><b>Letreiro 3D com o nome</b> do aniversariante, de cortesia em toda festa fechada.</div></li>
+          <li><span class="ic" style="background:var(--laranja)">2</span><div><b>Tapete vermelho</b> na entrada — a chegada vira o primeiro momento da festa.</div></li>
+          <li><span class="ic" style="background:var(--verde)">3</span><div><b>A casa que é um bolo</b>: fachada icônica que ninguém mais tem na região.</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEMAS ============ -->
+<section class="sec-pad temas" id="temas">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Portfólio real de festas</span>
+      <h2 class="sec-title">Escolha o mundo. A gente constrói o cenário.</h2>
+      <p class="sec-lead">Cada tema abaixo foi montado do zero aqui dentro — painel, bolo cenográfico, personagens e pedestais. Não é kit genérico de mesa: é produção temática de verdade.</p>
+    </div>
+    <div class="temas-grid">
+      <figure class="tema destaque reveal">
+        <img src="fotos/foto07.jpg" alt="Cenografia completa tema Alice no País das Maravilhas: piso xadrez, painel da Alice, bonecos de feltro, relógios gigantes e neon do número 1" loading="lazy">
+        <figcaption>
+          <span class="tt">Alice no País das Maravilhas</span>
+          <span class="st">Piso xadrez, painel pintado à mão, relógios gigantes — nível set de filme</span>
+        </figcaption>
+      </figure>
+      <figure class="tema reveal d1">
+        <img src="fotos/foto02.jpg" alt="Cenografia tema Príncipe Mickey: arco de balões azul-royal e dourado, painel de castelo e número 1 em neon" loading="lazy">
+        <figcaption><span class="tt">Príncipe Mickey</span><span class="st">Castelo, azul-royal & dourado</span></figcaption>
+      </figure>
+      <figure class="tema reveal d2">
+        <img src="fotos/foto05.jpg" alt="Cenografia tema Vingadores: painel dos heróis, bolo de quatro andares e bonecos de ação" loading="lazy">
+        <figcaption><span class="tt">Vingadores</span><span class="st">Bolo de 4 andares & heróis</span></figcaption>
+      </figure>
+      <figure class="tema wide reveal d3">
+        <img src="fotos/foto06.jpg" alt="Cenografia tema Minnie: painéis da Minnie, balões rosa e dourado cromado, mesa em formato de orelhas e bolo de três andares" loading="lazy">
+        <figcaption><span class="tt">Minnie</span><span class="st">Rosa & dourado, delicado</span></figcaption>
+      </figure>
+    </div>
+    <div class="temas-cta">
+      <p>Viu o tema perfeito? A gente monta o dela do mesmo jeito.</p>
+      <a class="btn btn-red" href="https://wa.me/5511942724301?text=Oi!%20Vi%20o%20site%20do%20Kifolia%20e%20vi%20o%20tema%20perfeito.%20Me%20manda%20os%20valores%20no%20WhatsApp%3F" target="_blank" rel="noopener">Vi o tema perfeito. Me manda os valores</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE: DIVERSAO DE VERDADE ============ -->
+<section class="feature">
+  <div class="feat-img reveal">
+    <img src="fotos/foto01.jpg" alt="Bebê sentado com segurança em uma piscina de bolinhas coloridas com cilindros de espuma" loading="lazy">
+  </div>
+  <div class="feat-txt reveal d1">
+    <span class="kicker">Diversão de verdade, não só decoração</span>
+    <h2 class="sec-title">Brincadeira que a criança pode fazer sozinha — e a mãe, tranquila</h2>
+    <p class="sec-lead">Piscina de bolinhas, playground multinível com escorregador-tubo e brinquedos revisados. Monitoras dedicadas às crianças o tempo todo, e tudo à vista dos pais durante o evento inteiro.</p>
+    <div class="feat-quote">
+      "As crianças brincaram com segurança, os funcionários atenciosos e super educados, o proprietário sempre atento e cordial."
+      <b>— Sandra Cristina Cunha ★★★★★</b>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE: A CASA CHEIA ============ -->
+<section class="feature flip feat-b">
+  <div class="feat-img reveal">
+    <img src="fotos/foto03.jpg" alt="Salão cheio de convidados de todas as idades assistindo à retrospectiva, com playground gigante ao fundo" loading="lazy">
+  </div>
+  <div class="feat-txt reveal d1">
+    <span class="kicker">O espaço comporta a família inteira</span>
+    <h2 class="sec-title">A casa fica cheia — e todo mundo se emociona junto</h2>
+    <p class="sec-lead">Avós, pais e crianças no mesmo salão, ambiente climatizado de verdade, e a retrospectiva passando sem falha técnica no grande momento. O espaço é grande o suficiente pra caber todo mundo que importa.</p>
+    <div class="feat-quote" style="border-color:var(--amarelo);background:rgba(255,201,60,.12)">
+      "O ar estava funcionando perfeitamente, serviram nossos convidados o tempo todo... a retrospectiva foi passada sem nenhuma intercorrência!"
+      <b style="color:var(--amarelo)">— Viana Brechó ★★★★★</b>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="sec-pad depo" id="depoimentos">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Quem já fez a festa aqui</span>
+      <h2 class="sec-title">957 famílias. E os medos de sempre, todos respondidos.</h2>
+      <p class="sec-lead">Comida ruim, equipe desatenta, criança sem segurança — os três receios de toda mãe que já levou cano de buffet. Veja o que dizem quem passou por aqui.</p>
+    </div>
+    <div class="depo-grid">
+      <div class="card-depo reveal d1">
+        <div class="stars">★★★★★</div>
+        <p>"Fizemos a festa da minha filha de um ano e foi tudo perfeito! O ar estava funcionando perfeitamente, serviram nossos convidados o tempo todo, e as meninas fizeram várias brincadeiras com as crianças!"</p>
+        <div class="autor"><span class="av" style="background:var(--roxo)">V</span>Viana Brechó</div>
+      </div>
+      <div class="card-depo reveal d2">
+        <div class="stars">★★★★★</div>
+        <p>"Bolo gostoso, salgadinhos crocantes, sem muita massa e sem muito óleo. As crianças brincaram com segurança, os funcionários atenciosos e super educados, o proprietário sempre atento e cordial."</p>
+        <div class="autor"><span class="av" style="background:var(--laranja)">S</span>Sandra Cristina Cunha</div>
+      </div>
+      <div class="card-depo reveal d3">
+        <div class="stars">★★★★★</div>
+        <p>"Monitores muito prestativos e a diversão foi garantida! Super recomendo, quem puder ir conhecer e ter a oportunidade de fechar com eles não vai se arrepender!"</p>
+        <div class="autor"><span class="av" style="background:var(--verde)">B</span>Bruna Nogueira</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.6rem" class="reveal">
+      <a class="btn btn-wa" href="https://wa.me/5511942724301?text=Oi!%20Quero%20uma%20festa%20assim%20pro%20meu%20filho%20no%20Kifolia.%20Tem%20data%20dispon%C3%ADvel%3F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2s-.7.9-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 00-8.6 15l-1.3 4.7 4.9-1.3A10 10 0 1012 2z"/></svg>
+        Quero uma festa assim pro meu filho
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section class="sec-pad difs">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">O que está incluso</span>
+      <h2 class="sec-title">Tudo pensado pra você só curtir o dia</h2>
+    </div>
+    <div class="difs-grid">
+      <div class="dif reveal d1"><span class="ico" style="background:var(--vermelho)">🎬</span><div><h3>Letreiro 3D + tapete vermelho</h3><p>O nome do aniversariante na entrada, de cortesia em toda festa fechada.</p></div></div>
+      <div class="dif reveal d2"><span class="ico" style="background:var(--laranja)">🎨</span><div><h3>Cenografia sob medida</h3><p>Mickey, Vingadores, Minnie, Alice e outros temas montados do zero mediante consulta.</p></div></div>
+      <div class="dif reveal d3"><span class="ico" style="background:var(--verde)">🍰</span><div><h3>Buffet completo testado</h3><p>Salgados crocantes, sem excesso de massa ou óleo. Bolo gostoso — palavra de quem provou.</p></div></div>
+      <div class="dif reveal d1"><span class="ico" style="background:var(--roxo)">❄️</span><div><h3>Ambiente climatizado</h3><p>Ar-condicionado que funciona de verdade — virou elogio espontâneo nos reviews.</p></div></div>
+      <div class="dif reveal d2"><span class="ico" style="background:var(--dourado);color:var(--carvao)">🧸</span><div><h3>Monitoras dedicadas</h3><p>Equipe cuidando das crianças e puxando brincadeiras durante toda a festa.</p></div></div>
+      <div class="dif reveal d3"><span class="ico" style="background:var(--amarelo);color:var(--carvao)">🎢</span><div><h3>Playground multinível</h3><p>Escorregador-tubo e brinquedos revisados, sempre à vista dos pais.</p></div></div>
+      <div class="dif reveal d1"><span class="ico" style="background:var(--vermelho)">📽️</span><div><h3>Retrospectiva sem falha</h3><p>Suporte técnico pro vídeo do grande momento rodar sem intercorrência.</p></div></div>
+      <div class="dif reveal d2"><span class="ico" style="background:var(--laranja)">🤝</span><div><h3>Do fechamento ao pós-venda</h3><p>Proprietário presente no salão, atencioso e cordial do início ao fim.</p></div></div>
+      <div class="dif reveal d3"><span class="ico" style="background:var(--verde)">⭐</span><div><h3>4,4 em 957 avaliações</h3><p>Reputação real construída festa após festa na Vila Jacuí.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFO / HORARIOS / MAPA ============ -->
+<section class="sec-pad" id="contato">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Venha conhecer</span>
+      <h2 class="sec-title">Horários, endereço e como falar com a gente</h2>
+    </div>
+    <div class="info-grid">
+      <div class="reveal d1">
+        <div class="info-box" style="margin-bottom:1.5rem">
+          <h3>🕒 Horários de atendimento</h3>
+          <ul class="hrs">
+            <li><span>Segunda a sexta</span><span>11h – 19h</span></li>
+            <li class="wknd"><span>Sábado e domingo</span><span>10h30 – 19h</span></li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h3>📍 Onde estamos</h3>
+          <ul class="contato-list">
+            <li><span class="ci" style="background:var(--roxo)">📌</span><a href="https://maps.google.com/?cid=13805796478385955391" target="_blank" rel="noopener">R. Jaime Barcelos, 435 — Vila Jacuí, São Paulo/SP</a></li>
+            <li><span class="ci" style="background:var(--wa);color:#053d1c">💬</span><a href="https://wa.me/5511942724301" target="_blank" rel="noopener">WhatsApp (11) 94272-4301</a></li>
+            <li><span class="ci" style="background:var(--vermelho)">☎️</span><a href="tel:+551122974533">Fixo (11) 2297-4533</a></li>
+            <li><span class="ci" style="background:var(--laranja)">📷</span><a href="https://instagram.com/buffet_kifoliaediversao" target="_blank" rel="noopener">@buffet_kifoliaediversao</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mapa reveal d2">
+        <iframe title="Mapa do Buffet Kifolia na Vila Jacuí" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=R.+Jaime+Barcelos,+435+-+Vila+Jacu%C3%AD,+S%C3%A3o+Paulo+-+SP,+08060-200&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="sec-pad cta-final">
+  <div class="wrap">
+    <span class="urg reveal"><span class="pulse"></span>Poucas datas por mês</span>
+    <h2 class="reveal d1">Confirma a agenda da festa do seu filho <span class="amp">agora</span></h2>
+    <p class="reveal d2">Manda uma mensagem, conta o tema e a data que você pensou — a gente devolve os valores e reserva o dia antes que ele acabe.</p>
+    <div class="reveal d3">
+      <a class="btn btn-wa" href="https://wa.me/5511942724301?text=Oi!%20Vi%20o%20site%20do%20Kifolia%20e%20quero%20saber%20se%20tem%20data%20dispon%C3%ADvel%20pra%20festa%20do%2Fda%20%5Bnome%20da%20crian%C3%A7a%5D%20%E2%80%94%20pode%20me%20passar%20os%20valores%3F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2s-.7.9-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 00-8.6 15l-1.3 4.7 4.9-1.3A10 10 0 1012 2z"/></svg>
+        Confirmar a agenda no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="logo"><span class="dot"></span>Kif<b style="color:var(--amarelo)">o</b>lia & Diversão Kids</div>
+      <p>O buffet onde seu filho não entra na festa — ele estreia nela. Cenografia temática sob medida, letreiro com o nome dele na porta e comida de verdade, na Vila Jacuí.</p>
+    </div>
+    <div>
+      <h4>Navegue</h4>
+      <ul>
+        <li><a href="#temas">Temas montados</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Horários & endereço</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5511942724301" target="_blank" rel="noopener">WhatsApp (11) 94272-4301</a></li>
+        <li><a href="tel:+551122974533">Fixo (11) 2297-4533</a></li>
+        <li><a href="https://instagram.com/buffet_kifoliaediversao" target="_blank" rel="noopener">@buffet_kifoliaediversao</a></li>
+        <li>R. Jaime Barcelos, 435 — Vila Jacuí, SP</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    © <span id="ano"></span> Buffet Kifolia & Diversão Kids · Segunda a sexta 11h–19h · Sáb e dom 10h30–19h
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLUTUANTE ============ -->
+<a class="wa-float" href="https://wa.me/5511942724301?text=Oi!%20Vi%20o%20site%20do%20Kifolia%20e%20quero%20saber%20se%20tem%20data%20dispon%C3%ADvel%20pra%20festa%20do%2Fda%20%5Bnome%20da%20crian%C3%A7a%5D%20%E2%80%94%20pode%20me%20passar%20os%20valores%3F" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2s-.7.9-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 00-8.6 15l-1.3 4.7 4.9-1.3A10 10 0 1012 2z"/></svg>
+  <span class="wa-txt">Chamar no WhatsApp</span>
+</a>
+
+<script>
+  // ano
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  // header scroll
+  var header = document.getElementById('header');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 40); };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // reveal on scroll
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // confetti (transform/opacity only)
+  if(!reduce){
+    var cores = ['#FFC93C','#8BC53F','#F4802A','#D62828','#D4AF7A'];
+    var c = document.getElementById('confetti');
+    var frag = document.createDocumentFragment();
+    for(var i=0;i<34;i++){
+      var s = document.createElement('i');
+      var size = 7 + Math.random()*9;
+      s.style.left = (Math.random()*100)+'%';
+      s.style.width = size+'px';
+      s.style.height = size+'px';
+      s.style.background = cores[i % cores.length];
+      s.style.borderRadius = Math.random()>.5 ? '2px' : '50%';
+      s.style.animationDuration = (7 + Math.random()*7)+'s';
+      s.style.animationDelay = (-Math.random()*10)+'s';
+      s.style.opacity = (0.55 + Math.random()*0.4).toFixed(2);
+      frag.appendChild(s);
+    }
+    c.appendChild(frag);
+  }
+</script>
+</body>
+</html>
