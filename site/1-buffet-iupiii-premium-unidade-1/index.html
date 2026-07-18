@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buffet Iupiii Premium · Unidade 1 — Vila Giordano, São Paulo</title>
+<meta name="description" content="Aqui a festa do seu filho não cabe num salão — vira parque. Cenografia de cinema por tema (heróis, Moana, Barbie, safari, princesas) + brinquedos de parque de verdade dentro do buffet. Vila Giordano, nota 4,4 em 1.332 avaliações no Google.">
+<meta property="og:title" content="Buffet Iupiii Premium · Unidade 1">
+<meta property="og:description" content="A festa vira parque: cenografia de cinema + brinquedos de parque de verdade dentro do buffet.">
+<meta property="og:image" content="fotos/foto01.jpg">
+<meta name="theme-color" content="#0B0B14">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%8E%88%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B0B14;
+  --ink-2:#13131F;
+  --ink-3:#1C1C2C;
+  --paper:#FAF7F2;
+  --paper-2:#F1ECE3;
+  --pink:#FF2E88;
+  --cyan:#2FE6D9;
+  --gold:#F5B942;
+  --text-on-dark:#EDEBF5;
+  --muted:#A5A2BC;
+  --muted-dark:#6A6685;
+  --line:rgba(255,255,255,.10);
+  --radius:22px;
+  --shadow:0 24px 60px -20px rgba(0,0,0,.55);
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+  background:var(--ink);
+  color:var(--text-on-dark);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+h1,h2,h3,.display{font-family:'Baloo 2','Fredoka',sans-serif;line-height:1.02;margin:0;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+section[id],header[id]{scroll-margin-top:78px}
+a:focus-visible,button:focus-visible,[role="link"]:focus-visible{
+  outline:3px solid var(--cyan);outline-offset:3px;border-radius:10px;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.eyebrow{
+  font-family:'Fredoka',sans-serif;font-weight:600;
+  text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;
+  color:var(--cyan);
+}
+section{position:relative}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 22px;
+  transition:background .3s ease, backdrop-filter .3s ease, padding .3s ease;
+}
+.nav.scrolled{background:rgba(11,11,20,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:10px 22px}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Baloo 2';font-weight:800;font-size:1.15rem}
+.brand .dot{
+  width:34px;height:34px;border-radius:11px;flex:none;
+  background:linear-gradient(135deg,var(--pink),var(--gold));
+  display:grid;place-items:center;font-size:1.15rem;
+  box-shadow:0 0 22px rgba(255,46,136,.5);
+}
+.brand small{display:block;font-family:'Plus Jakarta Sans';font-weight:600;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-top:1px}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-weight:600;font-size:.9rem;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{
+  font-family:'Fredoka';font-weight:600;font-size:.85rem;
+  background:var(--pink);color:#fff;padding:10px 18px;border-radius:999px;
+  box-shadow:0 8px 24px -6px rgba(255,46,136,.6);
+}
+@media(max-width:820px){.nav-links a:not(.nav-cta){display:none}}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100svh;display:flex;align-items:flex-end;position:relative;overflow:hidden;padding-bottom:6vh}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-bg img{width:100%;height:120%;object-fit:cover;object-position:center 40%;will-change:transform;transform:translateZ(0)}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(120% 90% at 20% 100%, rgba(11,11,20,.96) 12%, rgba(11,11,20,.55) 55%, rgba(11,11,20,.25) 100%),
+    linear-gradient(180deg, rgba(11,11,20,.72) 0%, rgba(11,11,20,.15) 26%, rgba(11,11,20,.1) 55%, rgba(11,11,20,.9) 100%);
+}
+.hero-glow{
+  position:absolute;z-index:1;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none;
+}
+.hg1{width:420px;height:420px;background:var(--pink);top:-120px;right:-80px}
+.hg2{width:360px;height:360px;background:var(--cyan);bottom:-140px;left:-100px;opacity:.35}
+.hero-inner{position:relative;z-index:2;width:100%}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(11,11,20,.55);border:1px solid var(--line);backdrop-filter:blur(8px);
+  padding:8px 15px;border-radius:999px;font-size:.8rem;font-weight:600;margin-bottom:22px;
+}
+.hero-badge .stars{color:var(--gold);letter-spacing:1px}
+.hero-badge b{color:#fff}
+.hero h1{
+  font-size:clamp(2.5rem,7.4vw,5.3rem);font-weight:800;max-width:15ch;
+  text-shadow:0 2px 30px rgba(0,0,0,.6);
+}
+.hero h1 .neon{
+  color:var(--cyan);
+  text-shadow:0 0 8px rgba(47,230,217,.9),0 0 26px rgba(47,230,217,.55),0 0 48px rgba(47,230,217,.3);
+}
+.hero p.sub{
+  margin:22px 0 0;max-width:56ch;font-size:clamp(1rem,2vw,1.18rem);
+  color:#E7E4F2;font-weight:500;text-shadow:0 2px 14px rgba(0,0,0,.6);
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;align-items:center}
+.btn{
+  font-family:'Fredoka',sans-serif;font-weight:600;font-size:1rem;
+  display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:none;
+  padding:16px 26px;border-radius:999px;transition:transform .18s ease, box-shadow .25s ease;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--pink),#ff5ba3);color:#fff;
+  box-shadow:0 14px 40px -10px rgba(255,46,136,.7);position:relative;
+}
+.btn-primary::after{
+  content:"";position:absolute;inset:0;border-radius:999px;
+  box-shadow:0 0 0 0 rgba(255,46,136,.55);animation:pulse 2.6s infinite;
+}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,46,136,.5)}70%{box-shadow:0 0 0 16px rgba(255,46,136,0)}100%{box-shadow:0 0 0 0 rgba(255,46,136,0)}}
+.btn-primary:hover,.btn-ghost:hover{transform:translateY(-3px)}
+.btn-ghost{background:rgba(255,255,255,.09);color:#fff;border:1px solid var(--line);backdrop-filter:blur(6px)}
+.hero-mini{display:flex;gap:8px;align-items:center;color:var(--cyan);font-weight:600;font-size:.86rem}
+.hero-strip{
+  display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:34px;
+  font-size:.82rem;color:#CFCCE0;font-weight:600;
+}
+.hero-strip span{display:inline-flex;align-items:center;gap:8px}
+.hero-strip i{width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block;box-shadow:0 0 10px var(--gold)}
+
+/* ---------- SECTION SHELL ---------- */
+.pad{padding:clamp(70px,10vw,120px) 0}
+.sec-head{max-width:720px;margin-bottom:52px}
+.sec-head h2{font-size:clamp(1.9rem,4.6vw,3.1rem);font-weight:800;margin-top:14px}
+.sec-head p{color:var(--muted);font-size:1.06rem;margin-top:16px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+/* ---------- PILLARS ---------- */
+.pillars-sec{background:linear-gradient(180deg,var(--ink) 0%,var(--ink-2) 100%)}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pillar{
+  background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 22px;transition:transform .25s ease,border-color .25s ease,background .25s;
+}
+.pillar:hover{transform:translateY(-6px);border-color:rgba(47,230,217,.4);background:rgba(255,255,255,.06)}
+.pillar .ic{font-size:1.7rem;width:52px;height:52px;border-radius:15px;display:grid;place-items:center;margin-bottom:16px;background:rgba(255,46,136,.12);border:1px solid rgba(255,46,136,.28)}
+.pillar:nth-child(2) .ic{background:rgba(47,230,217,.12);border-color:rgba(47,230,217,.3)}
+.pillar:nth-child(3) .ic{background:rgba(245,185,66,.14);border-color:rgba(245,185,66,.32)}
+.pillar:nth-child(4) .ic{background:rgba(255,46,136,.12);border-color:rgba(255,46,136,.28)}
+.pillar h3{font-family:'Fredoka';font-size:1.12rem;font-weight:600;margin-bottom:8px}
+.pillar p{color:var(--muted);font-size:.92rem;margin:0}
+@media(max-width:860px){.pillars{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.pillars{grid-template-columns:1fr}}
+
+/* ---------- UNIVERSOS ---------- */
+.universos-sec{background:var(--ink-2)}
+.portal-rail{
+  display:flex;gap:18px;overflow-x:auto;padding:6px 22px 26px;margin:0 -22px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+}
+.portal-rail::-webkit-scrollbar{height:8px}
+.portal-rail::-webkit-scrollbar-thumb{background:rgba(255,255,255,.16);border-radius:99px}
+.portal-rail::-webkit-scrollbar-track{background:transparent}
+.portal{
+  position:relative;flex:0 0 300px;height:420px;border-radius:24px;overflow:hidden;
+  scroll-snap-align:start;cursor:pointer;border:1px solid var(--line);
+  transition:transform .3s ease;
+}
+.portal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .5s}
+.portal::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,20,0) 32%,rgba(11,11,20,.55) 62%,rgba(11,11,20,.95) 100%)}
+.portal:hover{transform:translateY(-8px)}
+.portal:hover img{transform:scale(1.09)}
+.portal .p-body{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:24px 22px}
+.portal .p-tag{display:inline-block;font-family:'Fredoka';font-weight:600;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--cyan);padding:5px 11px;border-radius:99px;margin-bottom:12px}
+.portal:nth-child(2n) .p-tag{background:var(--pink);color:#fff}
+.portal:nth-child(3n) .p-tag{background:var(--gold);color:var(--ink)}
+.portal h3{font-family:'Baloo 2';font-size:1.5rem;font-weight:800;margin-bottom:4px}
+.portal p{font-size:.86rem;color:#D9D6E8;margin:0;transform:translateY(6px);opacity:.85;transition:transform .35s,opacity .35s}
+.portal:hover p{transform:translateY(0);opacity:1}
+.rail-hint{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.84rem;font-weight:600;margin-top:4px}
+.rail-hint .arrow{animation:nudge 1.8s ease-in-out infinite}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+.universo-cta{margin-top:40px;text-align:center}
+
+/* ---------- PARQUE ---------- */
+.parque-sec{background:linear-gradient(180deg,var(--ink-2) 0%,var(--ink) 100%);overflow:hidden}
+.parque-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.parque-copy .badge-line{display:inline-flex;align-items:center;gap:9px;background:rgba(245,185,66,.12);border:1px solid rgba(245,185,66,.3);color:var(--gold);padding:7px 14px;border-radius:99px;font-weight:600;font-size:.8rem;margin-bottom:20px}
+.parque-copy h2{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:800}
+.parque-copy>p{color:var(--muted);font-size:1.06rem;margin:18px 0 26px}
+.toy-list{list-style:none;padding:0;margin:0 0 30px;display:grid;gap:14px}
+.toy-list li{display:flex;gap:14px;align-items:flex-start}
+.toy-list .tic{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:1.25rem;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+.toy-list b{font-family:'Fredoka';font-weight:600;font-size:1.02rem;display:block}
+.toy-list span{color:var(--muted);font-size:.9rem}
+.parque-photos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:14px}
+.parque-photos figure{margin:0;position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.parque-photos img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.parque-photos figure:hover img{transform:scale(1.06)}
+.parque-photos .tall{grid-row:span 2;height:100%}
+.parque-photos figcaption{position:absolute;left:12px;bottom:12px;background:rgba(11,11,20,.7);backdrop-filter:blur(6px);padding:6px 12px;border-radius:99px;font-size:.74rem;font-weight:600}
+@media(max-width:900px){.parque-grid{grid-template-columns:1fr;gap:34px}}
+
+/* ---------- PROVA / DEPOIMENTOS ---------- */
+.proof-sec{position:relative;background:var(--ink);overflow:hidden}
+.proof-bg{position:absolute;inset:0;z-index:0}
+.proof-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05)}
+.proof-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,20,.9),rgba(11,11,20,.82)),radial-gradient(80% 60% at 50% 0%,rgba(255,46,136,.18),transparent 70%)}
+.proof-inner{position:relative;z-index:2}
+.score-band{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:26px 46px;
+  background:rgba(250,247,242,.05);border:1px solid var(--line);border-radius:26px;
+  padding:30px 34px;margin-bottom:48px;text-align:center;
+}
+.score-item .num{font-family:'Baloo 2';font-weight:800;font-size:clamp(2.4rem,6vw,3.4rem);line-height:1}
+.score-item .num.g{color:var(--gold)}
+.score-item .num.c{color:var(--cyan)}
+.score-item .lbl{color:var(--muted);font-size:.82rem;font-weight:600;margin-top:6px;text-transform:uppercase;letter-spacing:.12em}
+.score-stars{color:var(--gold);font-size:1.2rem;letter-spacing:3px}
+.score-div{width:1px;align-self:stretch;background:var(--line)}
+@media(max-width:620px){.score-div{display:none}}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.testi{
+  background:rgba(250,247,242,.05);border:1px solid var(--line);border-radius:20px;padding:26px 24px;
+  display:flex;flex-direction:column;transition:transform .25s,border-color .25s;
+}
+.testi:hover{transform:translateY(-5px);border-color:rgba(245,185,66,.4)}
+.testi .qmark{font-family:'Baloo 2';font-size:2.6rem;line-height:.5;color:var(--pink);opacity:.55;height:26px}
+.testi p{font-size:.96rem;color:#E4E1F0;margin:14px 0 20px;flex:1}
+.testi .who{display:flex;align-items:center;gap:12px}
+.testi .av{width:44px;height:44px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:'Baloo 2';font-weight:800;color:var(--ink);font-size:1.05rem}
+.testi .who b{display:block;font-family:'Fredoka';font-weight:600}
+.testi .who span{font-size:.78rem;color:var(--gold);letter-spacing:1px}
+@media(max-width:860px){.testi-grid{grid-template-columns:1fr}}
+
+/* ---------- CARDÁPIO ---------- */
+.menu-sec{background:var(--paper);color:var(--ink)}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.menu-sec .eyebrow{color:#C9257A}
+.menu-sec h2{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:800;margin-top:12px}
+.menu-sec .lead{color:var(--muted-dark);font-size:1.06rem;margin:16px 0 30px}
+.tiers{display:grid;gap:16px}
+.tier{border:1px solid rgba(11,11,20,.1);border-radius:18px;padding:22px 24px;background:#fff;position:relative;transition:transform .2s,box-shadow .2s}
+.tier:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(11,11,20,.3)}
+.tier.featured{border:2px solid var(--pink);box-shadow:0 20px 46px -22px rgba(255,46,136,.5)}
+.tier .rec{position:absolute;top:-12px;right:20px;background:var(--pink);color:#fff;font-family:'Fredoka';font-weight:600;font-size:.72rem;padding:5px 12px;border-radius:99px;letter-spacing:.04em}
+.tier h3{font-family:'Baloo 2';font-size:1.35rem;font-weight:800;display:flex;align-items:center;gap:10px}
+.tier p{color:var(--muted-dark);font-size:.94rem;margin:8px 0 0}
+.tier .quote{margin-top:14px;font-size:.86rem;color:#C9257A;font-style:italic;border-left:3px solid var(--pink);padding-left:12px}
+.menu-photo{position:relative;border-radius:24px;overflow:hidden;min-height:420px;box-shadow:var(--shadow)}
+.menu-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.menu-photo .float{position:absolute;bottom:18px;left:18px;right:18px;background:rgba(11,11,20,.78);backdrop-filter:blur(8px);color:#fff;border-radius:16px;padding:16px 18px;font-size:.9rem}
+.menu-photo .float b{font-family:'Fredoka';display:block;margin-bottom:2px}
+.perks{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.perk{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(11,11,20,.1);border-radius:99px;padding:9px 15px;font-size:.84rem;font-weight:600}
+@media(max-width:900px){.menu-grid{grid-template-columns:1fr;gap:32px}.menu-photo{min-height:320px;order:-1}}
+
+/* ---------- LOCAL / HORÁRIOS ---------- */
+.local-sec{background:var(--ink)}
+.local-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card-dark{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:var(--radius);padding:30px 30px}
+.card-dark h3{font-family:'Fredoka';font-weight:600;font-size:1.15rem;display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.hours{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.hours li{display:flex;justify-content:space-between;padding:11px 4px;border-bottom:1px dashed var(--line);font-size:.94rem}
+.hours li:last-child{border-bottom:none}
+.hours li.hl{color:var(--cyan);font-weight:700}
+.hours li b{font-weight:600;color:#CFCCE0}
+.hours .tag-sun{background:var(--cyan);color:var(--ink);font-family:'Fredoka';font-weight:600;font-size:.66rem;padding:3px 9px;border-radius:99px;margin-left:8px}
+.addr-lines{display:grid;gap:16px;margin-bottom:22px}
+.addr-lines .row{display:flex;gap:14px;align-items:flex-start}
+.addr-lines .ic{flex:none;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:rgba(47,230,217,.1);border:1px solid rgba(47,230,217,.28);font-size:1.1rem}
+.addr-lines b{font-family:'Fredoka';font-weight:600;display:block;font-size:1rem}
+.addr-lines span{color:var(--muted);font-size:.9rem}
+.map-btn{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:12px;padding:12px 18px;font-weight:600;font-size:.9rem;transition:background .2s}
+.map-btn:hover{background:rgba(255,255,255,.13)}
+@media(max-width:820px){.local-grid{grid-template-columns:1fr}}
+
+/* ---------- CTA FINAL ---------- */
+.final-sec{position:relative;overflow:hidden}
+.final-bg{position:absolute;inset:0;z-index:0}
+.final-bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.final-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,20,.9),rgba(11,11,20,.82)),radial-gradient(70% 90% at 50% 120%,rgba(255,46,136,.28),transparent 60%)}
+.final-inner{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto;padding:clamp(80px,12vw,130px) 22px}
+.final-inner .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(245,185,66,.14);border:1px solid rgba(245,185,66,.4);color:var(--gold);padding:8px 16px;border-radius:99px;font-weight:600;font-size:.84rem;margin-bottom:22px}
+.final-inner h2{font-size:clamp(2.1rem,5.6vw,3.6rem);font-weight:800}
+.final-inner h2 .neon{color:var(--cyan);text-shadow:0 0 10px rgba(47,230,217,.8),0 0 30px rgba(47,230,217,.4)}
+.final-inner p{color:#E7E4F2;font-size:1.1rem;margin:18px auto 34px;max-width:52ch}
+.final-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.final-phone{margin-top:24px;color:var(--muted);font-size:.92rem}
+.final-phone a{color:#fff;font-weight:700}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--ink);border-top:1px solid var(--line);padding:40px 0 34px;text-align:center}
+footer .brand{justify-content:center;margin-bottom:14px}
+footer p{color:var(--muted-dark);font-size:.82rem;margin:6px 0}
+footer .fnav{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin:16px 0;font-size:.86rem;font-weight:600}
+footer .fnav a{color:var(--muted)}
+footer .fnav a:hover{color:#fff}
+
+/* ---------- WHATSAPP FLOAT ---------- */
+.wa-float{
+  position:fixed;right:20px;bottom:20px;z-index:60;
+  display:inline-flex;align-items:center;gap:11px;
+  background:#25D366;color:#0a2e17;font-family:'Fredoka';font-weight:600;
+  padding:14px 20px;border-radius:999px;font-size:.95rem;
+  box-shadow:0 14px 40px -8px rgba(37,211,102,.6);
+  transition:transform .2s ease;
+}
+.wa-float:hover{transform:translateY(-3px) scale(1.02)}
+.wa-float .waic{width:26px;height:26px;flex:none}
+.wa-float .txt{white-space:nowrap}
+@media(max-width:560px){.wa-float .txt{display:none}.wa-float{padding:15px}}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+  .hero-bg img{height:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="brand" href="#top">
+    <span class="dot">🎈</span>
+    <span>Iupiii Premium<small>Unidade 1 · Vila Giordano</small></span>
+  </a>
+  <div class="nav-links">
+    <a href="#universos">Universos</a>
+    <a href="#parque">O parque</a>
+    <a href="#depoimentos">Avaliações</a>
+    <a href="#cardapio">Cardápio</a>
+    <a href="#local">Onde estamos</a>
+    <a class="nav-cta" href="#final">Ver datas</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-bg"><img id="heroImg" src="fotos/foto01.jpg" fetchpriority="high" decoding="async" alt="Cenário temático de heróis montado no Buffet Iupiii Premium, com estátua do Hulk, backdrop dos Vingadores, arcos de balão e pista de dança"></div>
+  <div class="hero-glow hg1"></div>
+  <div class="hero-glow hg2"></div>
+  <div class="hero-inner wrap">
+    <div class="hero-badge">
+      <span class="stars">★★★★☆</span>
+      <span><b>4,4</b> · <b>1.332</b> avaliações no Google</span>
+    </div>
+    <h1>Aqui a festa do seu filho não cabe num salão. <span class="neon">Vira parque.</span></h1>
+    <p class="sub">Carrinho de bate-bate, piscina de bolinhas e brinquedo radical dentro do próprio espaço — mais um cenário construído do zero pro universo que ele escolher: heróis, Moana, safari, princesas.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#wa-hero" data-wa="hero">🎉 Quero a festa do meu filho aqui</a>
+      <a class="btn btn-ghost" href="#universos">Ver os universos <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="hero-strip">
+      <span><i></i> Cenografia temática de cinema</span>
+      <span><i></i> Parque de diversões lá dentro</span>
+      <span><i></i> Aberto todo dia — inclusive domingo</span>
+    </div>
+  </div>
+</header>
+
+<!-- PILARES -->
+<section class="pillars-sec pad" id="ideia">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">A ideia central</span>
+      <h2>Não é um salão que se decora. É um parque que muda de universo a cada festa.</h2>
+      <p>A maioria dos buffets entrega um ou outro. Aqui o seu filho ganha os dois no mesmo dia, no mesmo lugar, sem sair pra rua — cenografia de cinema <b>e</b> brinquedo de parque de verdade.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="ic">🎬</div><h3>Cenário sob medida</h3><p>Cada festa é uma produção nova: backdrop, balões arquitetônicos, estátuas de personagem e luz de palco montados pro tema escolhido.</p></div>
+      <div class="pillar reveal"><div class="ic">🎢</div><h3>Parque de verdade dentro</h3><p>Bate-bate, piscina de bolinhas e brinquedo radical instalados no prédio. Nada de "recreação com monitor" — é brinquedo com estrutura e cinto.</p></div>
+      <div class="pillar reveal"><div class="ic">🍰</div><h3>Comida aprovada pelos pais</h3><p>Bolo, salgados e buffet que os próprios convidados elogiam nas avaliações — e ainda sai kit-festa pra levar pra casa.</p></div>
+      <div class="pillar reveal"><div class="ic">🤝</div><h3>Equipe que a família reconhece</h3><p>Gente com nome, não "atendimento": a gerente Meire e time fixo acompanham do fechamento do contrato ao fim da festa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- UNIVERSOS -->
+<section class="universos-sec pad" id="universos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Escolha o universo da festa</span>
+      <h2>Cinco mundos que a gente já construiu do zero.</h2>
+      <p>Estes cenários são reais — montados aqui, para festas de verdade. Escolha o universo do seu filho e a gente ergue ele inteiro.</p>
+    </div>
+  </div>
+  <div class="wrap"><div class="rail-hint reveal">Arraste para explorar <span class="arrow" aria-hidden="true">→</span></div></div>
+  <div class="wrap">
+    <div class="portal-rail">
+      <article class="portal reveal" data-wa="tema-herois" data-tema="Heróis / Vingadores" aria-label="Falar no WhatsApp sobre o tema Heróis / Vingadores">
+        <img src="fotos/foto01.jpg" loading="lazy" decoding="async" alt="Cenário de heróis com estátua do Hulk, backdrop dos Vingadores e pista de dança">
+        <div class="p-body"><span class="p-tag">Heróis</span><h3>Vingadores</h3><p>Estátua gigante do Hulk, backdrop dos heróis, arcos de balão e dance floor iluminado.</p></div>
+      </article>
+      <article class="portal reveal" data-wa="tema-safari" data-tema="Safari Disney" aria-label="Falar no WhatsApp sobre o tema Safari Disney">
+        <img src="fotos/foto03.jpg" loading="lazy" decoding="async" alt="Cenário Safari Disney com Mickey e turma explorando a selva, arco de balão e mesas postas">
+        <div class="p-body"><span class="p-tag">Aventura</span><h3>Safari Disney</h3><p>A turma do Mickey na selva, bichos de pelúcia e mesas postas com forração elegante.</p></div>
+      </article>
+      <article class="portal reveal" data-wa="tema-moana" data-tema="Moana" aria-label="Falar no WhatsApp sobre o tema Moana">
+        <img src="fotos/foto05.jpg" loading="lazy" decoding="async" alt="Cenário Moana com arco de balão coral e turquesa e letreiro de neon">
+        <div class="p-body"><span class="p-tag">Tropical</span><h3>Moana</h3><p>Arco de balão coral e turquesa, letreiro de neon e mesa de bolo tropical.</p></div>
+      </article>
+      <article class="portal reveal" data-wa="tema-barbie" data-tema="Barbie" aria-label="Falar no WhatsApp sobre o tema Barbie">
+        <img src="fotos/foto06.jpg" loading="lazy" decoding="async" alt="Cenário Barbie com arco gigante de balões rosa, bola de espelho e casinha da Barbie">
+        <div class="p-body"><span class="p-tag">Glam</span><h3>Barbie</h3><p>Arco gigante de balões pink, bola de espelho, cerejeiras e a casinha da Barbie.</p></div>
+      </article>
+      <article class="portal reveal" data-wa="tema-belaefera" data-tema="Bela e a Fera" aria-label="Falar no WhatsApp sobre o tema Bela e a Fera">
+        <img src="fotos/foto08.jpg" loading="lazy" decoding="async" alt="Cenário Bela e a Fera com estátuas dos personagens, rosas vermelhas e backdrop dourado">
+        <div class="p-body"><span class="p-tag">Encanto</span><h3>Bela e a Fera</h3><p>Estátuas da Bela e da Fera, rosas vermelhas e backdrop dourado de conto de fadas.</p></div>
+      </article>
+    </div>
+  </div>
+  <div class="wrap"><div class="universo-cta reveal">
+    <a class="btn btn-primary" href="#wa-tema" data-wa="tema-geral">✨ Quero esse tema pra festa do meu filho</a>
+  </div></div>
+</section>
+
+<!-- PARQUE -->
+<section class="parque-sec pad" id="parque">
+  <div class="wrap">
+    <div class="parque-grid">
+      <div class="parque-copy reveal">
+        <span class="badge-line">🎢 O diferencial que nenhum buffet do bairro tem</span>
+        <h2>O parque que mora dentro do buffet.</h2>
+        <p>Sem contratar recreação externa, sem sair do prédio. Enquanto o cenário encanta, a criançada anda de brinquedo de parque de verdade — com estrutura, cinto e adrenalina.</p>
+        <ul class="toy-list">
+          <li><span class="tic">🚗</span><span><b>Carrinho bate-bate & arcade</b><span>Pista de carrinhos giratórios e máquinas de game para não parar nunca.</span></span></li>
+          <li><span class="tic">🫧</span><span><b>Piscina de bolinhas</b><span>Espaço protegido com rede, seguro para os pequenos brincarem à vontade.</span></span></li>
+          <li><span class="tic">🎡</span><span><b>Brinquedo radical (torre/pêndulo)</b><span>Assentos com cinto de segurança amarelo — a atração dos maiores, dentro do salão.</span></span></li>
+        </ul>
+        <a class="btn btn-primary" href="#wa-parque" data-wa="parque">🎢 Quero incluir o parque na festa</a>
+      </div>
+      <div class="parque-photos reveal">
+        <figure class="tall"><img src="fotos/foto07.jpg" loading="lazy" decoding="async" alt="Brinquedo radical tipo torre com assentos amarelos e cinto de segurança dentro do buffet"><figcaption>Brinquedo radical</figcaption></figure>
+        <figure><img src="fotos/foto04.jpg" loading="lazy" decoding="async" alt="Piscina de bolinhas com rede de proteção e criança brincando"><figcaption>Piscina de bolinhas</figcaption></figure>
+        <figure><img src="fotos/foto02.jpg" loading="lazy" decoding="async" alt="Área de arcade com carrinhos giratórios e máquina de game de futebol"><figcaption>Carrinhos & arcade</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="proof-sec pad" id="depoimentos">
+  <div class="proof-bg"><img src="fotos/foto06.jpg" loading="lazy" decoding="async" alt="Cenário Barbie ao fundo em tons quentes"></div>
+  <div class="proof-inner wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">O que as famílias dizem</span>
+      <h2>Prova social que já vende por nós.</h2>
+    </div>
+    <div class="score-band reveal">
+      <div class="score-item">
+        <div class="num g" data-count="4.4" data-decimals="1">4,4</div>
+        <div class="score-stars">★★★★☆</div>
+        <div class="lbl">Nota no Google</div>
+      </div>
+      <div class="score-div"></div>
+      <div class="score-item">
+        <div class="num c" data-count="1332">1.332</div>
+        <div class="lbl">Avaliações reais</div>
+      </div>
+      <div class="score-div"></div>
+      <div class="score-item">
+        <div class="num g">7</div>
+        <div class="lbl">Dias por semana</div>
+      </div>
+    </div>
+    <div class="testi-grid">
+      <article class="testi reveal">
+        <div class="qmark">“</div>
+        <p>Desde o fechamento do contrato até o final da festa fomos muito bem atendidos, com atenção, carinho e muito profissionalismo. A comida estava maravilhosa, o bolo perfeito e os salgados simplesmente deliciosos — ainda ganhamos um kit festa para levar para casa.</p>
+        <div class="who"><span class="av" style="background:var(--pink)">B</span><span><b>Bruna Araujo</b><span>★★★★★</span></span></div>
+      </article>
+      <article class="testi reveal">
+        <div class="qmark">“</div>
+        <p>Salão ótimo, comida excelente e funcionários muito educados, em especial a gerente Meire, me deu total suporte em todo o decorrer do evento. Aconselho pegar o menu dileto — meus convidados saíram só elogiando a comida.</p>
+        <div class="who"><span class="av" style="background:var(--cyan)">G</span><span><b>Gabrielly Souza</b><span>★★★★★</span></span></div>
+      </article>
+      <article class="testi reveal">
+        <div class="qmark">“</div>
+        <p>Espaço maravilhoso, meus convidados amaram e minha filha aproveitou muito a festinha dela! A Meire que estava a todo tempo me auxiliando, a Maria, o Gabriel, e o palhaço Thiago que foi maravilhoso!! Recomendo a todos.</p>
+        <div class="who"><span class="av" style="background:var(--gold)">R</span><span><b>Rosemeire Oliveira</b><span>★★★★★</span></span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CARDÁPIO -->
+<section class="menu-sec pad" id="cardapio">
+  <div class="wrap">
+    <div class="menu-grid">
+      <div class="reveal">
+        <span class="eyebrow">Cardápio & diferenciais</span>
+        <h2>Escolha o nível. A prova social já recomenda o upgrade.</h2>
+        <p class="lead">São opções para todo bolso — mas quem quer convidado saindo só elogiando já sabe qual pedir. Não é a gente que diz: são as próprias mães nas avaliações.</p>
+        <div class="tiers">
+          <div class="tier reveal">
+            <h3>🍔 Cardápio essencial</h3>
+            <p>A base bem-feita para uma festa gostosa e tranquila, dentro do orçamento.</p>
+          </div>
+          <div class="tier featured reveal">
+            <span class="rec">Recomendado pelas mães</span>
+            <h3>⭐ Menu Dileto</h3>
+            <p>O nível premium: mais variedade, mais fartura, do início ao fim da festa.</p>
+            <div class="quote">"Aconselho pegar o menu dileto, meus convidados saíram só elogiando a comida." — Gabrielly Souza</div>
+          </div>
+        </div>
+        <div class="perks">
+          <span class="perk">🎁 Kit-festa para levar pra casa</span>
+          <span class="perk">🎯 Coordenação de evento dedicada</span>
+          <span class="perk">🤡 Animação com recreador</span>
+          <span class="perk">🪑 Estrutura para grupos grandes</span>
+        </div>
+      </div>
+      <div class="menu-photo reveal">
+        <img src="fotos/foto03.jpg" loading="lazy" decoding="async" alt="Mesa posta com forração elegante no cenário Safari Disney do Buffet Iupiii Premium">
+        <div class="float"><b>Mesa posta, do jeito que os pais elogiam</b>Forração temática, bolo perfeito e salgados que somem — a parte da festa que mais aparece nas avaliações.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL -->
+<section class="local-sec pad" id="local">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Onde a festa acontece</span>
+      <h2>Vila Giordano, São Paulo — aberto todo dia.</h2>
+      <p>Este é o endereço da <b>Unidade 1</b>. Funcionamos de segunda a domingo — inclusive no domingo, quando quase todo buffet fecha.</p>
+    </div>
+    <div class="local-grid">
+      <div class="card-dark reveal">
+        <h3>📍 Endereço & contato</h3>
+        <div class="addr-lines">
+          <div class="row"><span class="ic">🏠</span><span><b>R. Pascoal Daniel, 80</b><span>Vila Giordano, São Paulo - SP · CEP 08020-370</span></span></div>
+          <div class="row"><span class="ic">📞</span><span><b>+55 11 94743-4360</b><span>WhatsApp e telefone para reservas e dúvidas</span></span></div>
+          <div class="row"><span class="ic">🏷️</span><span><b>Unidade 1 · Vila Giordano</b><span>Confira o endereço ao buscar no Google para não confundir unidades.</span></span></div>
+        </div>
+        <a class="map-btn" href="https://maps.google.com/?cid=5503105870486997059" target="_blank" rel="noopener">🗺️ Abrir no Google Maps</a>
+      </div>
+      <div class="card-dark reveal">
+        <h3>🕒 Horários de funcionamento</h3>
+        <ul class="hours">
+          <li><b>Segunda a sexta</b><span>11h – 19h</span></li>
+          <li><b>Sábado</b><span>10h – 19h</span></li>
+          <li class="hl"><b>Domingo <span class="tag-sun">Diferencial</span></b><span>10h – 15h</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final-sec" id="final">
+  <div class="final-bg"><img src="fotos/foto07.jpg" loading="lazy" decoding="async" alt="Brinquedo radical e área de festa do Buffet Iupiii Premium"></div>
+  <div class="final-inner reveal">
+    <span class="pill">📅 Fins de semana fecham rápido</span>
+    <h2>Garanta a data antes que <span class="neon">o sábado dele</span> seja de outro.</h2>
+    <p>Fala agora com a nossa equipe, veja as datas livres e monte a festa que o seu filho vai lembrar pra sempre.</p>
+    <div class="final-actions">
+      <a class="btn btn-primary" href="#wa-final" data-wa="final">📅 Verificar datas disponíveis</a>
+      <a class="btn btn-ghost" href="tel:+5511947434360">📞 Ligar: (11) 94743-4360</a>
+    </div>
+    <div class="final-phone">Atendimento de segunda a domingo · Unidade 1 — Vila Giordano</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="dot">🎈</span><span>Iupiii Premium<small>Unidade 1 · Vila Giordano</small></span></a>
+    <div class="fnav">
+      <a href="#universos">Universos</a>
+      <a href="#parque">O parque</a>
+      <a href="#depoimentos">Avaliações</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#local">Onde estamos</a>
+    </div>
+    <p>R. Pascoal Daniel, 80 · Vila Giordano · São Paulo - SP · 08020-370 · (11) 94743-4360</p>
+    <p>Nota 4,4 com 1.332 avaliações no Google · Aberto de segunda a domingo</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg class="waic" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.5 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 .9-4.8-.3-.4C5.4 18.6 5 16.8 5 15 5 9 9.9 4.1 16 4.1S27 9 27 15 22.1 24.8 16 24.8zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.6-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2 2.2.9 3 1 4.1.9.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5z"/></svg>
+  <span class="txt">Falar no WhatsApp</span>
+</a>
+
+<script>
+(function(){
+  var WA="5511947434360";
+  var messages={
+    hero:"Oi! Vi o site do Iupiii Premium (Unidade 1) e quero saber datas disponíveis e valores para a festa do meu filho(a). Pode me ajudar?",
+    "tema-geral":"Oi! Vi os cenários no site do Iupiii Premium (Unidade 1) e quero saber como fica um tema pra festa do meu filho(a). Pode me passar mais detalhes?",
+    parque:"Oi! Vi que vocês têm brinquedo de parque dentro do buffet (bate-bate, piscina de bolinhas, brinquedo radical). Quero saber como incluir isso na festa.",
+    final:"Oi! Quero verificar a disponibilidade de datas de sábado/domingo no Iupiii Premium (Unidade 1) para a festa do meu filho(a).",
+    float:"Oi! Vi o site do Iupiii Premium (Unidade 1) e quero falar sobre a festa do meu filho(a)."
+  };
+  function link(key,tema){
+    var msg = messages[key];
+    if(!msg && tema){ msg = "Oi! Vi o cenário de "+tema+" no site e quero saber como fica pra festa do meu filho(a). Pode me passar mais detalhes?"; }
+    if(!msg){ msg = messages.float; }
+    return "https://wa.me/"+WA+"?text="+encodeURIComponent(msg);
+  }
+  // wire float
+  document.getElementById('waFloat').href = link('float');
+  // wire all data-wa triggers
+  document.querySelectorAll('[data-wa]').forEach(function(el){
+    var key = el.getAttribute('data-wa');
+    var tema = el.getAttribute('data-tema');
+    var k = (key && messages[key]) ? key : (key||'float');
+    var url = link(k, tema);
+    if(el.tagName === 'A'){
+      el.setAttribute('href', url);
+      el.setAttribute('target','_blank'); el.setAttribute('rel','noopener');
+    } else {
+      // non-anchor (theme cards): make it a real, keyboard-accessible link
+      el.setAttribute('role','link');
+      el.setAttribute('tabindex','0');
+      var open=function(){ window.open(url,'_blank','noopener'); };
+      el.addEventListener('click',open);
+      el.addEventListener('keydown',function(ev){
+        if(ev.key==='Enter' || ev.key===' '){ ev.preventDefault(); open(); }
+      });
+    }
+  });
+
+  // nav scrolled state
+  var nav=document.getElementById('nav');
+  var onScroll=function(){ nav.classList.toggle('scrolled', window.scrollY>40); };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // hero parallax
+  if(!reduce){
+    var heroImg=document.getElementById('heroImg');
+    window.addEventListener('scroll',function(){
+      var y=window.scrollY;
+      if(y<800){ heroImg.style.transform='translateY('+(y*0.18)+'px) translateZ(0)'; }
+    },{passive:true});
+  }
+
+  // reveal on scroll
+  var revs=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    revs.forEach(function(el){ io.observe(el); });
+  } else { revs.forEach(function(el){ el.classList.add('in'); }); }
+
+  // count-up
+  function animateCount(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    var dec=parseInt(el.getAttribute('data-decimals')||'0',10);
+    var start=null, dur=1400;
+    function fmt(v){
+      if(dec>0) return v.toFixed(dec).replace('.',',');
+      return Math.round(v).toLocaleString('pt-BR');
+    }
+    function step(ts){
+      if(!start) start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var eased=1-Math.pow(1-p,3);
+      el.textContent=fmt(target*eased);
+      if(p<1) requestAnimationFrame(step); else el.textContent=fmt(target);
+    }
+    requestAnimationFrame(step);
+  }
+  var counters=document.querySelectorAll('[data-count]');
+  if('IntersectionObserver' in window && !reduce){
+    var cio=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ animateCount(e.target); cio.unobserve(e.target); } });
+    },{threshold:.6});
+    counters.forEach(function(el){ cio.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
