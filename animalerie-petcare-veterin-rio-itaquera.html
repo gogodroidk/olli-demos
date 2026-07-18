@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animalerie PetCare - Veterinário Itaquera — Pet Shop em Itaquera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --verde: #1E9E77;
+    --verde-escuro: #0F6B52;
+    --azul: #1C7FA6;
+    --turquesa: #22B8AE;
+    --creme: #FBF9F1;
+    --creme-2: #F3F0E4;
+    --texto: #123330;
+    --texto-suave: #4B615D;
+    --branco: #FFFFFF;
+    --whats: #25D366;
+    --whats-escuro: #1DA851;
+    --sombra: 0 12px 30px -12px rgba(15, 60, 50, 0.25);
+    --radius: 22px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--creme);
+    color: var(--texto);
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img, svg, .bloco, .card, .galeria-item{ max-width: 100%; }
+  h1,h2,h3{
+    font-family: 'Fraunces', serif;
+    line-height: 1.12;
+    margin: 0 0 .5em 0;
+    color: var(--texto);
+  }
+  p{ margin: 0 0 1em 0; }
+  a{ text-decoration:none; color:inherit; }
+  .container{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  section{ padding: 64px 0; position: relative; }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    font-size:.75rem;
+    color: var(--verde-escuro);
+    background: rgba(30,158,119,0.1);
+    padding: 7px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+
+  /* ---------- Motion ---------- */
+  .reveal{
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .7s ease, transform .7s ease;
+    will-change: transform, opacity;
+  }
+  .reveal.is-visible{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-1{ transition-delay: .05s; }
+  .reveal-2{ transition-delay: .15s; }
+  .reveal-3{ transition-delay: .25s; }
+  .reveal-4{ transition-delay: .35s; }
+  .reveal-5{ transition-delay: .45s; }
+  .reveal-6{ transition-delay: .55s; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    .reveal{
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    .flutuante-wa{ animation: none !important; }
+    *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
+  }
+
+  /* ---------- Header / Hero ---------- */
+  header.hero{
+    background:
+      radial-gradient(circle at 12% -10%, rgba(34,184,174,0.35), transparent 55%),
+      radial-gradient(circle at 100% 0%, rgba(28,127,166,0.30), transparent 50%),
+      linear-gradient(180deg, #EAF6F1 0%, var(--creme) 75%);
+    padding: 28px 0 56px 0;
+    overflow: hidden;
+  }
+  .topo{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .marca{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size: 1.25rem;
+    color: var(--verde-escuro);
+  }
+  .marca .pata{
+    width: 38px; height: 38px;
+    display:grid; place-items:center;
+    background: var(--verde);
+    border-radius: 12px;
+    font-size: 1.15rem;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size: 1rem;
+    padding: 16px 28px;
+    border-radius: 999px;
+    cursor:pointer;
+    border: none;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .btn:active{ transform: scale(0.97); }
+  .btn-whats{
+    background: var(--whats);
+    color: #ffffff;
+    box-shadow: 0 14px 28px -10px rgba(37,211,102,0.55);
+  }
+  .btn-whats:hover{ transform: translateY(-2px); box-shadow: 0 18px 32px -10px rgba(37,211,102,0.65); }
+  .btn-topo{
+    padding: 10px 18px;
+    font-size: .85rem;
+  }
+
+  .hero-conteudo{
+    display:grid;
+    gap: 28px;
+  }
+  .hero-conteudo h1{
+    font-size: clamp(2.1rem, 6vw, 3.4rem);
+    max-width: 14ch;
+  }
+  .hero-conteudo .sub{
+    font-size: 1.08rem;
+    color: var(--texto-suave);
+    max-width: 46ch;
+  }
+  .hero-cta{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap: 12px;
+  }
+  .hero-nota{
+    font-size: .85rem;
+    color: var(--texto-suave);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .hero-nota .ponto{
+    width:8px; height:8px; border-radius:50%;
+    background: var(--whats);
+    display:inline-block;
+    flex: none;
+  }
+
+  .hero-badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .hero-badges span{
+    background: var(--branco);
+    border: 1px solid rgba(18,51,48,0.08);
+    box-shadow: var(--sombra);
+    padding: 9px 16px;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+
+  /* ---------- Prova social ---------- */
+  .prova-wrap{
+    padding: 40px 0;
+  }
+  .prova-card{
+    background: linear-gradient(135deg, var(--verde-escuro), var(--azul));
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    text-align:center;
+    box-shadow: var(--sombra);
+  }
+  .prova-card .rotulo{
+    font-size: .78rem;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-weight:700;
+    opacity:.85;
+    margin-bottom: 14px;
+  }
+  .prova-card p.frase{
+    font-family:'Fraunces', serif;
+    font-size: clamp(1.15rem, 3.6vw, 1.5rem);
+    font-style: italic;
+    margin: 0;
+    max-width: 56ch;
+    margin-inline:auto;
+  }
+
+  /* ---------- Cards de servicos ---------- */
+  .servicos h2{
+    font-size: clamp(1.7rem, 4.5vw, 2.4rem);
+  }
+  .servicos-intro{
+    max-width: 52ch;
+    color: var(--texto-suave);
+    margin-bottom: 36px;
+  }
+  .cards{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media (min-width: 760px){
+    .cards{ grid-template-columns: repeat(3, 1fr); }
+  }
+  .card{
+    background: var(--branco);
+    border-radius: var(--radius);
+    padding: 30px 26px;
+    box-shadow: var(--sombra);
+    border: 1px solid rgba(18,51,48,0.05);
+    display:flex;
+    flex-direction:column;
+    gap: 14px;
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -14px rgba(15,60,50,0.3);
+  }
+  .card .icone{
+    width: 58px; height: 58px;
+    border-radius: 16px;
+    display:grid; place-items:center;
+    font-size: 1.6rem;
+  }
+  .card:nth-child(1) .icone{ background: rgba(30,158,119,0.15); }
+  .card:nth-child(2) .icone{ background: rgba(28,127,166,0.15); }
+  .card:nth-child(3) .icone{ background: rgba(34,184,174,0.18); }
+  .card h3{ font-size: 1.25rem; margin-bottom: 2px; }
+  .card p{ color: var(--texto-suave); font-size: .95rem; flex-grow:1; }
+  .card .link-card{
+    font-weight: 800;
+    font-size: .88rem;
+    color: var(--verde-escuro);
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+  .card .link-card svg{ width:14px; height:14px; transition: transform .2s ease; }
+  .card:hover .link-card svg{ transform: translateX(3px); }
+
+  /* ---------- Galeria ---------- */
+  .galeria h2{ font-size: clamp(1.7rem, 4.5vw, 2.4rem); }
+  .galeria-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 30px;
+  }
+  @media (min-width: 640px){
+    .galeria-grid{ grid-template-columns: repeat(3, 1fr); }
+  }
+  .galeria-item{
+    aspect-ratio: 1 / 1;
+    border-radius: 18px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap: 8px;
+    color: #fff;
+    font-weight: 700;
+    text-align:center;
+    padding: 10px;
+    box-shadow: var(--sombra);
+    transition: transform .3s ease;
+  }
+  .galeria-item:hover{ transform: scale(1.03); }
+  .galeria-item .emoji{ font-size: 2.1rem; }
+  .galeria-item span.legenda{ font-size: .8rem; opacity: .95; }
+  .g1{ background: linear-gradient(150deg, #1E9E77, #22B8AE); }
+  .g2{ background: linear-gradient(150deg, #1C7FA6, #22B8AE); }
+  .g3{ background: linear-gradient(150deg, #22B8AE, #1E9E77); }
+  .g4{ background: linear-gradient(150deg, #0F6B52, #1C7FA6); }
+  .g5{ background: linear-gradient(150deg, #1C7FA6, #0F6B52); }
+  .g6{ background: linear-gradient(150deg, #22B8AE, #1C7FA6); }
+
+  /* ---------- Depoimento ---------- */
+  .depoimento{
+    background: var(--creme-2);
+  }
+  .depoimento-card{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align:center;
+  }
+  .depoimento-card .aspas{
+    font-family:'Fraunces', serif;
+    font-size: 3.5rem;
+    color: var(--turquesa);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .depoimento-card p.texto{
+    font-family:'Fraunces', serif;
+    font-size: clamp(1.15rem, 3.6vw, 1.5rem);
+    font-style: italic;
+    color: var(--texto);
+  }
+  .depoimento-card .autor{
+    margin-top: 18px;
+    font-weight: 800;
+    color: var(--verde-escuro);
+    font-size: .95rem;
+  }
+
+  /* ---------- CTA final ---------- */
+  .cta-final{
+    background: linear-gradient(135deg, var(--verde-escuro), var(--azul) 60%, var(--turquesa));
+    color: #fff;
+    border-radius: var(--radius);
+    margin: 0 20px;
+    max-width: 1140px;
+    margin-inline:auto;
+    padding: 56px 28px;
+    text-align:center;
+  }
+  .cta-final h2{
+    color:#fff;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    max-width: 20ch;
+    margin-inline:auto;
+  }
+  .cta-final p{
+    color: rgba(255,255,255,0.9);
+    max-width: 44ch;
+    margin-inline:auto;
+    margin-bottom: 28px;
+  }
+  .cta-final .btn-whats{
+    background: #fff;
+    color: var(--verde-escuro);
+    box-shadow: 0 14px 28px -10px rgba(0,0,0,0.25);
+  }
+
+  /* ---------- Rodape ---------- */
+  footer{
+    background: #0E2A27;
+    color: #DCEFEA;
+    padding: 48px 0 110px 0;
+  }
+  .rodape-grid{
+    display:grid;
+    gap: 22px;
+  }
+  @media (min-width: 640px){
+    .rodape-grid{ grid-template-columns: 1.3fr 1fr; align-items:start; }
+  }
+  footer .marca{ color: #fff; margin-bottom: 12px; }
+  footer .marca .pata{ background: var(--turquesa); }
+  footer p{ color: rgba(220,239,234,0.75); font-size: .92rem; }
+  footer .lista{
+    list-style:none;
+    padding:0; margin:0;
+    display:flex; flex-direction:column; gap: 10px;
+    font-size: .92rem;
+  }
+  footer .lista a{
+    color: #DCEFEA;
+    display:inline-flex;
+    gap: 8px;
+    align-items:flex-start;
+  }
+  footer .lista a:hover{ color: var(--turquesa); }
+  footer .copy{
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(220,239,234,0.12);
+    font-size: .78rem;
+    color: rgba(220,239,234,0.5);
+  }
+
+  /* ---------- Botao flutuante WhatsApp ---------- */
+  .flutuante-wa{
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: var(--whats);
+    display:grid;
+    place-items:center;
+    box-shadow: 0 10px 26px -6px rgba(0,0,0,0.4);
+    z-index: 999;
+    animation: pulso 2.6s ease-in-out infinite;
+  }
+  .flutuante-wa svg{ width: 30px; height: 30px; }
+  @keyframes pulso{
+    0%, 100% { box-shadow: 0 10px 26px -6px rgba(0,0,0,0.4), 0 0 0 0 rgba(37,211,102,0.55); }
+    50% { box-shadow: 0 10px 26px -6px rgba(0,0,0,0.4), 0 0 0 12px rgba(37,211,102,0); }
+  }
+
+  ::selection{ background: var(--turquesa); color:#fff; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="topo">
+      <div class="marca">
+        <span class="pata" aria-hidden="true">🐾</span>
+        Animalerie PetCare - Veterinário Itaquera
+      </div>
+      <a href="https://wa.me/551128934983" class="btn btn-whats btn-topo" aria-label="Falar no WhatsApp">
+        WhatsApp
+      </a>
+    </div>
+
+    <div class="hero-conteudo">
+      <div class="reveal reveal-1">
+        <span class="eyebrow">🐶 Pet Shop em Itaquera</span>
+        <h1>Seu pet merece um carinho que vira rotina.</h1>
+        <p class="sub">Banho e tosa, consulta, vacinas em dia, leva-e-traz e a lojinha completa — tudo num só lugar, pertinho de você em Itaquera.</p>
+      </div>
+
+      <div class="hero-cta reveal reveal-2">
+        <a href="https://wa.me/551128934983" class="btn btn-whats">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.04 2c-5.514 0-9.98 4.467-9.98 9.98 0 1.76.462 3.478 1.34 4.994L2 22l5.164-1.354a9.96 9.96 0 0 0 4.876 1.24h.004c5.514 0 9.98-4.467 9.98-9.98A9.98 9.98 0 0 0 12.04 2zm0 18.2h-.003a8.19 8.19 0 0 1-4.183-1.146l-.3-.178-3.066.804.818-2.987-.196-.307a8.18 8.18 0 0 1-1.27-4.406c0-4.523 3.681-8.204 8.208-8.204 2.193 0 4.253.855 5.804 2.406a8.15 8.15 0 0 1 2.402 5.807c0 4.523-3.681 8.211-8.214 8.211z"/></svg>
+          Falar no WhatsApp agora
+        </a>
+        <div class="hero-nota"><span class="ponto"></span> Resposta rápida, sem enrolação.</div>
+      </div>
+
+      <div class="hero-badges reveal reveal-3">
+        <span>🛁 Banho e tosa</span>
+        <span>💉 Vacinas em dia</span>
+        <span>🚐 Leva e traz</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container prova-wrap">
+  <div class="prova-card reveal">
+    <div class="rotulo">O que dizem por aí</div>
+    <p class="frase">⭐ 4,8 · 476 avaliações reais no Google</p>
+  </div>
+</div>
+
+<section class="servicos">
+  <div class="container">
+    <h2 class="reveal">Tudo que seu pet precisa, num só lugar</h2>
+    <p class="servicos-intro reveal reveal-1">Sem precisar rodar a cidade. Cuidado completo, do banho à vacina, com quem trata seu bicho como família.</p>
+
+    <div class="cards">
+      <div class="card reveal reveal-1">
+        <div class="icone">🛁</div>
+        <h3>Banho & Tosa</h3>
+        <p>Banho relaxante, tosa higiênica ou na tesoura, hidratação e aquele perfuminho gostoso. Seu pet sai de aqui outro bicho.</p>
+        <a href="https://wa.me/551128934983" class="link-card">Agendar pelo WhatsApp
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="card reveal reveal-2">
+        <div class="icone">🩺</div>
+        <h3>Consulta & Vacinas</h3>
+        <p>Check-up completo, vacinas sempre em dia e um papo honesto sobre a saúde do seu pet — sem sustos na hora de pagar.</p>
+        <a href="https://wa.me/551128934983" class="link-card">Marcar consulta
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="card reveal reveal-3">
+        <div class="icone">🚐</div>
+        <h3>Leva e Traz + Lojinha</h3>
+        <p>Buscamos e devolvemos seu pet em casa, e você ainda sai daqui com ração, petiscos e tudo que ele precisa.</p>
+        <a href="https://wa.me/551128934983" class="link-card">Chamar leva e traz
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="container">
+    <h2 class="reveal">Um gostinho do que rola por aqui</h2>
+    <div class="galeria-grid">
+      <div class="galeria-item g1 reveal reveal-1"><span class="emoji">🛁</span><span class="legenda">Banho relaxante</span></div>
+      <div class="galeria-item g2 reveal reveal-2"><span class="emoji">✂️</span><span class="legenda">Tosa na tesoura</span></div>
+      <div class="galeria-item g3 reveal reveal-3"><span class="emoji">💉</span><span class="legenda">Vacinas em dia</span></div>
+      <div class="galeria-item g4 reveal reveal-4"><span class="emoji">🩺</span><span class="legenda">Consulta completa</span></div>
+      <div class="galeria-item g5 reveal reveal-5"><span class="emoji">🚐</span><span class="legenda">Leva e traz</span></div>
+      <div class="galeria-item g6 reveal reveal-6"><span class="emoji">🦴</span><span class="legenda">Lojinha & produtos</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="depoimento">
+  <div class="container">
+    <div class="depoimento-card reveal">
+      <div class="aspas" aria-hidden="true">"</div>
+      <p class="texto">Deixo minha cachorra pela manhã e busco ela linda, cheirosa e tranquila. Virou parte da nossa rotina — e ela adora vir.</p>
+      <div class="autor">Ana, tutora de pet</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-wrap">
+  <div class="container">
+    <div class="cta-final reveal">
+      <h2>Vamos cuidar do seu melhor amigo?</h2>
+      <p>Fale agora no WhatsApp e garanta um horário de banho, tosa ou consulta ainda essa semana.</p>
+      <a href="https://wa.me/551128934983" class="btn btn-whats">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.04 2c-5.514 0-9.98 4.467-9.98 9.98 0 1.76.462 3.478 1.34 4.994L2 22l5.164-1.354a9.96 9.96 0 0 0 4.876 1.24h.004c5.514 0 9.98-4.467 9.98-9.98A9.98 9.98 0 0 0 12.04 2zm0 18.2h-.003a8.19 8.19 0 0 1-4.183-1.146l-.3-.178-3.066.804.818-2.987-.196-.307a8.18 8.18 0 0 1-1.27-4.406c0-4.523 3.681-8.204 8.208-8.204 2.193 0 4.253.855 5.804 2.406a8.15 8.15 0 0 1 2.402 5.807c0 4.523-3.681 8.211-8.214 8.211z"/></svg>
+        Quero agendar agora
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="rodape-grid">
+      <div>
+        <div class="marca">
+          <span class="pata" aria-hidden="true">🐾</span>
+          Animalerie PetCare - Veterinário Itaquera
+        </div>
+        <p>Pet Shop em Itaquera. Cuidado de verdade para o seu melhor amigo, todos os dias.</p>
+      </div>
+      <ul class="lista">
+        <li><a href="https://maps.google.com/?cid=12663776222770877258&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">📍 Av. Maria Luiza Americano, 1987 - Cidade Líder, São Paulo - SP, 08275-000</a></li>
+        <li><a href="tel:(11) 2893-4983">📞 (11) 2893-4983</a></li>
+        <li><a href="https://wa.me/551128934983">💬 Chamar no WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="copy">© Animalerie PetCare - Veterinário Itaquera — todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/551128934983" class="flutuante-wa" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.04 2c-5.514 0-9.98 4.467-9.98 9.98 0 1.76.462 3.478 1.34 4.994L2 22l5.164-1.354a9.96 9.96 0 0 0 4.876 1.24h.004c5.514 0 9.98-4.467 9.98-9.98A9.98 9.98 0 0 0 12.04 2zm0 18.2h-.003a8.19 8.19 0 0 1-4.183-1.146l-.3-.178-3.066.804.818-2.987-.196-.307a8.18 8.18 0 0 1-1.27-4.406c0-4.523 3.681-8.204 8.208-8.204 2.193 0 4.253.855 5.804 2.406a8.15 8.15 0 0 1 2.402 5.807c0 4.523-3.681 8.211-8.214 8.211z"/></svg>
+</a>
+
+<script>
+  (function(){
+    var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var itens = document.querySelectorAll('.reveal');
+    if(prefersReduced || !('IntersectionObserver' in window)){
+      itens.forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    itens.forEach(function(el){ obs.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
