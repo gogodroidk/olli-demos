@@ -1,686 +1,229 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buffet Iupiii Premium - Unidade 1 — Serviços em São Miguel Paulista</title>
-<meta name="description" content="Serviços em São Miguel Paulista. Decoração, buffet e recreação completos para a festa infantil dos sonhos. Fale agora no WhatsApp.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%89%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --roxo-950:#2c1745;
-    --roxo-800:#432269;
-    --roxo-700:#5a2f8a;
-    --roxo-600:#7137a6;
-    --rosa-500:#e0559e;
-    --rosa-400:#ef83b8;
-    --rosa-100:#fdeaf3;
-    --dourado-600:#c9932e;
-    --dourado-500:#dba63f;
-    --dourado-300:#f0cd7e;
-    --creme:#fbf6ef;
-    --branco:#ffffff;
-    --tinta:#2a1b3d;
-    --tinta-suave:#6a5a7f;
-    --linha:#ece1d8;
-    --sombra: 0 20px 45px -20px rgba(44,23,69,.35);
-    --raio-xl: 28px;
-    --raio-lg: 20px;
-    --raio-md: 14px;
-  }
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Adaptado como demo tokenizada para buffet infantil / casa de festas.
+-->
+<html>
+	<head>
+		<title>Buffet Iupiii Premium - Unidade 1 | Buffet Infantil em São Miguel Paulista</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://gogodroidk.github.io/olli-demos/_t/forty/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="https://gogodroidk.github.io/olli-demos/_t/forty/assets/css/noscript.css" /></noscript>
+		<style>
+			.whatsapp-float {
+				position: fixed;
+				right: 1.5em;
+				bottom: 1.5em;
+				width: 3.75em;
+				height: 3.75em;
+				background: #25d366;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.35);
+				z-index: 10001;
+				text-decoration: none;
+				transition: transform 0.2s ease;
+			}
+			.whatsapp-float:hover {
+				transform: scale(1.08);
+			}
+			.whatsapp-float .icon:before {
+				color: #ffffff;
+				font-size: 1.8em;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-  *,*::before,*::after{ box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
-  @media (prefers-reduced-motion: reduce){
-    html{ scroll-behavior:auto; }
-  }
-  body{
-    margin:0;
-    font-family:'Manrope',system-ui,-apple-system,sans-serif;
-    color:var(--tinta);
-    background:var(--creme);
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  img,svg{ max-width:100%; display:block; }
-  a{ color:inherit; text-decoration:none; }
-  h1,h2,h3{
-    font-family:'Fraunces',Georgia,serif;
-    line-height:1.08;
-    margin:0 0 .5em;
-    letter-spacing:-.01em;
-  }
-  p{ margin:0 0 1em; }
-  ul{ margin:0; padding:0; list-style:none; }
-  .container{
-    width:100%;
-    max-width:1140px;
-    margin:0 auto;
-    padding:0 20px;
-  }
-  section{ position:relative; }
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-  /* ---------- Faixa topo ---------- */
-  .faixa-topo{
-    background:var(--roxo-950);
-    color:var(--dourado-300);
-    text-align:center;
-    font-size:.82rem;
-    font-weight:600;
-    padding:9px 16px;
-    letter-spacing:.01em;
-  }
-  .faixa-topo a{ color:var(--branco); text-decoration:underline; text-underline-offset:2px; }
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="#" class="logo"><strong>Buffet Iupiii Premium - Unidade 1</strong> <span>Serviços</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
 
-  /* ---------- HERO ---------- */
-  .hero{
-    background:
-      radial-gradient(circle at 15% 15%, rgba(219,166,63,.35), transparent 45%),
-      radial-gradient(circle at 85% 10%, rgba(224,85,158,.45), transparent 50%),
-      linear-gradient(165deg, var(--roxo-950) 10%, var(--roxo-700) 55%, var(--rosa-500) 130%);
-    color:var(--branco);
-    padding:56px 0 72px;
-    overflow:hidden;
-  }
-  .hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background-image:
-      radial-gradient(circle, rgba(255,255,255,.5) 1.5px, transparent 1.6px);
-    background-size:26px 26px;
-    opacity:.08;
-    pointer-events:none;
-  }
-  .hero-inner{
-    position:relative;
-    z-index:1;
-    text-align:center;
-    max-width:640px;
-    margin:0 auto;
-  }
-  .eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.28);
-    color:var(--dourado-300);
-    font-weight:700;
-    font-size:.78rem;
-    letter-spacing:.03em;
-    text-transform:uppercase;
-    padding:8px 16px;
-    border-radius:999px;
-    margin-bottom:22px;
-    backdrop-filter:blur(2px);
-  }
-  .hero h1{
-    font-size:clamp(2.1rem, 7vw, 3.4rem);
-    font-weight:700;
-    color:var(--branco);
-  }
-  .hero h1 em{
-    font-style:italic;
-    color:var(--dourado-300);
-  }
-  .hero .sub{
-    font-size:clamp(1rem, 3.4vw, 1.2rem);
-    color:rgba(255,255,255,.88);
-    max-width:520px;
-    margin:0 auto 30px;
-  }
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    font-family:'Manrope',sans-serif;
-    font-weight:800;
-    font-size:1.02rem;
-    padding:17px 30px;
-    border-radius:999px;
-    cursor:pointer;
-    border:none;
-    transition:transform .25s ease, box-shadow .25s ease;
-    line-height:1;
-  }
-  .btn svg{ width:22px; height:22px; flex-shrink:0; }
-  .btn-primary{
-    background:linear-gradient(120deg, var(--dourado-500), var(--rosa-500));
-    color:var(--roxo-950);
-    box-shadow:0 14px 30px -10px rgba(219,166,63,.55);
-  }
-  .btn-primary:hover{ transform:translateY(-3px); box-shadow:0 18px 34px -8px rgba(219,166,63,.65); }
-  .btn-primary:active{ transform:translateY(0); }
-  .btn-ghost-light{
-    background:rgba(255,255,255,.1);
-    color:var(--branco);
-    border:1.5px solid rgba(255,255,255,.5);
-  }
-  .btn-ghost-light:hover{ background:rgba(255,255,255,.2); transform:translateY(-2px); }
-  .hero-note{
-    margin-top:16px;
-    font-size:.85rem;
-    color:rgba(255,255,255,.72);
-    font-weight:600;
-  }
-  .hero-emojis{
-    margin-top:34px;
-    font-size:1.6rem;
-    letter-spacing:.3em;
-    opacity:.9;
-  }
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="#banner">Início</a></li>
+							<li><a href="#one">Pacotes de Festa</a></li>
+							<li><a href="#two">Por que a Buffet Iupiii Premium - Unidade 1</a></li>
+							<li><a href="#contact">Contato</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="https://wa.me/5511947434360" class="button primary fit">Falar no WhatsApp</a></li>
+							<li><a href="https://maps.google.com/?cid=5503105870486997059&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" class="button fit">Ver Endereço</a></li>
+						</ul>
+					</nav>
 
-  /* ---------- PROVA SOCIAL ---------- */
-  .prova-social{
-    margin-top:-40px;
-    position:relative;
-    z-index:2;
-    padding:0 0 10px;
-  }
-  .prova-card{
-    background:var(--branco);
-    border:1px solid var(--linha);
-    border-radius:var(--raio-lg);
-    box-shadow:var(--sombra);
-    max-width:760px;
-    margin:0 auto;
-    padding:22px 26px;
-    display:flex;
-    align-items:center;
-    gap:16px;
-    text-align:left;
-  }
-  .prova-icon{
-    font-size:1.8rem;
-    flex-shrink:0;
-    background:var(--rosa-100);
-    width:52px;
-    height:52px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .prova-card p{
-    margin:0;
-    font-weight:700;
-    color:var(--roxo-800);
-    font-size:.98rem;
-    line-height:1.4;
-  }
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>Buffet Iupiii Premium - Unidade 1</h1>
+							</header>
+							<div class="content">
+								<p>O Serviços completo para a festa do seu filho em São Miguel Paulista.<br />
+								Decoração, recreação e buffet prontos — você só chega e aproveita.</p>
+								<ul class="actions">
+									<li><a href="#one" class="button next scrolly">Ver Pacotes</a></li>
+									<li><a href="https://wa.me/5511947434360" class="button primary" target="_blank">Falar no WhatsApp</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
 
-  /* ---------- SEÇÃO GENÉRICA ---------- */
-  .secao{ padding:64px 0; }
-  .secao-head{
-    text-align:center;
-    max-width:600px;
-    margin:0 auto 40px;
-  }
-  .kicker{
-    display:inline-block;
-    color:var(--rosa-500);
-    font-weight:800;
-    font-size:.78rem;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    margin-bottom:10px;
-  }
-  .secao-head h2{
-    font-size:clamp(1.7rem, 5vw, 2.3rem);
-    color:var(--roxo-950);
-  }
-  .secao-head p{
-    color:var(--tinta-suave);
-    font-size:1.02rem;
-  }
+				<!-- Main -->
+					<div id="main">
 
-  /* ---------- PACOTES ---------- */
-  .pacotes-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:22px;
-  }
-  .pacote-card{
-    background:var(--branco);
-    border:1px solid var(--linha);
-    border-radius:var(--raio-xl);
-    padding:30px 26px 26px;
-    box-shadow:var(--sombra);
-    display:flex;
-    flex-direction:column;
-    transition:transform .3s ease, box-shadow .3s ease;
-  }
-  .pacote-card:hover{ transform:translateY(-6px); box-shadow:0 26px 50px -18px rgba(44,23,69,.32); }
-  .pacote-card.destaque{
-    border:2px solid var(--dourado-500);
-    background:linear-gradient(180deg, var(--rosa-100), var(--branco) 40%);
-    position:relative;
-  }
-  .selo{
-    position:absolute;
-    top:-14px;
-    left:50%;
-    transform:translateX(-50%);
-    background:linear-gradient(120deg,var(--dourado-500),var(--rosa-500));
-    color:var(--branco);
-    font-size:.72rem;
-    font-weight:800;
-    letter-spacing:.03em;
-    text-transform:uppercase;
-    padding:6px 16px;
-    border-radius:999px;
-    box-shadow:0 8px 16px -6px rgba(219,166,63,.5);
-    white-space:nowrap;
-  }
-  .pacote-emoji{
-    font-size:2.4rem;
-    margin-bottom:14px;
-  }
-  .pacote-card h3{
-    font-size:1.4rem;
-    color:var(--roxo-950);
-    margin-bottom:8px;
-  }
-  .pacote-card > p{
-    color:var(--tinta-suave);
-    font-size:.95rem;
-  }
-  .pacote-lista{
-    margin:14px 0 22px;
-    flex-grow:1;
-  }
-  .pacote-lista li{
-    display:flex;
-    gap:10px;
-    align-items:flex-start;
-    font-size:.92rem;
-    color:var(--tinta);
-    padding:6px 0;
-  }
-  .pacote-lista li::before{
-    content:"✓";
-    color:var(--dourado-600);
-    font-weight:800;
-    flex-shrink:0;
-  }
-  .btn-card{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    background:var(--roxo-950);
-    color:var(--branco);
-    font-weight:700;
-    font-size:.92rem;
-    padding:13px 20px;
-    border-radius:999px;
-    transition:transform .25s ease, background .25s ease;
-  }
-  .btn-card:hover{ background:var(--roxo-700); transform:translateY(-2px); }
-  .btn-card svg{ width:17px; height:17px; }
+						<!-- One -->
+							<section id="one" class="tiles">
+								<article>
+									<span class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/forty/images/pic01.jpg" alt="Serviços Buffet Iupiii Premium - Unidade 1" />
+									</span>
+									<header class="major">
+										<h3><a href="https://wa.me/5511947434360" target="_blank" class="link">Pacote Completo</a></h3>
+										<p>Decoração, recreação e buffet num combo só</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/forty/images/pic02.jpg" alt="Serviços Buffet Iupiii Premium - Unidade 1" />
+									</span>
+									<header class="major">
+										<h3><a href="https://wa.me/5511947434360" target="_blank" class="link">Espaço Kids</a></h3>
+										<p>Brinquedos, cama elástica e piscina de bolinhas</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/forty/images/pic03.jpg" alt="Serviços Buffet Iupiii Premium - Unidade 1" />
+									</span>
+									<header class="major">
+										<h3><a href="https://wa.me/5511947434360" target="_blank" class="link">Recreação e Monitores</a></h3>
+										<p>Equipe treinada cuidando da criançada o tempo todo</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/forty/images/pic04.jpg" alt="Serviços Buffet Iupiii Premium - Unidade 1" />
+									</span>
+									<header class="major">
+										<h3><a href="https://wa.me/5511947434360" target="_blank" class="link">Buffet e Doces</a></h3>
+										<p>Salgados, docinhos e bolo personalizado</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/forty/images/pic05.jpg" alt="Serviços Buffet Iupiii Premium - Unidade 1" />
+									</span>
+									<header class="major">
+										<h3><a href="https://wa.me/5511947434360" target="_blank" class="link">Temas Personalizados</a></h3>
+										<p>O tema favorito do seu filho em grande estilo</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/forty/images/pic06.jpg" alt="Serviços Buffet Iupiii Premium - Unidade 1" />
+									</span>
+									<header class="major">
+										<h3><a href="https://wa.me/5511947434360" target="_blank" class="link">Fotos e Lembrancinhas</a></h3>
+										<p>Registro da festa e mimos para os convidados</p>
+									</header>
+								</article>
+							</section>
 
-  /* ---------- GALERIA ---------- */
-  .galeria-secao{ background:var(--roxo-950); }
-  .galeria-secao .secao-head h2{ color:var(--branco); }
-  .galeria-secao .secao-head p{ color:rgba(255,255,255,.72); }
-  .galeria-secao .kicker{ color:var(--dourado-300); }
-  .galeria-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:14px;
-  }
-  .galeria-item{
-    width:100%;
-    max-width:100%;
-    aspect-ratio:1/1;
-    border-radius:var(--raio-md);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    text-align:center;
-    padding:14px;
-    color:var(--branco);
-    position:relative;
-    overflow:hidden;
-    box-shadow:0 14px 26px -12px rgba(0,0,0,.4);
-  }
-  .galeria-item .emoji{ font-size:2.3rem; }
-  .galeria-item .legenda{
-    font-size:.78rem;
-    font-weight:700;
-    letter-spacing:.01em;
-  }
-  .g1{ background:linear-gradient(150deg, var(--roxo-600), var(--rosa-500)); }
-  .g2{ background:linear-gradient(150deg, var(--rosa-500), var(--dourado-500)); }
-  .g3{ background:linear-gradient(150deg, var(--dourado-600), var(--roxo-700)); }
-  .g4{ background:linear-gradient(150deg, var(--roxo-800), var(--rosa-400)); }
-  .g5{ background:linear-gradient(150deg, var(--rosa-400), var(--roxo-600)); }
-  .g6{ background:linear-gradient(150deg, var(--dourado-500), var(--roxo-950)); }
+						<!-- Two -->
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2>Por que escolher a Buffet Iupiii Premium - Unidade 1</h2>
+									</header>
+									<p>Há anos realizando festas inesquecíveis em São Miguel Paulista, a Buffet Iupiii Premium - Unidade 1 cuida de tudo: decoração, recreação, buffet e limpeza. Você e sua família só precisam chegar e aproveitar o dia — sem estresse, sem correria, sem imprevisto.</p>
+									<blockquote>⭐ 4,4 · 1332 avaliações reais no Google</blockquote>
+									<ul class="actions">
+										<li><a href="https://wa.me/5511947434360" class="button next" target="_blank">Quero Reservar Minha Data</a></li>
+									</ul>
+								</div>
+							</section>
 
-  /* ---------- DEPOIMENTO ---------- */
-  .depoimento-secao{ background:var(--rosa-100); }
-  .depoimento-card{
-    max-width:680px;
-    margin:0 auto;
-    text-align:center;
-    padding:0 8px;
-  }
-  .aspas{
-    font-family:'Fraunces',serif;
-    font-size:3.2rem;
-    color:var(--dourado-500);
-    line-height:1;
-    margin-bottom:6px;
-  }
-  .depoimento-card p.texto{
-    font-family:'Fraunces',serif;
-    font-size:clamp(1.05rem, 3.6vw, 1.35rem);
-    font-style:italic;
-    color:var(--roxo-950);
-    line-height:1.5;
-  }
-  .depoimento-autor{
-    font-family:'Manrope',sans-serif;
-    font-weight:700;
-    font-size:.88rem;
-    color:var(--tinta-suave);
-    font-style:normal;
-  }
+					</div>
 
-  /* ---------- CTA FINAL ---------- */
-  .cta-final{
-    background:
-      radial-gradient(circle at 20% 20%, rgba(219,166,63,.4), transparent 45%),
-      radial-gradient(circle at 80% 80%, rgba(224,85,158,.45), transparent 50%),
-      linear-gradient(160deg, var(--roxo-950), var(--roxo-700));
-    color:var(--branco);
-    text-align:center;
-    padding:64px 0;
-  }
-  .cta-final h2{
-    color:var(--branco);
-    font-size:clamp(1.8rem, 6vw, 2.6rem);
-    max-width:600px;
-    margin:0 auto .4em;
-  }
-  .cta-final p{
-    color:rgba(255,255,255,.85);
-    max-width:480px;
-    margin:0 auto 28px;
-    font-size:1.02rem;
-  }
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<header class="major">
+									<h2>Vamos planejar a festa do seu filho?</h2>
+								</header>
+								<p>Fale agora com a nossa equipe pelo WhatsApp e receba um orçamento na hora, sem compromisso.</p>
+								<ul class="actions">
+									<li><a href="https://wa.me/5511947434360" target="_blank" class="button primary large">Falar no WhatsApp</a></li>
+								</ul>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon brands alt fa-whatsapp"></span>
+										<h3>WhatsApp</h3>
+										<a href="https://wa.me/5511947434360" target="_blank">(11) 94743-4360</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-map-marker-alt"></span>
+										<h3>Endereço</h3>
+										<a href="https://maps.google.com/?cid=5503105870486997059&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank">R. Pascoal Daniel, 80 - Vila Giordano, São Paulo - SP, 08020-370</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-birthday-cake"></span>
+										<h3>Atendimento</h3>
+										<span>São Miguel Paulista e região</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
 
-  /* ---------- RODAPÉ ---------- */
-  footer{
-    background:var(--roxo-950);
-    color:rgba(255,255,255,.75);
-    padding:40px 0 100px;
-    text-align:center;
-    border-top:1px solid rgba(255,255,255,.08);
-  }
-  footer .marca{
-    font-family:'Fraunces',serif;
-    font-weight:700;
-    font-size:1.3rem;
-    color:var(--branco);
-    margin-bottom:10px;
-  }
-  footer .linha-info{
-    font-size:.92rem;
-    margin-bottom:6px;
-  }
-  footer .maps-link{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    margin-top:10px;
-    color:var(--dourado-300);
-    font-weight:700;
-    font-size:.88rem;
-    border-bottom:1px solid rgba(219,166,63,.4);
-    padding-bottom:2px;
-  }
-  footer .maps-link:hover{ color:var(--dourado-500); }
-  footer .copy{
-    margin-top:26px;
-    font-size:.76rem;
-    color:rgba(255,255,255,.4);
-  }
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>R. Pascoal Daniel, 80 - Vila Giordano, São Paulo - SP, 08020-370</li><li><a href="https://maps.google.com/?cid=5503105870486997059&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank">Ver no mapa</a></li><li>(11) 94743-4360</li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Buffet Iupiii Premium - Unidade 1</li><li>Todos os direitos reservados</li>
+							</ul>
+						</div>
+					</footer>
 
-  /* ---------- BOTÃO FLUTUANTE WHATSAPP ---------- */
-  .wa-flutuante{
-    position:fixed;
-    right:18px;
-    bottom:18px;
-    z-index:999;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#25D366;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 12px 24px -8px rgba(0,0,0,.45);
-    animation:wa-pulso 2.6s ease-in-out infinite;
-  }
-  .wa-flutuante svg{ width:32px; height:32px; }
-  .wa-flutuante:hover{ transform:scale(1.07); }
-  @keyframes wa-pulso{
-    0%,100%{ box-shadow:0 12px 24px -8px rgba(0,0,0,.45), 0 0 0 0 rgba(37,211,102,.55); }
-    50%{ box-shadow:0 12px 24px -8px rgba(0,0,0,.45), 0 0 0 12px rgba(37,211,102,0); }
-  }
-  @media (prefers-reduced-motion: reduce){
-    .wa-flutuante{ animation:none; }
-  }
+			</div>
 
-  /* ---------- REVEAL ON SCROLL ---------- */
-  .reveal{
-    opacity:1;
-    transform:none;
-    transition:opacity .7s ease, transform .7s ease;
-  }
-  .reveal.reveal-init{
-    opacity:0;
-    transform:translateY(22px);
-  }
-  .reveal.reveal-init.is-visible{
-    opacity:1;
-    transform:translateY(0);
-  }
+		<!-- WhatsApp flutuante -->
+			<a href="https://wa.me/5511947434360" target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp">
+				<span class="icon brands fa-whatsapp"></span>
+			</a>
 
-  /* ---------- RESPONSIVO ---------- */
-  @media (min-width:640px){
-    .galeria-grid{ grid-template-columns:repeat(3, 1fr); }
-  }
-  @media (min-width:780px){
-    .pacotes-grid{ grid-template-columns:repeat(3, 1fr); }
-    .pacote-card.destaque{ transform:scale(1.04); }
-  }
-  @media (min-width:900px){
-    .hero{ padding:88px 0 108px; }
-    .secao{ padding:88px 0; }
-  }
-</style>
-</head>
-<body>
+		<!-- Scripts -->
+			<script src="https://gogodroidk.github.io/olli-demos/_t/forty/assets/js/jquery.min.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/forty/assets/js/jquery.scrolly.min.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/forty/assets/js/jquery.scrollex.min.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/forty/assets/js/browser.min.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/forty/assets/js/breakpoints.min.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/forty/assets/js/util.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/forty/assets/js/main.js"></script>
 
-  <!-- FAIXA TOPO -->
-  <div class="faixa-topo">
-    🎊 Orçamento personalizado em minutos — <a href="https://wa.me/5511947434360">fale agora no WhatsApp</a>
-  </div>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container hero-inner">
-      <span class="eyebrow">✨ Serviços em São Miguel Paulista</span>
-      <h1>A festa que vira <em>lenda</em> na turminha inteira</h1>
-      <p class="sub">Decoração encantada, buffet completo e recreação profissional — tudo organizado do primeiro convite ao último docinho. Você só aparece pra comemorar.</p>
-      <a class="btn btn-primary" href="https://wa.me/5511947434360">
-        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.38 4 15c0 2.36.68 4.55 1.86 6.4L4 29l7.78-1.82A11.9 11.9 0 0 0 16.02 27C22.64 27 28 21.62 28 15S22.64 3 16.02 3zm0 21.6c-1.9 0-3.68-.53-5.2-1.44l-.37-.22-4.62 1.08 1.1-4.5-.24-.38A9.5 9.5 0 0 1 6.4 15c0-5.3 4.32-9.6 9.62-9.6 5.3 0 9.6 4.3 9.6 9.6s-4.3 9.6-9.6 9.6zm5.27-7.2c-.29-.15-1.7-.84-1.96-.94-.26-.1-.46-.15-.65.15-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.48.1-.2.05-.37-.02-.51-.07-.15-.65-1.57-.9-2.15-.24-.57-.48-.5-.65-.5-.17 0-.37-.02-.56-.02-.2 0-.51.07-.78.37-.26.29-1.03 1.01-1.03 2.46 0 1.45 1.06 2.85 1.2 3.05.15.2 2.09 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.7-.7 1.94-1.36.24-.67.24-1.25.17-1.37-.07-.12-.26-.19-.55-.34z"/></svg>
-        Chamar no WhatsApp agora
-      </a>
-      <p class="hero-note">Resposta rápida • Orçamento sem compromisso</p>
-      <p class="hero-emojis" aria-hidden="true">🎈 🎂 🎉 🎁 🤹</p>
-    </div>
-  </header>
-
-  <!-- PROVA SOCIAL -->
-  <section class="prova-social reveal" aria-label="prova social">
-    <div class="container">
-      <div class="prova-card">
-        <span class="prova-icon" aria-hidden="true">🎉</span>
-        <p>⭐ 4,4 · 1332 avaliações reais no Google</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PACOTES -->
-  <section class="secao" id="pacotes">
-    <div class="container">
-      <div class="secao-head reveal">
-        <span class="kicker">Pacotes de festa</span>
-        <h2>Escolha o tamanho da magia</h2>
-        <p>Do aniversário mais intimista à festa que vira assunto no grupo da escola — tem um pacote feito sob medida pra sua comemoração.</p>
-      </div>
-
-      <div class="pacotes-grid">
-        <article class="pacote-card reveal">
-          <span class="pacote-emoji" aria-hidden="true">🎈</span>
-          <h3>Pacote Encantado</h3>
-          <p>Ideal para comemorações mais intimistas, com decoração temática e mesa de doces que encantam a criançada.</p>
-          <ul class="pacote-lista">
-            <li>Decoração temática completa</li>
-            <li>Mesa de doces e bolo</li>
-            <li>Bebidas e salgadinhos</li>
-            <li>Montagem e desmontagem inclusas</li>
-          </ul>
-          <a class="btn-card" href="https://wa.me/5511947434360">
-            <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.38 4 15c0 2.36.68 4.55 1.86 6.4L4 29l7.78-1.82A11.9 11.9 0 0 0 16.02 27C22.64 27 28 21.62 28 15S22.64 3 16.02 3z"/></svg>
-            Quero esse pacote
-          </a>
-        </article>
-
-        <article class="pacote-card destaque reveal">
-          <span class="selo">Mais escolhido</span>
-          <span class="pacote-emoji" aria-hidden="true">🎪</span>
-          <h3>Pacote Festa Completa</h3>
-          <p>O queridinho das famílias: buffet completo, recreação profissional e estrutura pra receber todo mundo com conforto.</p>
-          <ul class="pacote-lista">
-            <li>Tudo do Pacote Encantado</li>
-            <li>Recreadores profissionais</li>
-            <li>Brinquedos infláveis e monitoria</li>
-            <li>Buffet completo (salgados, doces e refeição)</li>
-          </ul>
-          <a class="btn-card" href="https://wa.me/5511947434360">
-            <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.38 4 15c0 2.36.68 4.55 1.86 6.4L4 29l7.78-1.82A11.9 11.9 0 0 0 16.02 27C22.64 27 28 21.62 28 15S22.64 3 16.02 3z"/></svg>
-            Quero esse pacote
-          </a>
-        </article>
-
-        <article class="pacote-card reveal">
-          <span class="pacote-emoji" aria-hidden="true">👑</span>
-          <h3>Pacote Realeza</h3>
-          <p>Para quem quer a festa mais comentada do ano, sem se preocupar com nenhum detalhe.</p>
-          <ul class="pacote-lista">
-            <li>Tudo do Festa Completa</li>
-            <li>Cenografia personalizada por tema</li>
-            <li>Fotografia profissional</li>
-            <li>Lembrancinhas e cabine de fotos</li>
-          </ul>
-          <a class="btn-card" href="https://wa.me/5511947434360">
-            <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.38 4 15c0 2.36.68 4.55 1.86 6.4L4 29l7.78-1.82A11.9 11.9 0 0 0 16.02 27C22.64 27 28 21.62 28 15S22.64 3 16.02 3z"/></svg>
-            Quero esse pacote
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERIA -->
-  <section class="secao galeria-secao" id="galeria">
-    <div class="container">
-      <div class="secao-head reveal">
-        <span class="kicker">Um gostinho da festa</span>
-        <h2>Cada detalhe pensado pra encantar</h2>
-        <p>Prévia do clima que sua festa vai ter — cores, doces e diversão em cada canto.</p>
-      </div>
-      <div class="galeria-grid">
-        <div class="galeria-item g1 reveal"><span class="emoji" aria-hidden="true">🎈</span><span class="legenda">Decoração temática</span></div>
-        <div class="galeria-item g2 reveal"><span class="emoji" aria-hidden="true">🎂</span><span class="legenda">Mesa do bolo e doces</span></div>
-        <div class="galeria-item g3 reveal"><span class="emoji" aria-hidden="true">🤹</span><span class="legenda">Recreação e monitoria</span></div>
-        <div class="galeria-item g4 reveal"><span class="emoji" aria-hidden="true">🎪</span><span class="legenda">Estrutura completa</span></div>
-        <div class="galeria-item g5 reveal"><span class="emoji" aria-hidden="true">🍭</span><span class="legenda">Cantinho da guloseima</span></div>
-        <div class="galeria-item g6 reveal"><span class="emoji" aria-hidden="true">🎉</span><span class="legenda">Festa em grande estilo</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTO -->
-  <section class="secao depoimento-secao">
-    <div class="container">
-      <div class="depoimento-card reveal">
-        <span class="aspas" aria-hidden="true">&ldquo;</span>
-        <p class="texto">Contratamos e não precisamos nos preocupar com nada — da decoração ao último brigadeiro. As crianças brincaram o tempo todo e a gente, enfim, conseguiu aproveitar a festa.</p>
-        <p class="depoimento-autor">— Mãe de aniversariante</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="cta-final">
-    <div class="container reveal">
-      <h2>Bora colocar a festa dos sonhos na agenda?</h2>
-      <p>Fale agora com nossa equipe em São Miguel Paulista e receba um orçamento personalizado pelo WhatsApp em poucos minutos.</p>
-      <a class="btn btn-primary" href="https://wa.me/5511947434360">
-        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.38 4 15c0 2.36.68 4.55 1.86 6.4L4 29l7.78-1.82A11.9 11.9 0 0 0 16.02 27C22.64 27 28 21.62 28 15S22.64 3 16.02 3zm0 21.6c-1.9 0-3.68-.53-5.2-1.44l-.37-.22-4.62 1.08 1.1-4.5-.24-.38A9.5 9.5 0 0 1 6.4 15c0-5.3 4.32-9.6 9.62-9.6 5.3 0 9.6 4.3 9.6 9.6s-4.3 9.6-9.6 9.6z"/></svg>
-        Falar no WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <!-- RODAPÉ -->
-  <footer>
-    <div class="container">
-      <p class="marca">Buffet Iupiii Premium - Unidade 1</p>
-      <p class="linha-info">📍 R. Pascoal Daniel, 80 - Vila Giordano, São Paulo - SP, 08020-370 — São Miguel Paulista</p>
-      <p class="linha-info">📞 (11) 94743-4360</p>
-      <a class="maps-link" href="https://maps.google.com/?cid=5503105870486997059&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener noreferrer">Ver no mapa →</a>
-      <p class="copy">© Buffet Iupiii Premium - Unidade 1 — Serviços feito com carinho para famílias de São Miguel Paulista.</p>
-    </div>
-  </footer>
-
-  <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a class="wa-flutuante" href="https://wa.me/5511947434360" aria-label="Falar no WhatsApp" target="_blank" rel="noopener noreferrer">
-    <svg viewBox="0 0 32 32" fill="#ffffff" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.38 4 15c0 2.36.68 4.55 1.86 6.4L4 29l7.78-1.82A11.9 11.9 0 0 0 16.02 27C22.64 27 28 21.62 28 15S22.64 3 16.02 3zm0 21.6c-1.9 0-3.68-.53-5.2-1.44l-.37-.22-4.62 1.08 1.1-4.5-.24-.38A9.5 9.5 0 0 1 6.4 15c0-5.3 4.32-9.6 9.62-9.6 5.3 0 9.6 4.3 9.6 9.6s-4.3 9.6-9.6 9.6zm5.27-7.2c-.29-.15-1.7-.84-1.96-.94-.26-.1-.46-.15-.65.15-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.48.1-.2.05-.37-.02-.51-.07-.15-.65-1.57-.9-2.15-.24-.57-.48-.5-.65-.5-.17 0-.37-.02-.56-.02-.2 0-.51.07-.78.37-.26.29-1.03 1.01-1.03 2.46 0 1.45 1.06 2.85 1.2 3.05.15.2 2.09 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.7-.7 1.94-1.36.24-.67.24-1.25.17-1.37-.07-.12-.26-.19-.55-.34z"/></svg>
-  </a>
-
-  <script>
-    (function(){
-      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduceMotion || !('IntersectionObserver' in window)) return;
-
-      var alvos = document.querySelectorAll('.reveal');
-      alvos.forEach(function(el){ el.classList.add('reveal-init'); });
-
-      var observador = new IntersectionObserver(function(entradas){
-        entradas.forEach(function(entrada){
-          if (entrada.isIntersecting){
-            entrada.target.classList.add('is-visible');
-            observador.unobserve(entrada.target);
-          }
-        });
-      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
-      alvos.forEach(function(el){ observador.observe(el); });
-    })();
-  </script>
-
-</body>
+	</body>
 </html>
