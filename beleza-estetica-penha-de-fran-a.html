@@ -1,658 +1,398 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beleza&estetica Penha de França — Loja em Penha</title>
-<meta name="description" content="Beleza&estetica Penha de França: Loja em Penha. Limpeza de pele, harmonização facial e protocolos personalizados. Agende pelo WhatsApp.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --rose-50:#fdf7f4;
-    --rose-100:#f9ece6;
-    --rose-200:#f3ded3;
-    --nude-300:#e9c9b8;
-    --rose-400:#d9a79a;
-    --rose-500:#c48b7d;
-    --rose-600:#a86a5c;
-    --gold-400:#cda15f;
-    --gold-500:#b8863f;
-    --gold-600:#96692e;
-    --ink:#332622;
-    --ink-soft:#6f5c56;
-    --ink-faint:#9c8a83;
-    --cream:#fffcfa;
-    --line:#ece0d8;
-    --shadow: 0 20px 45px -25px rgba(64,38,28,.35);
-    --ease: cubic-bezier(.16,.8,.32,1);
-  }
-  *,*::before,*::after{ box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
-  body{
-    margin:0;
-    background:var(--cream);
-    color:var(--ink);
-    font-family:'Manrope',system-ui,sans-serif;
-    font-size:16px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  img,svg{ max-width:100%; display:block; }
-  a{ color:inherit; text-decoration:none; }
-  h1,h2,h3{
-    font-family:'Fraunces',serif;
-    font-weight:500;
-    line-height:1.12;
-    letter-spacing:-.01em;
-    margin:0;
-    color:var(--ink);
-  }
-  p{ margin:0; }
-  .container{
-    width:100%;
-    max-width:1180px;
-    margin:0 auto;
-    padding:0 22px;
-  }
-  section{ position:relative; }
+<!DOCTYPE HTML>
+<!--
+	Adaptado do template "Story" by HTML5 UP (html5up.net) — demo tokenizado
+	para clinica de estetica e harmonizacao facial.
+-->
+<html>
+	<head>
+		<title>Beleza&estetica Penha de França | Loja em Penha</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Beleza&estetica Penha de França — Loja em Penha. Agende sua avaliacao pelo WhatsApp." />
+		<link rel="stylesheet" href="https://gogodroidk.github.io/olli-demos/_t/story/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="https://gogodroidk.github.io/olli-demos/_t/story/assets/css/noscript.css" /></noscript>
+		<style>
+			.prova-social {
+				display: inline-block;
+				margin: 0 0 1.5em 0;
+				padding: 0.5em 1.25em;
+				font-size: 0.8em;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				border: 1px solid rgba(255, 255, 255, 0.35);
+				border-radius: 100px;
+				opacity: 0.9;
+			}
+			.whatsapp-float {
+				position: fixed;
+				right: 1.25em;
+				bottom: 1.25em;
+				width: 3.6em;
+				height: 3.6em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #25D366;
+				border-radius: 50%;
+				box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+				z-index: 10000;
+				transition: transform 0.2s ease-in-out;
+				animation: whatsapp-pulse 2.4s infinite;
+			}
+			.whatsapp-float:hover {
+				transform: scale(1.08);
+			}
+			.whatsapp-float svg {
+				width: 1.9em;
+				height: 1.9em;
+				fill: #ffffff;
+				display: block;
+			}
+			@keyframes whatsapp-pulse {
+				0% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(37, 211, 102, 0.55); }
+				70% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), 0 0 0 14px rgba(37, 211, 102, 0); }
+				100% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(37, 211, 102, 0); }
+			}
+			@media screen and (max-width: 480px) {
+				.whatsapp-float {
+					right: 1em;
+					bottom: 1em;
+					width: 3.2em;
+					height: 3.2em;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-  /* ---------- reveal motion ---------- */
-  .reveal{
-    opacity:0;
-    transform:translateY(22px);
-    transition:opacity .8s var(--ease), transform .8s var(--ease);
-    will-change:transform,opacity;
-  }
-  .reveal.in-view{ opacity:1; transform:translateY(0); }
-  .reveal-delay-1.in-view{ transition-delay:.08s; }
-  .reveal-delay-2.in-view{ transition-delay:.16s; }
-  .reveal-delay-3.in-view{ transition-delay:.24s; }
-  .reveal-delay-4.in-view{ transition-delay:.32s; }
-  .reveal-delay-5.in-view{ transition-delay:.4s; }
-  @media (prefers-reduced-motion: reduce){
-    .reveal, .reveal.in-view{ transition:none !important; opacity:1 !important; transform:none !important; }
-    .float-pulse, .hero-orb, .btn-cta::after{ animation:none !important; }
-  }
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-  /* ---------- topbar ---------- */
-  .topbar{
-    padding:18px 0;
-    border-bottom:1px solid var(--line);
-    background:rgba(255,252,250,.9);
-  }
-  .topbar .container{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:12px;
-  }
-  .brand{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-weight:500;
-    font-size:1.25rem;
-    letter-spacing:.01em;
-    color:var(--rose-600);
-  }
-  .topbar-phone{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-size:.82rem;
-    font-weight:600;
-    color:var(--ink-soft);
-    white-space:nowrap;
-  }
-  .topbar-phone svg{ width:16px; height:16px; flex-shrink:0; color:var(--gold-500); }
+				<!-- One -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Beleza&estetica Penha de França</h1>
+							<p class="major">Loja em Penha. Procedimentos com tecnologia de ponta, biosseguranca e resultados naturais que valorizam a sua beleza.</p>
+							<p class="prova-social">⭐ Bem avaliado pelos clientes no Google</p>
+							<ul class="actions stacked">
+								<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button big wide">Agendar Avaliacao no WhatsApp</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/banner.jpg" alt="Beleza&estetica Penha de França - Loja" />
+						</div>
+					</section>
 
-  /* ---------- hero ---------- */
-  .hero{
-    padding:64px 0 56px;
-    background:
-      radial-gradient(120% 90% at 85% -10%, rgba(217,167,154,.28), transparent 60%),
-      radial-gradient(90% 70% at -10% 110%, rgba(205,161,95,.18), transparent 60%),
-      var(--cream);
-    overflow:hidden;
-  }
-  .hero .container{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:22px;
-  }
-  .eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:8px 16px;
-    border:1px solid var(--nude-300);
-    border-radius:999px;
-    background:var(--rose-50);
-    font-size:.78rem;
-    font-weight:700;
-    letter-spacing:.04em;
-    text-transform:uppercase;
-    color:var(--rose-600);
-  }
-  .eyebrow span.dot{ color:var(--gold-500); font-size:1rem; line-height:0; }
-  h1.hero-title{
-    font-size:clamp(2.05rem, 7vw, 3.4rem);
-    max-width:16ch;
-  }
-  h1.hero-title em{
-    font-style:italic;
-    color:var(--rose-600);
-    background:linear-gradient(180deg, transparent 62%, var(--rose-200) 62%);
-  }
-  .hero-subtitle{
-    font-size:1.02rem;
-    color:var(--ink-soft);
-    max-width:46ch;
-  }
-  .hero-actions{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:12px;
-    width:100%;
-  }
-  .btn-cta{
-    position:relative;
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    padding:16px 26px;
-    border-radius:999px;
-    background:linear-gradient(135deg, var(--rose-600), var(--gold-500));
-    color:#fff;
-    font-weight:700;
-    font-size:.98rem;
-    box-shadow:var(--shadow);
-    transition:transform .35s var(--ease);
-  }
-  .btn-cta:hover{ transform:translateY(-2px); }
-  .btn-cta svg{ width:19px; height:19px; }
-  .btn-ghost{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    font-size:.85rem;
-    font-weight:600;
-    color:var(--ink-soft);
-  }
-  .btn-ghost svg{ width:15px; height:15px; color:var(--gold-500); }
+				<!-- Two -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Harmonizacao Facial</h2>
+							<p>Preenchimento labial, botox, bioestimuladores de colageno e fios de sustentacao combinados em um protocolo unico, pensado para o seu rosto. Equilibrio, simetria e naturalidade em cada detalhe.</p>
+							<ul class="actions stacked">
+								<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button">Quero minha avaliacao</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/spotlight01.jpg" alt="Harmonizacao facial" />
+						</div>
+					</section>
 
-  .hero-points{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px 22px;
-    padding-top:6px;
-    width:100%;
-  }
-  .hero-point{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    font-size:.82rem;
-    font-weight:600;
-    color:var(--ink-soft);
-  }
-  .hero-point svg{ width:15px; height:15px; color:var(--rose-600); flex-shrink:0; }
+				<!-- Three -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Tratamentos Faciais Avancados</h2>
+							<p>Limpeza de pele profunda, peelings, microagulhamento e protocolos de rejuvenescimento conduzidos por profissionais especializados. Pele tratada, saudavel e com o brilho renovado.</p>
+							<ul class="actions stacked">
+								<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button">Falar com uma especialista</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/spotlight02.jpg" alt="Tratamentos faciais" />
+						</div>
+					</section>
 
-  .hero-visual{
-    width:100%;
-    margin-top:8px;
-    aspect-ratio:16/11;
-    border-radius:26px;
-    position:relative;
-    background:
-      linear-gradient(150deg, var(--rose-200), var(--nude-300) 45%, var(--gold-400) 100%);
-    box-shadow:var(--shadow);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-  }
-  .hero-visual::before{
-    content:'';
-    position:absolute; inset:0;
-    background:
-      radial-gradient(circle at 30% 25%, rgba(255,255,255,.5), transparent 45%),
-      radial-gradient(circle at 75% 80%, rgba(255,255,255,.25), transparent 40%);
-  }
-  .hero-orb{
-    position:relative;
-    font-size:3.4rem;
-    filter:drop-shadow(0 12px 18px rgba(64,38,28,.22));
-    animation:float 6s ease-in-out infinite;
-  }
-  @keyframes float{
-    0%,100%{ transform:translateY(0); }
-    50%{ transform:translateY(-14px); }
-  }
+				<!-- Four -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Design e Contorno Facial</h2>
+							<p>Design de sobrancelhas, contorno facial e procedimentos de definicao que realcam suas caracteristicas naturais. Cada atendimento e personalizado ao seu tipo de pele e objetivo.</p>
+							<ul class="actions stacked">
+								<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button">Marcar horario</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/spotlight03.jpg" alt="Design e contorno facial" />
+						</div>
+					</section>
 
-  /* ---------- social proof ---------- */
-  .proof{ padding:34px 0; }
-  .proof-badge{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-    text-align:center;
-    padding:20px 24px;
-    border-radius:18px;
-    background:var(--rose-50);
-    border:1px solid var(--nude-300);
-    max-width:760px;
-    margin:0 auto;
-  }
-  .proof-badge svg{ width:20px; height:20px; color:var(--gold-500); flex-shrink:0; }
-  .proof-badge p{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-size:1.02rem;
-    color:var(--ink);
-  }
+				<!-- Five -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Nossos Resultados</h2>
+							<p>Conheca alguns dos procedimentos mais realizados em nossa Loja. Cada transformacao respeita a anatomia e a identidade de cada paciente.</p>
+						</div>
 
-  /* ---------- section heads ---------- */
-  .section-head{
-    max-width:640px;
-    margin:0 auto 34px;
-    text-align:center;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    align-items:center;
-  }
-  .section-tag{
-    font-size:.74rem;
-    font-weight:700;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:var(--gold-600);
-  }
-  .section-head h2{ font-size:clamp(1.7rem, 5vw, 2.35rem); }
-  .section-head p{ color:var(--ink-soft); font-size:.98rem; }
+						<!-- Gallery -->
+							<div class="gallery style2 medium lightbox onscroll-fade-in">
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/01.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/01.jpg" alt="Preenchimento labial" />
+									</a>
+									<div class="caption">
+										<h3>Preenchimento Labial</h3>
+										<p>Volume e contorno natural para labios harmoniosos.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/02.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/02.jpg" alt="Botox facial" />
+									</a>
+									<div class="caption">
+										<h3>Botox Facial</h3>
+										<p>Suavizacao das linhas de expressao com aplicacao segura.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/03.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/03.jpg" alt="Bioestimulador de colageno" />
+									</a>
+									<div class="caption">
+										<h3>Bioestimulador de Colageno</h3>
+										<p>Estimulo natural de colageno para firmeza e vico da pele.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/04.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/04.jpg" alt="Fios de sustentacao" />
+									</a>
+									<div class="caption">
+										<h3>Fios de Sustentacao</h3>
+										<p>Efeito lifting sem cirurgia, com resultado imediato.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/05.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/05.jpg" alt="Skinbooster" />
+									</a>
+									<div class="caption">
+										<h3>Skinbooster</h3>
+										<p>Hidratacao profunda para uma pele vicosa e luminosa.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/06.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/06.jpg" alt="Peeling facial" />
+									</a>
+									<div class="caption">
+										<h3>Peeling Facial</h3>
+										<p>Renovacao celular para uma pele mais uniforme.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/07.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/07.jpg" alt="Limpeza de pele profunda" />
+									</a>
+									<div class="caption">
+										<h3>Limpeza de Pele Profunda</h3>
+										<p>Remocao de impurezas com protocolo especializado.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/08.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/08.jpg" alt="Microagulhamento" />
+									</a>
+									<div class="caption">
+										<h3>Microagulhamento</h3>
+										<p>Estimulo de colageno para textura e poros mais refinados.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/09.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/09.jpg" alt="Design de sobrancelhas" />
+									</a>
+									<div class="caption">
+										<h3>Design de Sobrancelhas</h3>
+										<p>Simetria e expressao que valorizam o seu olhar.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/10.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/10.jpg" alt="Harmonizacao do contorno mandibular" />
+									</a>
+									<div class="caption">
+										<h3>Contorno Mandibular</h3>
+										<p>Definicao e equilibrio para a harmonia do rosto.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/11.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/11.jpg" alt="Rinomodelacao" />
+									</a>
+									<div class="caption">
+										<h3>Rinomodelacao</h3>
+										<p>Ajuste do nariz sem cirurgia, com resultado natural.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/fulls/12.jpg" class="image">
+										<img src="https://gogodroidk.github.io/olli-demos/_t/story/images/gallery/thumbs/12.jpg" alt="Preenchimento de olheiras" />
+									</a>
+									<div class="caption">
+										<h3>Preenchimento de Olheiras</h3>
+										<p>Suavizacao da regiao dos olhos, com olhar descansado.</p>
+										<ul class="actions fixed">
+											<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button small">Falar no WhatsApp</a></li>
+										</ul>
+									</div>
+								</article>
+							</div>
 
-  /* ---------- services ---------- */
-  .services{ padding:64px 0; }
-  .cards{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:18px;
-  }
-  .card{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:22px;
-    padding:30px 26px 26px;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-    transition:transform .4s var(--ease);
-  }
-  .card:hover{ transform:translateY(-6px); }
-  .card-icon{
-    width:54px; height:54px;
-    border-radius:16px;
-    display:flex; align-items:center; justify-content:center;
-    font-size:1.5rem;
-    background:linear-gradient(150deg, var(--rose-100), var(--nude-300));
-  }
-  .card h3{ font-size:1.22rem; }
-  .card p.card-desc{ color:var(--ink-soft); font-size:.92rem; }
-  .card-link{
-    margin-top:auto;
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    font-size:.84rem;
-    font-weight:700;
-    color:var(--rose-600);
-    padding-top:6px;
-  }
-  .card-link svg{ width:14px; height:14px; transition:transform .3s var(--ease); }
-  .card-link:hover svg{ transform:translateX(3px); }
+					</section>
 
-  /* ---------- gallery ---------- */
-  .gallery{ padding:64px 0; background:var(--rose-50); }
-  .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:14px;
-  }
-  .gallery-item{
-    aspect-ratio:1/1;
-    border-radius:20px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    text-align:center;
-    padding:14px;
-    box-shadow:0 14px 30px -20px rgba(64,38,28,.4);
-  }
-  .gallery-item span.emoji{ font-size:2rem; }
-  .gallery-item span.label{
-    font-size:.76rem;
-    font-weight:700;
-    color:#fff;
-    text-shadow:0 2px 8px rgba(0,0,0,.18);
-  }
-  .g1{ background:linear-gradient(150deg, var(--rose-400), var(--rose-600)); }
-  .g2{ background:linear-gradient(150deg, var(--gold-400), var(--gold-600)); }
-  .g3{ background:linear-gradient(150deg, var(--nude-300), var(--rose-500)); }
-  .g4{ background:linear-gradient(150deg, var(--rose-500), var(--gold-500)); }
-  .g5{ background:linear-gradient(150deg, var(--rose-200), var(--rose-500)); }
-  .g6{ background:linear-gradient(150deg, var(--gold-500), var(--rose-600)); }
+				<!-- Six -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Por que escolher Beleza&estetica Penha de França</h2>
+							<p>Cuidamos de cada detalhe para que sua experiencia em nossa Loja seja segura, confortavel e cheia de resultados.</p>
+							<div class="items style1 medium onscroll-fade-in">
+								<section>
+									<span class="icon style2 major fa-gem"></span>
+									<h3>Excelencia</h3>
+									<p>Atendimento premium com foco em resultados naturais e duradouros para cada paciente.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-save"></span>
+									<h3>Seguranca</h3>
+									<p>Produtos registrados na Anvisa e protocolos seguros em cada procedimento realizado.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-chart-bar"></span>
+									<h3>Resultados</h3>
+									<p>Acompanhamento fotografico e avaliacao constante da evolucao do seu tratamento.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-wifi"></span>
+									<h3>Tecnologia</h3>
+									<p>Equipamentos e tecnicas atualizadas com o que ha de mais moderno em estetica facial.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-cog"></span>
+									<h3>Personalizacao</h3>
+									<p>Protocolos sob medida, pensados para a anatomia e o objetivo de cada rosto.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-paper-plane"></span>
+									<h3>Agilidade</h3>
+									<p>Atendimento rapido, sem filas de espera, com horarios flexiveis para a sua rotina.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-desktop"></span>
+									<h3>Avaliacao Online</h3>
+									<p>Tire suas duvidas antes mesmo de visitar a clinica, direto pelo WhatsApp.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-sync-alt"></span>
+									<h3>Acompanhamento</h3>
+									<p>Retornos programados para garantir a manutencao e a evolucao dos resultados.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-hashtag"></span>
+									<h3>Referencia em Penha</h3>
+									<p>Clinica reconhecida pela qualidade dos atendimentos na regiao de Penha.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-bolt"></span>
+									<h3>Praticidade</h3>
+									<p>Agendamento simples e direto, sem burocracia, pelo WhatsApp.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-envelope"></span>
+									<h3>Contato Direto</h3>
+									<p>Fale com a nossa equipe e tire todas as suas duvidas rapidamente.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-leaf"></span>
+									<h3>Naturalidade</h3>
+									<p>Harmonizacao equilibrada que respeita e valoriza as suas caracteristicas.</p>
+								</section>
+							</div>
+						</div>
+					</section>
 
-  /* ---------- testimonial ---------- */
-  .testimonial{ padding:64px 0; }
-  .testimonial-inner{
-    max-width:640px;
-    margin:0 auto;
-    text-align:center;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:18px;
-  }
-  .testimonial-mark{
-    font-family:'Fraunces',serif;
-    font-size:3rem;
-    color:var(--rose-400);
-    line-height:0;
-    height:.6em;
-  }
-  .testimonial blockquote{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-weight:400;
-    font-size:clamp(1.15rem, 3.6vw, 1.5rem);
-    color:var(--ink);
-    margin:0;
-  }
-  .testimonial cite{
-    font-style:normal;
-    font-size:.85rem;
-    font-weight:700;
-    color:var(--ink-soft);
-    letter-spacing:.02em;
-  }
+				<!-- Seven -->
+					<section class="wrapper style1 align-center">
+						<div class="inner medium">
+							<h2>Agende sua Avaliacao</h2>
+							<p>Fale agora mesmo com a nossa equipe pelo WhatsApp e tire todas as suas duvidas sobre o tratamento ideal para voce.</p>
+							<ul class="actions special">
+								<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="button big">Falar no WhatsApp</a></li>
+							</ul>
+						</div>
+					</section>
 
-  /* ---------- final cta ---------- */
-  .final-cta{
-    padding:70px 0;
-    background:linear-gradient(150deg, var(--rose-600), var(--gold-600));
-    color:#fff;
-    text-align:center;
-    overflow:hidden;
-    position:relative;
-  }
-  .final-cta::before{
-    content:'';
-    position:absolute; inset:0;
-    background:radial-gradient(60% 80% at 20% 0%, rgba(255,255,255,.18), transparent 60%);
-  }
-  .final-cta .container{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:18px;
-  }
-  .final-cta h2{ color:#fff; font-size:clamp(1.8rem, 6vw, 2.5rem); max-width:16ch; }
-  .final-cta p{ color:rgba(255,255,255,.86); max-width:44ch; font-size:1rem; }
-  .final-cta .btn-cta{
-    background:#fff;
-    color:var(--rose-600);
-    box-shadow:0 20px 45px -18px rgba(0,0,0,.35);
-  }
-  .final-cta .btn-cta svg{ color:var(--rose-600); }
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="icon brands style2 fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+								<li><a href="tel:(11) 96214-2793" class="icon solid style2 fa-phone"><span class="label">Telefone</span></a></li>
+								<li><a href="https://maps.google.com/?cid=14252433145216482625&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener noreferrer" class="icon solid style2 fa-map-marker-alt"><span class="label">Mapa</span></a></li>
+							</ul>
+							<p>Praça Nossa Sra. da Penha, 101 - Penha de França, São Paulo - SP, 03632-010<br />
+							(11) 96214-2793 &middot; <a href="https://maps.google.com/?cid=14252433145216482625&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener noreferrer">Como chegar</a><br />
+							Atendimento em Penha e regiao.</p>
+							<p>&copy; Beleza&estetica Penha de França — Loja.</p>
+						</div>
+					</footer>
 
-  /* ---------- footer ---------- */
-  footer{
-    padding:40px 0 120px;
-    background:var(--ink);
-    color:#efe4de;
-  }
-  footer .container{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-  }
-  .footer-brand{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-size:1.3rem;
-    color:#fff;
-  }
-  .footer-info{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    font-size:.88rem;
-    color:#cbb9b1;
-  }
-  .footer-info a{ font-weight:700; color:#f2e6e0; }
-  .footer-info .row{ display:flex; align-items:flex-start; gap:8px; }
-  .footer-info svg{ width:16px; height:16px; color:var(--gold-400); flex-shrink:0; margin-top:2px; }
-  .footer-divider{ border:none; border-top:1px solid rgba(255,255,255,.12); margin:6px 0; }
-  .footer-bottom{
-    font-size:.76rem;
-    color:#a4938c;
-  }
+			</div>
 
-  /* ---------- floating whatsapp ---------- */
-  .whatsapp-float{
-    position:fixed;
-    right:18px;
-    bottom:18px;
-    z-index:60;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:#25D366;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 14px 30px -10px rgba(0,0,0,.45);
-  }
-  .whatsapp-float svg{ width:29px; height:29px; color:#fff; }
-  .whatsapp-float .float-pulse{
-    position:absolute;
-    inset:0;
-    border-radius:50%;
-    background:#25D366;
-    animation:pulse 2.4s ease-out infinite;
-    z-index:-1;
-  }
-  @keyframes pulse{
-    0%{ transform:scale(1); opacity:.55; }
-    100%{ transform:scale(1.9); opacity:0; }
-  }
+		<!-- WhatsApp flutuante -->
+			<a href="https://wa.me/5511962142793" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar no WhatsApp">
+				<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.697 4.61 1.902 6.478L4 29l7.72-1.865A11.94 11.94 0 0 0 16.001 27C22.63 27 28 21.627 28 15S22.63 3 16.001 3zm0 21.75a9.71 9.71 0 0 1-4.95-1.357l-.355-.21-4.584 1.107 1.127-4.463-.232-.366A9.69 9.69 0 0 1 5.75 15c0-5.652 4.6-10.25 10.251-10.25S26.25 9.348 26.25 15 21.652 24.75 16.001 24.75zm5.657-7.646c-.31-.155-1.833-.905-2.117-1.008-.284-.104-.49-.155-.697.155-.207.31-.8 1.008-.98 1.215-.181.207-.362.233-.672.078-.31-.155-1.31-.483-2.496-1.54-.923-.823-1.546-1.84-1.727-2.15-.181-.31-.02-.478.136-.633.14-.14.31-.362.465-.543.155-.181.207-.31.31-.517.104-.207.052-.388-.026-.543-.078-.155-.697-1.68-.955-2.3-.252-.605-.508-.523-.697-.533l-.594-.01c-.207 0-.543.078-.828.388-.284.31-1.086 1.06-1.086 2.585 0 1.525 1.112 2.998 1.267 3.205.155.207 2.19 3.343 5.307 4.688.741.32 1.319.512 1.77.655.744.237 1.42.203 1.955.123.596-.089 1.833-.75 2.092-1.474.258-.723.258-1.343.181-1.474-.077-.13-.284-.207-.594-.362z"/></svg>
+			</a>
 
-  /* ---------- desktop refinements ---------- */
-  @media (min-width:700px){
-    .container{ padding:0 32px; }
-    .hero{ padding:88px 0 76px; }
-    .hero .container{ flex-direction:row; align-items:center; gap:52px; }
-    .hero-copy{ flex:1 1 50%; }
-    .hero-visual{ flex:1 1 46%; margin-top:0; aspect-ratio:4; max-width:420px; }
-    .hero-actions{ align-items:flex-start; }
-    .cards{ grid-template-columns:repeat(3, 1fr); }
-    .gallery-grid{ grid-template-columns:repeat(3, 1fr); }
-    footer .container{ flex-direction:row; justify-content:space-between; align-items:flex-start; }
-    .footer-info{ align-items:flex-end; text-align:right; }
-    .footer-info .row{ flex-direction:row-reverse; }
-  }
-  @media (min-width:980px){
-    h1.hero-title{ font-size:3.6rem; }
-  }
-</style>
-</head>
-<body>
+		<!-- Scripts -->
+			<script src="https://gogodroidk.github.io/olli-demos/_t/story/assets/js/jquery.min.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/story/assets/js/jquery.scrollex.min.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/story/assets/js/jquery.scrolly.min.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/story/assets/js/browser.min.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/story/assets/js/breakpoints.min.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/story/assets/js/util.js"></script>
+			<script src="https://gogodroidk.github.io/olli-demos/_t/story/assets/js/main.js"></script>
 
-  <header class="topbar">
-    <div class="container">
-      <span class="brand">Beleza&estetica Penha de França</span>
-      <a class="topbar-phone" href="tel:(11) 96214-2793">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        (11) 96214-2793
-      </a>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div class="hero-copy">
-        <div class="eyebrow reveal in-view"><span class="dot">✦</span> Loja em Penha</div>
-        <h1 class="hero-title reveal in-view">Harmonização facial com a <em>delicadeza</em> que sua pele merece</h1>
-        <p class="hero-subtitle reveal in-view reveal-delay-1">Limpeza de pele, preenchimentos e protocolos personalizados num espaço pensado para você relaxar, renovar e sair com o olhar mais confiante.</p>
-        <div class="hero-actions reveal in-view reveal-delay-2">
-          <a class="btn-cta" href="https://wa.me/5511962142793" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.6-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-            Quero agendar minha avaliação
-          </a>
-          <span class="btn-ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Resposta rápida no WhatsApp</span>
-        </div>
-        <div class="hero-points reveal in-view reveal-delay-3">
-          <span class="hero-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Avaliação individual</span>
-          <span class="hero-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Técnicas atualizadas</span>
-          <span class="hero-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Ambiente acolhedor</span>
-        </div>
-      </div>
-      <div class="hero-visual reveal in-view reveal-delay-2">
-        <span class="hero-orb">🌸</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="proof">
-    <div class="container">
-      <div class="proof-badge reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.9 6.3L21 9l-5 4.6L17.5 21 12 17.6 6.5 21 8 13.6 3 9l6.1-.7z"/></svg>
-        <p>⭐ Bem avaliado pelos clientes no Google</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="services" id="servicos">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">Nossos cuidados</span>
-        <h2>O cuidado certo pra cada fase da sua pele</h2>
-        <p>Protocolos exclusivos, do ritual do dia a dia à harmonização mais completa.</p>
-      </div>
-      <div class="cards">
-        <div class="card reveal reveal-delay-1">
-          <div class="card-icon">🧖‍♀️</div>
-          <h3>Limpeza de Pele Profunda</h3>
-          <p class="card-desc">Higienização, esfoliação e hidratação num ritual completo que devolve o viço e a leveza da sua pele.</p>
-          <a class="card-link" href="https://wa.me/5511962142793" target="_blank" rel="noopener">Agendar no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-        <div class="card reveal reveal-delay-2">
-          <div class="card-icon">✨</div>
-          <h3>Harmonização Facial</h3>
-          <p class="card-desc">Preenchimentos e toxina botulínica com técnica precisa, respeitando seus traços e realçando sua beleza natural.</p>
-          <a class="card-link" href="https://wa.me/5511962142793" target="_blank" rel="noopener">Agendar no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-        <div class="card reveal reveal-delay-3">
-          <div class="card-icon">🌿</div>
-          <h3>Skincare & Rejuvenescimento</h3>
-          <p class="card-desc">Peelings, bioestimuladores e protocolos anti-idade personalizados para uma pele mais firme, uniforme e radiante.</p>
-          <a class="card-link" href="https://wa.me/5511962142793" target="_blank" rel="noopener">Agendar no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="gallery" id="galeria">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">Nosso espaço</span>
-        <h2>Um ambiente pensado para o seu bem-estar</h2>
-        <p>Conforto, discrição e cuidado em cada detalhe do seu atendimento.</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item g1 reveal reveal-delay-1"><span class="emoji">🕊️</span><span class="label">Ambiente</span></div>
-        <div class="gallery-item g2 reveal reveal-delay-2"><span class="emoji">🧴</span><span class="label">Produtos premium</span></div>
-        <div class="gallery-item g3 reveal reveal-delay-3"><span class="emoji">💆‍♀️</span><span class="label">Ritual de cuidado</span></div>
-        <div class="gallery-item g4 reveal reveal-delay-1"><span class="emoji">🌷</span><span class="label">Resultados naturais</span></div>
-        <div class="gallery-item g5 reveal reveal-delay-2"><span class="emoji">🤍</span><span class="label">Atendimento exclusivo</span></div>
-        <div class="gallery-item g6 reveal reveal-delay-3"><span class="emoji">🥂</span><span class="label">Experiência completa</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonial">
-    <div class="container">
-      <div class="testimonial-inner reveal">
-        <span class="testimonial-mark">"</span>
-        <blockquote>Saí de lá com a pele renovada e a autoestima lá em cima. O atendimento é acolhedor do início ao fim, com muita atenção a cada detalhe.</blockquote>
-        <cite>— Paciente da clínica</cite>
-      </div>
-    </div>
-  </section>
-
-  <section class="final-cta">
-    <div class="container">
-      <h2 class="reveal">Vamos cuidar da sua próxima versão?</h2>
-      <p class="reveal reveal-delay-1">Fale agora com nossa equipe e agende sua avaliação personalizada em Penha.</p>
-      <a class="btn-cta reveal reveal-delay-2" href="https://wa.me/5511962142793" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.6-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-        Chamar no WhatsApp agora
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div>
-        <div class="footer-brand">Beleza&estetica Penha de França</div>
-      </div>
-      <div class="footer-info">
-        <div class="row">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Praça Nossa Sra. da Penha, 101 - Penha de França, São Paulo - SP, 03632-010 — Penha · <a href="https://maps.google.com/?cid=14252433145216482625&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Como chegar</a></span>
-        </div>
-        <div class="row">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <a href="tel:(11) 96214-2793">(11) 96214-2793</a>
-        </div>
-        <hr class="footer-divider">
-        <div class="footer-bottom">© Beleza&estetica Penha de França · Loja em Penha</div>
-      </div>
-    </div>
-  </footer>
-
-  <a class="whatsapp-float" href="https://wa.me/5511962142793" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-    <span class="float-pulse"></span>
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.6-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-  </a>
-
-<script>
-(function(){
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var targets = document.querySelectorAll('.reveal');
-  if(reduceMotion || !('IntersectionObserver' in window)){
-    targets.forEach(function(el){ el.classList.add('in-view'); });
-    return;
-  }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        entry.target.classList.add('in-view');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-  targets.forEach(function(el){ io.observe(el); });
-})();
-</script>
-</body>
+	</body>
 </html>
